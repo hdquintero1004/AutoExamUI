@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :options
+  resources :questions
   devise_for :users
   get 'home/index'
 

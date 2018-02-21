@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @option.body %>
+</p>
+
+<p>
+  <strong>True or false:</strong>
+  <%= @option.true_or_false %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @option.question %>
+</p>
+
+<%= link_to 'Edit', edit_option_path(@option) %> |
+<%= link_to 'Back', options_path %>
