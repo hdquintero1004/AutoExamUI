@@ -15,6 +15,7 @@ class OptionsController < ApplicationController
   # GET /options/new
   def new
     @option = Option.new
+    @option.question_id = params[:question_id]
   end
 
   # GET /options/1/edit
@@ -28,8 +29,8 @@ class OptionsController < ApplicationController
 
     respond_to do |format|
       if @option.save
-        format.html { redirect_to @option, notice: 'Option was successfully created.' }
-        format.json { render :show, status: :created, location: @option }
+        format.html { redirect_to new_option_path(question_id: @option.question_id), notice: 'Option was successfully created.' }
+        format.json { render :new, status: :created, location: @option }
       else
         format.html { render :new }
         format.json { render json: @option.errors, status: :unprocessable_entity }

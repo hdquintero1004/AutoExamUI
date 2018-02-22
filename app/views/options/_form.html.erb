@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <div class="question">
+    <label>Question:</label>
+    <text> <%= Question.find(@option.question_id).body %></text>
+  </div>
+
   <div class="field">
     <%= f.label :body %>
     <%= f.text_area :body %>
@@ -22,8 +27,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :question_id %>
-    <%= f.text_field :question_id %>
+    <%= f.hidden_field :question_id%>
   </div>
 
   <div class="actions">
