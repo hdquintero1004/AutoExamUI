@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180221193503) do
+ActiveRecord::Schema.define(version: 20180222044002) do
 
   create_table "options", force: :cascade do |t|
     t.text     "body"
@@ -42,6 +42,13 @@ ActiveRecord::Schema.define(version: 20180221193503) do
     t.text     "labels"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "signatures_users", force: :cascade do |t|
+    t.integer "signature_id"
+    t.integer "user_id"
+    t.index ["signature_id"], name: "index_signatures_users_on_signature_id"
+    t.index ["user_id"], name: "index_signatures_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
