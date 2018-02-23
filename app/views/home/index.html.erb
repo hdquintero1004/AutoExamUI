@@ -2,15 +2,17 @@
 <p>...</p>
 
 <ul class="nav nav-tabs" role="tablist">
-  <li><a data-toggle="tab" aria-controls="A" href="#A">A</a></li>
-  <li><a data-toggle="tab" aria-controls="B" href="#B">B</a></li>
+  <% @signatures.each do |signature| %>
+    <li><a data-toggle="tab" aria-controls="<%= signature %>" href="#<%= signature %>"><%= signature %></a></li>
+  <% end %>
 </ul>
 
 <div class="tab-content">
-  <div class="tab-pane" id="A">
-    <p>Text tab A</p>
-  </div>
-  <div class="tab-pane" id="B">
-    <p>Text tab B</p>
-  </div>
+  <% @signatures.each do |signature| %>
+      <div class="tab-pane" id="<%= signature %>">
+        <% Question.find_by_signature_id(signature).each do |question| %>
+          <p><%= question %></p>
+        <% end %>
+      </div>
+  <% end %>
 </div>
