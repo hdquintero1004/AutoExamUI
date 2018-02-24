@@ -3,7 +3,12 @@ class HomeController < ApplicationController
     if not user_signed_in?
       redirect_to(user_session_path)
     else
-      @signatures = Teacher.select(:signature_id).where(user_id: current_user.id)
+      @teachers = Teacher.select(:signature_id).where(:user_id => current_user.id)
+
+      @signatures = []
+      @teachers.each do |s|
+        @signatures.append(s.signature_id)
+      end
     end
   end
 end
