@@ -15,7 +15,7 @@ class QuestionsController < ApplicationController
   # GET /questions/new
   def new
     @question = Question.new
-    @question.signature_id = params[:s]
+    @question.signature_id = params[:signature_id]
   end
 
   # GET /questions/1/edit
