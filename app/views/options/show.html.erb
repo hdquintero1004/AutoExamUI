@@ -12,8 +12,5 @@
 
 <p>
   <strong>Question:</strong>
-  <%= @option.question %>
+  <%= @option.question.body %>
 </p>
-
-<%= link_to 'Edit', edit_option_path(@option) %> |
-<%= link_to 'Back', options_path %>

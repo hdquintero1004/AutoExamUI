@@ -4,7 +4,7 @@
   <% count = 0 %>
   <% @signatures.each do |signature| %>
       <% sig_name = Signature.find(signature).name %>
-      <li><a data-toggle="tab" aria-controls="<%= count %>" href="#<%= count %>"><%= sig_name %></a></li>
+      <li><a data-toggle="tab" aria-controls="s<%= count %>" href="#s<%= count %>"><%= sig_name %></a></li>
       <% count += 1 %>
   <% end %>
 </ul>
@@ -12,7 +12,7 @@
 <div class="tab-content">
   <% count = 0 %>
   <% @signatures.each do |signature| %>
-      <div class="tab-pane" id="<%= count %>">
+      <div class="tab-pane" id="s<%= count %>">
         <div class="col-md-6">
           <% @signature_id = signature %>
           <%= render partial: 'user_questions' %>

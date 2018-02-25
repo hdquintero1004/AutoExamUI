@@ -1,31 +1,52 @@
-<br/>
+<body>
 
-<%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
+  <br/>
 
-<br/>
+  <%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
 
-<table class="table table-condensed">
-  <thead>
-  <tr>
-    <th>Title</th>
-    <th>Body</th>
-    <th>Labels</th>
-    <th>Signature</th>
-    <th colspan="3"></th>
-  </tr>
-  </thead>
-  <% @questions = Question.where(:signature_id => @signature_id) %>
-  <% @questions.each do |question| %>
+  <br/>
 
-      <tr>
-        <td><%= question.title %></td>
-        <td><%= question.body %></td>
-        <td><%= question.labels %></td>
-        <td><%= Signature.find(@signature_id).name %></td>
-        <td><%= link_to 'Show', question %></td>
-        <td><%= link_to 'Edit', edit_question_path(question) %></td>
-        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <br/>
-      </tr>
-  <% end %>
-</table>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Labels</th>
+      <th>Signature</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+    <% @questions = Question.where(:signature_id => @signature_id) %>
+    <ul class="nav nav-tabs">
+      <% count = 0 %>
+      <% @questions.each do |question| %>
+          <tr>
+            <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>">Options</a></td>
+            <td><%= question.title %></td>
+            <td><%= question.body %></td>
+            <td><%= question.labels %></td>
+            <td><%= Signature.find(@signature_id).name %></td>
+            <td><%= link_to 'Show', question %></td>
+            <td><%= link_to 'Edit', edit_question_path(question) %></td>
+            <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <br/>
+          </tr>
+          <% count += 1 %>
+      <% end %>
+    </ul>
+  </table>
+
+  <div class="tab-content">
+    <% count = 0 %>
+    <% @questions.each do |question| %>
+        <div class="tab-pane" id="q<%= count %>">
+          <div class="col-md-6">
+            <% @question = question %>
+            <%= render partial: 'question_options' %>
+          </div>
+        </div>
+        <% count += 1 %>
+    <% end %>
+  </div>
+</body>
