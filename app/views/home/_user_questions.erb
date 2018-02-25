@@ -1,14 +1,30 @@
-<% @questions = Question.where(:signature_id => @signature_id) %>
-<% @questions.each do |question| %>
-    <tr>
-      <td><%= question.title %></td>
-      <td><%= question.body %></td>
-      <td><%= question.labels %></td>
-      <td><%= question.signature %></td>
-      <td><%= link_to 'Show', question %></td>
-      <td><%= link_to 'Edit', edit_question_path(question) %></td>
-      <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-<% end %>
+<br/>
 
-<%= link_to new_question_path %>
+<%= link_to "+ New Question", {:controller => "questions", :action => "new", :s => @signature_id }, :class => "btn btn-primary" %>
+
+<br/>
+
+<table class="table table-responsive">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Labels</th>
+    <th>Signature</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+  <% @questions = Question.where(:signature_id => @signature_id) %>
+  <% @questions.each do |question| %>
+      <tr>
+        <td><%= question.title %></td>
+        <td><%= question.body %></td>
+        <td><%= question.labels %></td>
+        <td><%= Signature.find(@signature_id).name %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <br/>
+      </tr>
+  <% end %>
+</table>

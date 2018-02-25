@@ -13,7 +13,7 @@
   <% count = 0 %>
   <% @signatures.each do |signature| %>
       <div class="tab-pane" id="<%= count %>">
-        <div class="col-md-5">
+        <div class="col-md-6">
           <% @signature_id = signature %>
           <%= render partial: 'user_questions' %>
         </div>
