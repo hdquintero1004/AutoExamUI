@@ -16,6 +16,7 @@
   </thead>
   <% @questions = Question.where(:signature_id => @signature_id) %>
   <% @questions.each do |question| %>
+
       <tr>
         <td><%= question.title %></td>
         <td><%= question.body %></td>

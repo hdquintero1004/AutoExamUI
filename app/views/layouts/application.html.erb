@@ -4,13 +4,13 @@
     <meta charset="UTF-8"> <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge,chrome=1"> <meta name=viewport content="width=device-width, initial-scale=1">
     <title><%= content_for?(:title) ? yield(:title) : "AutoExam" %></title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
-    <p class="navbar-text pull-right">
+    <div class="navbar-text pull-right">
       <% if user_signed_in? %>
           Logged in as <strong><%= current_user.email %></strong>.
           <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -19,7 +19,7 @@
           <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
           <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
-    </p>
+    </div>
 
     <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
@@ -27,6 +27,8 @@
     <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
     <% end %>
+
+    <br/>
     <%= yield %>
   </body>
 </html>
