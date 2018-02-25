@@ -2,7 +2,11 @@
 
 <h1>Signatures</h1>
 
-<table>
+<%= link_to '+ New Signature', new_signature_path, class: "btn btn-primary" %>
+
+<br/>
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -25,5 +29,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Signature', new_signature_path %>

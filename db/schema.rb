@@ -44,13 +44,6 @@ ActiveRecord::Schema.define(version: 20180223001005) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "signatures_users", force: :cascade do |t|
-    t.integer "signature_id"
-    t.integer "user_id"
-    t.index ["signature_id"], name: "index_signatures_users_on_signature_id"
-    t.index ["user_id"], name: "index_signatures_users_on_user_id"
-  end
-
   create_table "teachers", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "signature_id"
@@ -62,6 +55,7 @@ ActiveRecord::Schema.define(version: 20180223001005) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
+    t.integer "role_id"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -76,6 +70,7 @@ ActiveRecord::Schema.define(version: 20180223001005) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["role_id"], name: "index_users_on_role_id"
   end
 
 end

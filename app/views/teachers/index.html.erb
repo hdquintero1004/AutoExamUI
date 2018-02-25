@@ -2,7 +2,9 @@
 
 <h1>Teachers</h1>
 
-<table>
+<%= link_to '+ New Teacher', new_teacher_path, class: "btn btn-primary" %>
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>User</th>
@@ -14,8 +16,8 @@
   <tbody>
     <% @teachers.each do |teacher| %>
       <tr>
-        <td><%= teacher.user %></td>
-        <td><%= teacher.signature %></td>
+        <td><%= teacher.user.email %></td>
+        <td><%= teacher.signature.name %></td>
         <td><%= link_to 'Show', teacher %></td>
         <td><%= link_to 'Edit', edit_teacher_path(teacher) %></td>
         <td><%= link_to 'Destroy', teacher, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -25,5 +27,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Teacher', new_teacher_path %>
