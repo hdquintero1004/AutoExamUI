@@ -2,7 +2,9 @@
 
 <h1>Options</h1>
 
-<table>
+<%= link_to '+ New Option', new_option_path, class: "btn btn-primary" %>
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Body</th>
@@ -27,5 +29,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Option', new_option_path %>

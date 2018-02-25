@@ -2,7 +2,9 @@
 
 <h1>Questions</h1>
 
-<table>
+<%= link_to '+ New Question', new_question_path, class: "btn btn-primary" %>
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Title</th>
@@ -29,5 +31,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Question', new_question_path %>
