@@ -4,9 +4,7 @@
 
   <%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
 
-  <br/>
-
-  <table class="table table-striped">
+  <table class="table table-responsive">
     <thead>
     <tr>
       <th></th>
@@ -18,23 +16,21 @@
     </tr>
     </thead>
     <% @questions = Question.where(:signature_id => @signature_id) %>
-    <ul class="nav nav-tabs">
       <% count = 0 %>
       <% @questions.each do |question| %>
-          <tr>
-            <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>">Options</a></td>
-            <td><%= question.title %></td>
-            <td><%= question.body %></td>
-            <td><%= question.labels %></td>
-            <td><%= Signature.find(@signature_id).name %></td>
-            <td><%= link_to 'Show', question %></td>
-            <td><%= link_to 'Edit', edit_question_path(question) %></td>
-            <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            <br/>
-          </tr>
-          <% count += 1 %>
+        <tr>
+          <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>">Options</a></td>
+          <td><%= question.title %></td>
+          <td><%= question.body %></td>
+          <td><%= question.labels %></td>
+          <td><%= Signature.find(@signature_id).name %></td>
+          <td><%= link_to 'Show', question %></td>
+          <td><%= link_to 'Edit', edit_question_path(question) %></td>
+          <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <br/>
+        </tr>
+        <% count += 1 %>
       <% end %>
-    </ul>
   </table>
 
   <div class="tab-content">

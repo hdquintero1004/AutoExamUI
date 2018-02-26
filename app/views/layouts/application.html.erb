@@ -13,6 +13,12 @@
     <div class="navbar">
       <div class="navbar-text pull-left">
         <%= link_to "AutoExam", home_index_url %>
+        <% if user_signed_in? %>
+            <%= link_to "Prepare Exam" %>
+            <% if current_user.role_id == 1 %>
+              <%= link_to "Admin Panel", teachers_path %>
+            <% end %>
+        <% end %>
       </div>
       <div class="navbar-text pull-right">
         <% if user_signed_in? %>

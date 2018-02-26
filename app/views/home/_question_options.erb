@@ -1,15 +1,14 @@
 <body>
 
-  <%= link_to "+ New Option", {:controller => "options", :action => "new", :question_id => @question.id}, class: "btn btn-primary" %>
+  <p>Options for: "<%= @question.body %>"</p>
 
-  <br/>
+  <%= link_to "+ New Option", {:controller => "options", :action => "new", :question_id => @question.id}, class: "btn btn-primary" %>
 
   <table class="table table-responsive">
     <thead>
     <tr>
       <th>Body</th>
       <th>True or false</th>
-      <th>Question</th>
       <th colspan="3"></th>
     </tr>
     </thead>
@@ -20,7 +19,6 @@
         <tr>
           <td><%= option.body %></td>
           <td><%= option.true_or_false %></td>
-          <td><%= option.question.body %></td>
           <td><%= link_to 'Show', option %></td>
           <td><%= link_to 'Edit', edit_option_path(option) %></td>
           <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
