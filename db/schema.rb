@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180223001005) do
+ActiveRecord::Schema.define(version: 20180226023259) do
+
+  create_table "exams", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "signature_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["signature_id"], name: "index_exams_on_signature_id"
+  end
 
   create_table "options", force: :cascade do |t|
     t.text     "body"
@@ -55,7 +64,7 @@ ActiveRecord::Schema.define(version: 20180223001005) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.integer "role_id"
+    t.integer  "role_id"
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
