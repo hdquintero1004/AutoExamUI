@@ -31,7 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
-gem 'will_paginate', '~> 3.1.6'
+# gem 'will_paginate', '~> 3.1.6'
 gem 'bootstrap-sass', '~> 3.2.0'
 
 group :development, :test do

@@ -17,13 +17,17 @@
   </div>
 
   <div class="field">
+    <%= f.label :header %>
+    <%= f.text_field :header %>
+  </div>
+
+  <div class="field">
     <%= f.label :description %>
     <%= f.text_area :description %>
   </div>
 
   <div class="field">
-    <%= f.label :signature_id %>
-    <%= f.text_field :signature_id %>
+    <%= f.hidden_field :signature_id %>
   </div>
 
   <div class="actions">

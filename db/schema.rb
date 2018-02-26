@@ -14,7 +14,9 @@ ActiveRecord::Schema.define(version: 20180226023259) do
 
   create_table "exams", force: :cascade do |t|
     t.string   "title"
+    t.string   "header"
     t.text     "description"
+    t.string   "labels"
     t.integer  "signature_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false

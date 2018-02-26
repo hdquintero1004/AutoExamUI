@@ -2,9 +2,13 @@
 
   <br/>
 
+  <%= link_to "+ New Exam", {:controller => "exams", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
+
+  <t/>
+
   <%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
 
-  <% @questions = Question.where(:signature_id => @signature_id).paginate(page: params[:page], per_page: 10)%>
+  <% @questions = Question.where(:signature_id => @signature_id) #.paginate(page: params[:page], per_page: 10)%>
   <table class="table table-responsive">
     <thead>
     <tr>
@@ -16,7 +20,7 @@
       <th colspan="3"></th>
     </tr>
     </thead>
-      <%= will_paginate @questions %>
+      <% # will_paginate @questions %>
       <% count = 0 %>
       <% @questions.each do |question| %>
         <tr>

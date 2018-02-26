@@ -14,17 +14,7 @@
   <div class="navbar-text pull-left">
     <%= link_to "AutoExam", home_index_url, class: "btn" %>
     <% if user_signed_in? %>
-        <div>
-          <button class="btn dropdown-toggle"  id="examMenu" data-toggle="dropdown">
-            Exams
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="examMenu">
-            <li role="presentation"><a role="menuitem" href="<%= new_exam_path %>">New Exam</a></li>
-            <li role="presentation"><a role="menuitem" href="<%= exams_path %>">Exams</a></li>
-          </ul>
-        </div>
-
+        <%= link_to "Exams", exams_path, class: "btn" %>
         <% if current_user.role_id == 1 %>
             <div>
               <button class="btn dropdown-toggle"  id="adminMenu" data-toggle="dropdown">
