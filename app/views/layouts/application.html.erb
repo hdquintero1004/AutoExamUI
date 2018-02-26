@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <meta charset="UTF-8"> <meta http-equiv="X-UA-COMPATIBLE" content="IE=Edge,chrome=1"> <meta name=viewport content="width=device-width, initial-scale=1">
   <title><%= content_for?(:title) ? yield(:title) : "AutoExam" %></title>
+
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <!-- Bootstrap core CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="jumbotron-narrow.css" rel="stylesheet">
+
 </head>
 
-
 <body>
-<div class="navbar">
-  <div class="navbar-text pull-left">
-    <%= link_to "AutoExam", home_index_url, class: "btn" %>
-    <% if user_signed_in? %>
-        <%= link_to "Exams", exams_path, class: "btn" %>
-        <% if current_user.role_id == 1 %>
-            <div>
-              <button class="btn dropdown-toggle"  id="adminMenu" data-toggle="dropdown">
-                Admin Panel
-                <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" role="menu" aria-labelledby="adminMenu">
-                <li role="presentation"><a role="menuitem" href="<%= teachers_path %>">Assing Roles</a></li>
+<div class="container">
+
+  <!-- Static navbar -->
+  <div class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">AutoExam</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="<%= home_index_path %>">Home</a></li>
+          <% if user_signed_in? and current_user.role_id == 1 %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administration <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="<%= teachers_path %>">Assing Roles</a></li>
               </ul>
-            </div>
-        <% end %>
-    <% end %>
+            </li>
+          <% end %>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+              <li><a class="active">Logged in as <strong><%= current_user.email %></strong></a></li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+          <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
+          <% end %>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
   </div>
-  <div class="navbar-text pull-right">
-    <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong>.
-        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-    <% else %>
-        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-        <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-    <% end %>
-  </div>
-</div>
 
-<% if notice %>
-    <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-    <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+  <%= yield %>
 
-<br/>
-<%= yield %>
+</div> <!-- /container -->
+
 </body>
+
 </html>
