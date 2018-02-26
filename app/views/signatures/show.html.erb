@@ -1,14 +1,79 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @signature.name %>
-</p>
+<h1> <%= @signature.name %></h1>
 
-<p>
-  <strong>Labels:</strong>
-  <%= @signature.labels %>
-</p>
+<h3> Exams </h3>
 
-<%= link_to 'Edit', edit_signature_path(@signature) %> |
-<%= link_to 'Back', signatures_path %>
+<%= link_to "+ New Exam", {:controller => "exams", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Signature</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% exams = Exam.where(:signature_id => @signature.id) %>
+  <% exams.each do |exam| %>
+      <tr>
+        <td><%= exam.title %></td>
+        <td><%= exam.description %></td>
+        <td><%= exam.signature.name %></td>
+        <td><%= link_to 'Show', exam %></td>
+        <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
+        <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<h3> Questions </h3>
+
+<%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th></th>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Labels</th>
+    <th>Signature</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% count = 0 %>
+  <% questions = Question.where(:signature_id => @signature.id) %>
+  <% questions.each do |question| %>
+      <tr>
+        <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>">Options</a></td>
+        <td><%= question.title %></td>
+        <td><%= question.body %></td>
+        <td><%= question.labels %></td>
+        <td><%= question.signature.name %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><%= link_to 'Edit', edit_question_path(question) %></td>
+        <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<div class="tab-content">
+  <% count = 0 %>
+  <% questions.each do |question| %>
+      <div class="tab-pane" id="q<%= count %>">
+        <div class="col-md-6">
+          <% @question = question %>
+          <%= render partial: 'question_options' %>
+        </div>
+      </div>
+      <% count += 1 %>
+  <% end %>
+</div>

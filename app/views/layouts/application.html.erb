@@ -58,8 +58,26 @@
     </div><!--/.container-fluid -->
   </div>
 
-  <%= yield %>
-
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3 col-md-2 sidebar">
+        <% if user_signed_in? %>
+          <% @signatures = [] %>
+          <% Teacher.where(:user_id => current_user.id).each { |t| @signatures.append(t.signature)}  %>
+          <ul class="nav nav-sidebar">
+            <li><p>My Signatures</p></li>
+            <li class="nav-divider"></li>
+            <% @signatures.each do |signature| %>
+              <li class="active"><a href="<%= signature_path(signature.id) %>"><%= signature.name %></a></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+      <div class="col-sm-5 col-sm-offset-2 col-md-9 col-md-offset-1 main">
+        <%= yield %>
+      </div>
+    </div>
+  </div>
 </div> <!-- /container -->
 
 </body>

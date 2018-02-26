@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Questions</h1>
+<h3>Questions</h3>
 
-<%= link_to '+ New Question', new_question_path, class: "btn btn-primary" %>
+<%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
 
 <table class="table table-striped">
   <thead>
@@ -21,7 +21,7 @@
         <td><%= question.title %></td>
         <td><%= question.body %></td>
         <td><%= question.labels %></td>
-        <td><%= question.signature %></td>
+        <td><%= question.signature.name %></td>
         <td><%= link_to 'Show', question %></td>
         <td><%= link_to 'Edit', edit_question_path(question) %></td>
         <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
