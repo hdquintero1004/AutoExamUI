@@ -2,6 +2,8 @@
 
 <h1>Exams</h1>
 
+<%= link_to '+ New Exam', new_exam_path, class: "btn btn-primary" %>
+
 <table class="table table-responsive">
   <thead>
     <tr>
@@ -25,7 +27,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Exam', new_exam_path %>
