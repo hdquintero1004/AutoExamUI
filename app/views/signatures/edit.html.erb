@@ -1,6 +1,32 @@
-<h1>Editing Signature</h1>
+<h1>Editing Labels</h1>
+<h4><%= @signature.name %></h4>
 
-<%= render 'form', signature: @signature %>
+<%= form_for(@signature) do |f| %>
+    <% if @signature.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@signature.errors.count, "error") %> prohibited this signature from being saved:</h2>
 
-<%= link_to 'Show', @signature %> |
-<%= link_to 'Back', signatures_path %>
+          <ul>
+            <% @signature.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.hidden_field :name %>
+    </div>
+
+    <br/>
+
+    <div class="form form-group">
+      <%= f.label :labels %>
+      <%= f.text_area :labels, class: "form form-control" %>
+    </div>
+
+    <input class="btn btn-primary" name="commit" value="Update Signature" data-disable-with="Update Signature" type="submit">
+
+    <%= link_to 'Back', signature_path(@signature.id), class: "btn btn-primary" %>
+
+<% end %>

@@ -2,6 +2,9 @@
 
 <h1> <%= @signature.name %></h1>
 
+<h3> Labels <a href="<%= edit_signature_path(@signature.id) %>"><span class="glyphicon glyphicon-pencil"></span>edit</a></h3>
+<p> <%= @signature.labels %> </p>
+
 <h3> Exams </h3>
 
 <%= link_to "+ New Exam", {:controller => "exams", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
@@ -52,7 +55,7 @@
   <% questions = Question.where(:signature_id => @signature.id) %>
   <% questions.each do |question| %>
       <tr>
-        <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>">Options</a></td>
+        <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>
         <td><%= question.title %></td>
         <td><%= question.body %></td>
         <td><%= question.labels %></td>
