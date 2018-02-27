@@ -11,26 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <br/>
+
+  <div class="form form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form form-group">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "form form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form form-group">
     <%= f.label :labels %>
-    <%= f.text_area :labels %>
+
+    <select class="form form-control" name="dsfsd">
+      <option class="checkbox-inline" value="as">dasdasd</option>
+      <option value="ds">asddsa</option>
+    </select>
   </div>
 
   <div class="field">
     <%= f.hidden_field :signature_id %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
+
 <% end %>

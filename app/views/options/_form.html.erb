@@ -11,26 +11,24 @@
     </div>
   <% end %>
 
-  <div class="question">
-    <label>Question:</label>
-    <text> <%= Question.find(@option.question_id).body %></text>
-  </div>
+  <h4>Question: <%= Question.find(@option.question_id).body %></h4>
 
-  <div class="field">
+  <br/>
+
+  <div class="form form-group">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: "form form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form form-group">
     <%= f.label :true_or_false %>
-    <%= f.text_field :true_or_false %>
+    <%= f.text_field :true_or_false, class: "form form-control" %>
   </div>
 
   <div class="field">
     <%= f.hidden_field :question_id%>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
+
 <% end %>

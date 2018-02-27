@@ -1,5 +1,38 @@
 <h1>New Option</h1>
 
-<%= render 'form', option: @option %>
+<%= form_for(@option) do |f| %>
+    <% if @option.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@option.errors.count, "error") %> prohibited this option from being saved:</h2>
 
-<%= link_to "Finish", home_index_path %>
+          <ul>
+            <% @option.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <h4>Question: <%= Question.find(@option.question_id).body %></h4>
+
+    <br/>
+
+    <div class="form form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, class: "form form-control" %>
+    </div>
+
+    <div class="form form-group">
+      <%= f.label :true_or_false %>
+      <%= f.text_field :true_or_false, class: "form form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.hidden_field :question_id%>
+    </div>
+
+    <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
+    <%= link_to "Finish", home_index_path, class: "btn btn-primary" %>
+
+<% end %>
+

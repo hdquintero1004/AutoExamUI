@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   # GET /questions
   # GET /questions.json
   def index
-    @questions = Question.where(:signature_id => params[:signature_id])
+    @questions = Question.All
   end
 
   # GET /questions/1

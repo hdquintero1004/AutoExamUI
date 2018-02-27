@@ -7,7 +7,7 @@
 
 <h3> Exams </h3>
 
-<%= link_to "+ New Exam", {:controller => "exams", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
+<%= link_to "+ New Exam", {:controller => "exams", :action => "new", :signature_id => @signature.id }, :class => "btn btn-primary" %>
 
 <table class="table table-striped">
   <thead>
@@ -36,7 +36,7 @@
 
 <h3> Questions </h3>
 
-<%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature_id }, :class => "btn btn-primary" %>
+<%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature.id }, :class => "btn btn-primary" %>
 
 <table class="table table-striped">
   <thead>
