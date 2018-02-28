@@ -26,7 +26,7 @@ class ExamsController < ApplicationController
   # POST /exams.json
   def create
     @exam = Exam.new(exam_params)
-
+    set_labels
     respond_to do |format|
       if @exam.save
         format.html { redirect_to @exam, notice: 'Exam was successfully created.' }
@@ -41,6 +41,7 @@ class ExamsController < ApplicationController
   # PATCH/PUT /exams/1
   # PATCH/PUT /exams/1.json
   def update
+    set_labels
     respond_to do |format|
       if @exam.update(exam_params)
         format.html { redirect_to @exam, notice: 'Exam was successfully updated.' }
@@ -63,6 +64,20 @@ class ExamsController < ApplicationController
   end
 
   private
+    def set_labels
+      labels = ""
+      signature_labels = Signature.find(@exam.signature_id).labels
+      if signature_labels.nil?
+        return
+      end
+      signature_labels.remove(' ').split(',').each do |l|
+        if not params[l].nil?
+          labels += ", " if labels.length != 0
+          labels += l
+        end
+      end
+      @exam.labels = labels
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_exam
       @exam = Exam.find(params[:id])
@@ -70,6 +85,6 @@ class ExamsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exam_params
-      params.require(:exam).permit(:title, :description, :signature_id)
+      params.require(:exam).permit(:title, :header, :description, :labels, :amount, :signature_id)
     end
 end

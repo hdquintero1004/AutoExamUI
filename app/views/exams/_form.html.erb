@@ -1,41 +1,64 @@
-<%= form_for(exam) do |f| %>
-  <% if exam.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(exam.errors.count, "error") %> prohibited this exam from being saved:</h2>
+<head>
 
-      <ul>
-      <% exam.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+</head>
+<body>
+  <%= form_for(exam) do |f| %>
+    <% if exam.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(exam.errors.count, "error") %> prohibited this exam from being saved:</h2>
+
+        <ul>
+        <% exam.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <br/>
+
+    <div class="form form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form form-control" %>
     </div>
+
+    <div class="form form-group">
+      <%= f.label :header %>
+      <%= f.text_field :header, class: "form form-control" %>
+    </div>
+
+    <div class="form form-group">
+      <%= f.label :description %>
+      <%= f.text_area :description, class: "form form-control" %>
+    </div>
+
+    <div class="form form-group">
+      <% @labels = Signature.find(exam.signature_id).labels %>
+      <% if @labels.nil?
+           @labels = []
+         else
+           @labels = @labels.remove(' ').split(',')
+         end %>
+      <label for="exam_labels">Labels</label>
+      <div class="btn-group">
+        <a style="width: 825px; background-color: transparent; border-color: silver" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i>...</a>
+        <ul class="dropdown-menu" style="padding: 10px" id="myDiv">
+          <% @labels.each do |label| %>
+              <li><p><input class="active" type="checkbox" value="<%=label%>" style="margin-right: 10px;" name="<%=label%>"><%=label%></p></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="form form-group">
+      <%= f.label :amount %>
+      <%= f.text_field :amount, class: "form form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.hidden_field :signature_id %>
+    </div>
+
+    <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
   <% end %>
-
-  <br/>
-
-  <div class="form form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form form-control" %>
-  </div>
-
-  <div class="form form-group">
-    <%= f.label :header %>
-    <%= f.text_field :header, class: "form form-control" %>
-  </div>
-
-  <div class="form form-group">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: "form form-control" %>
-  </div>
-
-  <div class="form form-group">
-    <%= f.label :amount %>
-    <%= f.text_field :amount, class: "form form-control" %>
-  </div>
-
-  <div class="field">
-    <%= f.hidden_field :signature_id %>
-  </div>
-
-  <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
-<% end %>
+</body>
