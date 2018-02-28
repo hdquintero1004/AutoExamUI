@@ -29,19 +29,26 @@
     </div>
 
     <div class="form form-group">
+      <% @previous_labels = question.labels %>
+      <% if @previous_labels.nil?
+          @previous_labels = []
+         else
+          @previous_labels = @previous_labels.remove(' ').split(',')
+         end %>
+
       <% @labels = Signature.find(question.signature_id).labels %>
       <% if @labels.nil?
-        @labels = []
-      else
-        @labels = @labels.remove(' ').split(',')
-      end %>
+          @labels = []
+         else
+          @labels = @labels.remove(' ').split(',')
+         end %>
 
       <label for="question_labels">Labels</label>
       <div class="btn-group">
         <a style="width: 825px; background-color: transparent; border-color: silver" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i>...</a>
         <ul class="dropdown-menu" style="padding: 10px" id="myDiv">
           <% @labels.each do |label| %>
-              <li><p><input class="active" type="checkbox" value="<%=label%>" style="margin-right: 10px;" name="<%=label%>"><%=label%></p></li>
+              <li><p><input class="active" type="checkbox" value="<%=label%>" style="margin-right: 10px;" name="<%=label%>" <%= @previous_labels.include?(label) ? 'checked' : '' %>><%=label%></p></li>
           <% end %>
         </ul>
       </div>

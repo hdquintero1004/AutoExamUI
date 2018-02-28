@@ -78,6 +78,7 @@ class ExamsController < ApplicationController
       end
       @exam.labels = labels
     end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_exam
       @exam = Exam.find(params[:id])
