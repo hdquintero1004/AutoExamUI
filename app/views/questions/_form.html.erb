@@ -29,13 +29,18 @@
     </div>
 
     <div class="form form-group">
-      <% labels = Signature.find(question.signature_id).labels.remove(' ').split(',') %>
+      <% @labels = Signature.find(question.signature_id).labels %>
+      <% if @labels.nil?
+        @labels = []
+      else
+        @labels = @labels.remove(' ').split(',')
+      end %>
 
       <div class="btn-group">
         <a href="#" class="btn btn-primary"><i class="fa fa-cogs"></i>Labels</a>
         <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
         <ul class="dropdown-menu" style="padding: 10px" id="myDiv">
-          <% labels.each do |label| %>
+          <% @labels.each do |label| %>
               <li><p><input class="active" type="checkbox" value="<%=label%>" style="margin-right: 10px;" name="<%=label%>"><%=label%></p></li>
           <% end %>
         </ul>

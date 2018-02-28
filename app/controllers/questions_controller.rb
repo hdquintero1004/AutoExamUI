@@ -69,7 +69,11 @@ class QuestionsController < ApplicationController
   private
     def set_labels
       labels = ""
-      Signature.find(@question.signature_id).labels.remove(' ').split(',').each do |l|
+      signature_labels = Signature.find(@question.signature_id).labels
+      if signature_labels.nil?
+        return
+      end
+      signature_labels.remove(' ').split(',').each do |l|
         if not params[l].nil?
           labels += ", " if labels.length != 0
           labels += l
