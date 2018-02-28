@@ -1,41 +1,53 @@
-<%= form_for(question) do |f| %>
-  <% if question.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+<head>
 
-      <ul>
-      <% question.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+</head>
+
+<body>
+  <%= form_for(question) do |f| %>
+    <% if question.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(question.errors.count, "error") %> prohibited this question from being saved:</h2>
+
+        <ul>
+        <% question.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <br/>
+
+    <div class="form form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, class: "form form-control" %>
     </div>
+
+    <div class="form form-group">
+      <%= f.label :body %>
+      <%= f.text_area :body, class: "form form-control" %>
+    </div>
+
+    <div class="form form-group">
+      <% labels = Signature.find(question.signature_id).labels.remove(' ').split(',') %>
+
+      <div class="btn-group">
+        <a href="#" class="btn btn-primary"><i class="fa fa-cogs"></i>Labels</a>
+        <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+        <ul class="dropdown-menu" style="padding: 10px" id="myDiv">
+          <% labels.each do |label| %>
+              <li><p><input class="active" type="checkbox" value="<%=label%>" style="margin-right: 10px;" name="<%=label%>"><%=label%></p></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.hidden_field :signature_id %>
+    </div>
+
+    <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
+
   <% end %>
 
-  <br/>
-
-  <div class="form form-group">
-    <%= f.label :title %>
-    <%= f.text_field :title, class: "form form-control" %>
-  </div>
-
-  <div class="form form-group">
-    <%= f.label :body %>
-    <%= f.text_area :body, class: "form form-control" %>
-  </div>
-
-  <div class="form form-group">
-    <%= f.label :labels %>
-
-    <select class="form form-control" name="dsfsd">
-      <option class="checkbox-inline" value="as">dasdasd</option>
-      <option value="ds">asddsa</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <%= f.hidden_field :signature_id %>
-  </div>
-
-  <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
-
-<% end %>
+</body>

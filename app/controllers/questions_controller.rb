@@ -27,6 +27,8 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
 
+    set_labels
+
     respond_to do |format|
       if @question.save
         format.html { redirect_to new_option_path(question_id: @question.id), notice: 'Question was successfully created.' }
@@ -41,6 +43,8 @@ class QuestionsController < ApplicationController
   # PATCH/PUT /questions/1
   # PATCH/PUT /questions/1.json
   def update
+    set_labels
+
     respond_to do |format|
       if @question.update(question_params)
         format.html { redirect_to @question, notice: 'Question was successfully updated.' }
@@ -63,6 +67,16 @@ class QuestionsController < ApplicationController
   end
 
   private
+    def set_labels
+      labels = ""
+      Signature.find(@question.signature_id).labels.remove(' ').split(',').each do |l|
+        if not params[l].nil?
+          labels += ", " if labels.length != 0
+          labels += l
+        end
+      end
+      @question.labels = labels
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_question
       @question = Question.find(params[:id])
