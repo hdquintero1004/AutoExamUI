@@ -1,0 +1,32 @@
+<% @exam = Exam.find(params[:id])
+   @labels = @exam.labels
+   if @labels.nil?
+     @labels = []
+   else
+     @labels = @labels.remove(' ').split(',')
+   end
+%>
+
+<h1><%= @exam.title %></h1>
+<h2><%= @exam.header %></h2>
+<h3><%= Signature.find(@exam.signature_id).name %></h3>
+
+<head></head>
+<body>
+  <br/>
+  <h4>Labels:</h4>
+  <ul class="nav nav-tabs">
+    <% @labels.each do |label| %>
+      <li><a data-toggle="tab" aria-controls="<%= label %>" href="#<%= label %>"><%= label %></a></li>
+    <% end %>
+  </ul>
+
+  <div class="tab-content">
+    <% @labels.each do |label| %>
+      <div class="tab-pane" id="<%= label %>">
+
+      </div>
+    <% end %>
+  </div>
+
+</body>

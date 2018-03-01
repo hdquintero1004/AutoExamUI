@@ -1,13 +1,19 @@
 Rails.application.routes.draw do
-  resources :exams
+  resources :exams do
+    member do
+      get 'select_questions'
+    end
+  end
   resources :teachers
   resources :options
   resources :questions
+  resources :signatures
+  resources :roles
+
   devise_for :users
+
   get 'home/index'
 
-  resources :roles
-  resources :signatures
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root to: "home#index"
+  root to: 'home#index'
 end

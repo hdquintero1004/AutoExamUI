@@ -22,6 +22,11 @@ class ExamsController < ApplicationController
   def edit
   end
 
+  # GET /exams/1/select_questions
+  def select_question
+    @exam = Exam.find(params[:id])
+  end
+
   # POST /exams
   # POST /exams.json
   def create
@@ -44,8 +49,8 @@ class ExamsController < ApplicationController
     set_labels
     respond_to do |format|
       if @exam.update(exam_params)
-        format.html { redirect_to @exam, notice: 'Exam was successfully updated.' }
-        format.json { render :show, status: :ok, location: @exam }
+        format.html { redirect_to select_questions_exam_path(@exam), notice: 'Exam was successfully updated.' }
+        #format.json { render :exam_question, status: :ok, location: @exam }
       else
         format.html { render :edit }
         format.json { render json: @exam.errors, status: :unprocessable_entity }
