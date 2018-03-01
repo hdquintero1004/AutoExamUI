@@ -69,6 +69,11 @@ class SignaturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def signature_params
-      params.require(:signature).permit(:name, :labels)
+      signature_params = params.require(:signature).permit(:name, :labels)
+
+      if not signature_params[:labels].nil?
+        signature_params[:labels] = signature_params[:labels].remove(' ').split(',').sort.join(", ")
+      end
+      signature_params
     end
 end
