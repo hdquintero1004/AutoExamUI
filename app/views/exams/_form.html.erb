@@ -52,7 +52,7 @@
         <a style="width: 825px; background-color: transparent; border-color: silver" href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cogs"></i>...</a>
         <ul class="dropdown-menu" style="padding: 10px" id="myDiv">
           <% @labels.each do |label| %>
-              <li><p><input class="active" type="checkbox" value="<%=label%>" style="margin-right: 10px;" name="<%=label%>" <%= @previous_labels.include?(label) ? 'checked' : '' %>><%=label%></p></li>
+              <li><p><input class="active" type="checkbox" value="<%=label%>" style="margin-right: 10px;" name="<%=label%>" <%= @previous_labels.find_index(label).nil? ? '' : 'checked' %>><%=label%></p></li>
           <% end %>
         </ul>
       </div>
