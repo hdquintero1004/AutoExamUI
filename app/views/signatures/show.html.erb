@@ -9,6 +9,8 @@
 
 <%= link_to "+ New Exam", {:controller => "exams", :action => "new", :signature_id => @signature.id }, :class => "btn btn-primary" %>
 
+<% exams = Exam.where(:signature_id => @signature.id).paginate(:page => params[:exam_page], :per_page => 1) %>
+<br/><%= will_paginate exams, :param_name => 'exam_page' %>
 <table class="table table-striped">
   <thead>
   <tr>
@@ -22,7 +24,6 @@
   </thead>
 
   <tbody>
-  <% exams = Exam.where(:signature_id => @signature.id) %>
   <% exams.each do |exam| %>
       <tr>
         <td><%= exam.title %></td>
@@ -42,6 +43,8 @@
 
 <%= link_to "+ New Question", {:controller => "questions", :action => "new", :signature_id => @signature.id }, :class => "btn btn-primary" %>
 
+<% questions = Question.where(:signature_id => @signature.id).paginate(:page => params[:question_page], :per_page => 1) %>
+<br/><%= will_paginate questions, :param_name => 'question_page' %>
 <table class="table table-striped">
   <thead>
   <tr>
@@ -56,7 +59,6 @@
 
   <tbody>
   <% count = 0 %>
-  <% questions = Question.where(:signature_id => @signature.id) %>
   <% questions.each do |question| %>
       <tr>
         <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>

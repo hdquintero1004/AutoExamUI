@@ -34,8 +34,8 @@ class ExamsController < ApplicationController
     set_labels
     respond_to do |format|
       if @exam.save
-        format.html { redirect_to @exam, notice: 'Exam was successfully created.' }
-        format.json { render :show, status: :created, location: @exam }
+        format.html { redirect_to select_questions_exam_path(@exam), notice: 'Exam was successfully created.' }
+        format.json { render :select_question, status: :ok, location: @exam }
       else
         format.html { render :new }
         format.json { render json: @exam.errors, status: :unprocessable_entity }
@@ -50,7 +50,7 @@ class ExamsController < ApplicationController
     respond_to do |format|
       if @exam.update(exam_params)
         format.html { redirect_to select_questions_exam_path(@exam), notice: 'Exam was successfully updated.' }
-        #format.json { render :exam_question, status: :ok, location: @exam }
+        format.json { render :select_question, status: :ok, location: @exam }
       else
         format.html { render :edit }
         format.json { render json: @exam.errors, status: :unprocessable_entity }
