@@ -22,9 +22,76 @@
   </ul>
 
   <div class="tab-content">
+    <% tab_count = 0 %>
     <% @labels.each do |label| %>
       <div class="tab-pane" id="<%= label %>">
+        <br/>
+        <div class="form form-group">
+          <label>How many questions:</label>
+          <textarea class="form form-control" placeholder="Max number of questions."></textarea>
+        </div>
 
+        <% @questions = Question.where(:signature_id => @exam.signature_id) %>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Min Cost</th>
+            <th>Max Cost</th>
+            <th colspan="3"></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% count = 0 %>
+          <% @questions.each do |question| %>
+              <tr>
+                <td><a data-toggle="tab" aria-controls="q<%= tab_count %><%= count %>" href="#q<%= tab_count %><%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>
+                <td><%= question.title %></td>
+                <td><%= question.body %></td>
+                <td><input class="text-center"></td>
+                <td><input class="text-center"></td>
+              </tr>
+              <% count += 1 %>
+          <% end %>
+          </tbody>
+        </table>
+
+        <div class="tab-content">
+          <% count = 0 %>
+          <% @questions.each do |question| %>
+              <div class="tab-pane" id="q<%= tab_count %><%= count %>">
+                <p>Options for: "<%= question.body %>"</p>
+                <table class="table table-responsive">
+                  <thead>
+                  <tr>
+                    <th>Body</th>
+                    <th>True or false</th>
+                    <th>Checked</th>
+                    <th>Unchecked</th>
+                    <th colspan="3"></th>
+                  </tr>
+                  </thead>
+
+                  <tbody>
+                  <% @options = Option.where(:question_id => question.id) %>
+                  <% @options.each do |option| %>
+                      <tr>
+                        <td><%= option.body %></td>
+                        <td><%= option.true_or_false %></td>
+                        <td><input class="text-center"></td>
+                        <td><input class="text-center"></td>
+                      </tr>
+                  <% end %>
+                  </tbody>
+                </table>
+              </div>
+              <% count += 1 %>
+          <% end %>
+        </div>
+        <% tab_count += 1 %>
       </div>
     <% end %>
   </div>
