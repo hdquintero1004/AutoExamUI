@@ -31,8 +31,8 @@
           <textarea class="form form-control" placeholder="Max number of questions."></textarea>
         </div>
 
-        <% @questions = Question.where(:signature_id => @exam.signature_id).paginate(:page => params[:question_page], :per_page => 1) %>
-        <%= will_paginate @questions, :param_name => 'question_page' %>
+        <% @questions = Question.where(:signature_id => @exam.signature_id).paginate(:page => params['question_page'+tab_count.to_s], :per_page => 1) %>
+        <%= will_paginate @questions, :param_name => 'question_page'+tab_count.to_s %>
         <table class="table table-striped">
           <thead>
           <tr>
