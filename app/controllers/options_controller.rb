@@ -55,9 +55,10 @@ class OptionsController < ApplicationController
   # DELETE /options/1
   # DELETE /options/1.json
   def destroy
+    go_back = @option.question.signature_id
     @option.destroy
     respond_to do |format|
-      format.html { redirect_to options_url, notice: 'Option was successfully destroyed.' }
+      format.html { redirect_to signature_path(go_back), notice: 'Option was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

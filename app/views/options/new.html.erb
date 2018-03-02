@@ -32,7 +32,7 @@
     </div>
 
     <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
-    <%= link_to "Finish", home_index_path, class: "btn btn-primary" %>
+    <%= link_to "Finish", signature_path(@option.question.signature_id), class: "btn btn-primary" %>
 
 <% end %>
 

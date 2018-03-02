@@ -1,16 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @option.body %>
-</p>
+<h2>Option</h2><br/>
+<h4><strong>Question: </strong><%= @option.question.body %></h4>
 
-<p>
-  <strong>True or false:</strong>
-  <%= @option.true_or_false %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Body</strong>
+  </div>
+  <div class="panel-body"><%= @option.body %></div>
+</div>
 
-<p>
-  <strong>Question:</strong>
-  <%= @option.question.body %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>True or False</strong>
+  </div>
+  <div class="panel-body"><%= @option.true_or_false %></div>
+</div>
+
+<%= link_to 'Edit', edit_option_path(@option), class: "btn btn-primary" %>
+<%= link_to 'Back', signature_path(@option.question.signature_id), class: "btn btn-primary" %>

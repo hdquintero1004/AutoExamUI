@@ -1,19 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @exam.title %>
-</p>
+<h2>Exam</h2><br/>
+<h4><strong>Signature: </strong><%= @exam.signature.name %></h4>
 
-<p>
-  <strong>Description:</strong>
-  <%= @exam.description %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Title</strong>
+  </div>
+  <div class="panel-body"><%= @exam.title %></div>
+</div>
 
-<p>
-  <strong>Signature:</strong>
-  <%= @exam.signature %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Header</strong>
+  </div>
+  <div class="panel-body"><%= @exam.header %></div>
+</div>
 
-<%= link_to 'Edit', edit_exam_path(@exam) %> |
-<%= link_to 'Back', exams_path %>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Description</strong>
+  </div>
+  <div class="panel-body"><%= @exam.description %></div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Labels</strong>
+  </div>
+  <div class="panel-body"><%= @exam.labels %></div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Amount</strong>
+  </div>
+  <div class="panel-body"><%= @exam.amount %></div>
+</div>
+
+<%= link_to 'Edit', edit_exam_path(@exam), class: "btn btn-primary" %>
+<%= link_to 'Back', signature_path(@exam.signature_id), class: "btn btn-primary" %>

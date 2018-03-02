@@ -1,21 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @question.title %>
-</p>
+<h2>Question</h2><br/>
+<h4><strong>Signature: </strong><%= @question.signature.name %></h4>
 
-<p>
-  <strong>Body:</strong>
-  <%= @question.body %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Title</strong>
+  </div>
+  <div class="panel-body"><%= @question.title %></div>
+</div>
 
-<p>
-  <strong>Labels:</strong>
-  <%= @question.labels %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Body</strong>
+  </div>
+  <div class="panel-body"><%= @question.body %></div>
+</div>
 
-<p>
-  <strong>Signature:</strong>
-  <%= @question.signature.name %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Labels</strong>
+  </div>
+  <div class="panel-body"><%= @question.labels %></div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Signature</strong>
+  </div>
+  <div class="panel-body"><%= @question.signature.name %></div>
+</div>
+
+
+<%= link_to 'Edit', edit_question_path(@question), class: "btn btn-primary" %>
+<%= link_to 'Back', signature_path(@question.signature_id), class: "btn btn-primary" %>
