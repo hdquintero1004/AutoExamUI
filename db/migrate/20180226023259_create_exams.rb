@@ -6,6 +6,7 @@ class CreateExams < ActiveRecord::Migration[5.0]
       t.text :description
       t.string :labels
       t.integer :amount
+      t.text :students_list
       t.references :signature, foreign_key: true
 
       t.timestamps

@@ -23,16 +23,27 @@
 
   <div class="tab-content">
     <% tab_count = 0 %>
+    <% @all_questions = Question.where(:signature_id => @exam.signature_id ) %>
     <% @labels.each do |label| %>
       <div class="tab-pane" id="<%= label %>">
         <br/>
         <div class="form form-group">
           <label>How many questions:</label>
-          <textarea class="form form-control" placeholder="Max number of questions."></textarea>
+          <input class="form form-control" placeholder="Minimum.">
+          <br/>
+          <input class="form form-control" placeholder="Maximum.">
         </div>
 
-        <% @questions = Question.where(:signature_id => @exam.signature_id).paginate(:page => params['question_page'+tab_count.to_s], :per_page => 1) %>
-        <%= will_paginate @questions, :param_name => 'question_page'+tab_count.to_s %>
+        <% questions_filtered = []
+           @all_questions.each do |question|
+             if not question.labels.remove(' ').split(',').find_index(label).nil?
+                questions_filtered.append(question)
+             end
+           end
+           # @questions = Question.where(:id => questions_filtered).paginate(:page => params['question_page'+tab_count.to_s], :per_page => 1)
+           @questions = questions_filtered
+        %>
+        <% # will_paginate @questions, :param_name => 'question_page'+tab_count.to_s %>
         <table class="table table-striped">
           <thead>
           <tr>
@@ -52,8 +63,8 @@
                 <td><a data-toggle="tab" aria-controls="q<%= tab_count %><%= count %>" href="#q<%= tab_count %><%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>
                 <td><%= question.title %></td>
                 <td><%= question.body %></td>
-                <td><input class="text-center"></td>
-                <td><input class="text-center"></td>
+                <td><input id="minC<%=question.id%>" class="text-center"></td>
+                <td><input id="maxC<%=question.id%>" class="text-center"></td>
               </tr>
               <% count += 1 %>
           <% end %>
@@ -82,8 +93,8 @@
                       <tr>
                         <td><%= option.body %></td>
                         <td><%= option.true_or_false %></td>
-                        <td><input class="text-center"></td>
-                        <td><input class="text-center"></td>
+                        <td><input id="c<%= option.id%>" class="text-center"></td>
+                        <td><input id="uc<%= option.id%>" class="text-center"></td>
                       </tr>
                   <% end %>
                   </tbody>

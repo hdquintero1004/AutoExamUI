@@ -14,11 +14,16 @@
         </div>
     <% end %>
 
-    <div class="field">
-      <%= f.hidden_field :name %>
-    </div>
-
     <br/>
+
+    <div class="form form-group">
+      <% if User.find(current_user.id).role_id == 1 %>
+          <%= f.label :name %>
+          <%= f.text_area :name, class: "form form-control" %>
+      <% else %>
+          <%= f.hidden_field :name %>
+      <% end %>
+    </div>
 
     <div class="form form-group">
       <%= f.label :labels %>

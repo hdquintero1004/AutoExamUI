@@ -11,17 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form form-group">
     <%= f.label :user_id %>
-    <%= f.text_field :user_id %>
+    <%= f.text_field :user_id, class: "form form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form form-group">
     <%= f.label :signature_id %>
-    <%= f.text_field :signature_id %>
+    <%= f.text_field :signature_id, class: "form form-control" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
+
 <% end %>

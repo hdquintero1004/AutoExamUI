@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @teacher.user %>
-</p>
+<h2>Teacher</h2>
 
-<p>
-  <strong>Signature:</strong>
-  <%= @teacher.signature %>
-</p>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>User</strong>
+  </div>
+  <div class="panel-body"><%= @teacher.user.email %></div>
+</div>
 
-<%= link_to 'Edit', edit_teacher_path(@teacher) %> |
-<%= link_to 'Back', teachers_path %>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Signature</strong>
+  </div>
+  <div class="panel-body"><%= @teacher.signature.name %></div>
+</div>
+
+<%= link_to 'Edit', edit_teacher_path(@teacher), class: "btn btn-primary" %>
+<%= link_to 'Back', teachers_path, class: "btn btn-primary" %>

@@ -16,8 +16,9 @@ ActiveRecord::Schema.define(version: 20180226023259) do
     t.string   "title"
     t.string   "header"
     t.text     "description"
+    t.text     "students_list"
     t.string   "labels"
-    t.integer "amount"
+    t.integer  "amount"
     t.integer  "signature_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false

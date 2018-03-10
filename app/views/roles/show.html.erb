@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @role.name %>
-</p>
+<h2>Role</h2>
 
-<%= link_to 'Edit', edit_role_path(@role) %> |
-<%= link_to 'Back', roles_path %>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Name</strong>
+  </div>
+  <div class="panel-body"><%= @role.name %></div>
+</div>
+
+<%= link_to 'Edit', edit_role_path(@role), class: "btn btn-primary" %>
+<%= link_to 'Back', roles_path, class: "btn btn-primary" %>
