@@ -31,6 +31,7 @@ class ExamsController < ApplicationController
   def update_master
     @exam = Exam.find(params[:id])
     @exam.json_master = JSON.dump($json_master)
+    @exam.save
     redirect_to home_index_path
   end
 
@@ -107,18 +108,24 @@ class ExamsController < ApplicationController
 
       exams_labels = @exam.labels.remove(' ').split(',')
       exams_labels.each do |l|
-        json_master[l+"-min"] = nil if previous_json[l+"-min"].nil?; previous_json[l+"-min"]
-        json_master[l+"-max"] = nil if previous_json[l+"-max"].nil?; previous_json[l+"-max"]
+        json_master[l+"-min"] = nil
+        json_master[l+"-min"] = previous_json[l+"-min"] if not previous_json[l+"-min"].nil?
+        json_master[l+"-max"] = nil
+        json_master[l+"-max"] = previous_json[l+"-max"] if not previous_json[l+"-max"].nil?
       end
 
       Question.where(:signature_id => @exam.signature_id).each do |q|
         q.labels.remove(' ').split(',').each do |l|
           if not exams_labels.find_index(l).nil?
-            json_master[l+"-"+q.id.to_s+"-min"] = nil if previous_json[l+"-"+q.id.to_s+"-min"].nil?; previous_json[l+"-"+q.id.to_s+"-min"]
-            json_master[l+"-"+q.id.to_s+"-max"] = nil if previous_json[l+"-"+q.id.to_s+"-max"].nil?; previous_json[l+"-"+q.id.to_s+"-max"]
+            json_master[l+"-"+q.id.to_s+"-min"] = nil
+            json_master[l+"-"+q.id.to_s+"-min"] = previous_json[l+"-"+q.id.to_s+"-min"] if not previous_json[l+"-"+q.id.to_s+"-min"].nil?
+            json_master[l+"-"+q.id.to_s+"-max"] = nil
+            json_master[l+"-"+q.id.to_s+"-max"] = previous_json[l+"-"+q.id.to_s+"-max"] if not previous_json[l+"-"+q.id.to_s+"-max"].nil?
             Option.where(:question_id => q.id).each do |o|
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = nil if previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"].nil?; previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"]
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = nil if previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"].nil?; previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"]
+              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = nil
+              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] if not previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"].nil?
+              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = nil
+              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] if not previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"].nil?
             end
           end
         end

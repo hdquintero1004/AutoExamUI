@@ -30,9 +30,9 @@
         <br/>
         <div class="form form-group">
           <label>How many questions:</label>
-          <input type="number" class="form form-control" placeholder="Minimum.">
+          <input id="<%=label%>minC" type="number" class="form form-control" placeholder="Minimum." onchange="change_key_master('<%=label+"-min"%>', '<%= label+"minC" %>')" value="<%= $json_master[label+"-min"] if not $json_master[label+"-min"].nil?%>">
           <br/>
-          <input type="number" class="form form-control" placeholder="Maximum.">
+          <input id="<%=label%>maxC" type="number" class="form form-control" placeholder="Maximum." onchange="change_key_master('<%=label+"-max"%>', '<%= label+"maxC" %>')" value="<%= $json_master[label+"-max"] if not $json_master[label+"-max"].nil?%>">
         </div>
 
         <% questions_filtered = []
@@ -64,8 +64,8 @@
                 <td><a data-toggle="tab" aria-controls="q<%= tab_count %><%= count %>" href="#q<%= tab_count %><%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>
                 <td><%= question.title %></td>
                 <td><%= question.body %></td>
-                <td><input id="minC<%=question.id%>" onchange="change_key_master(1,2)" type="number" value=0></td>
-                <td><input id="maxC<%=question.id%>" type="number"></td>
+                <td><input id="minC<%=question.id%>" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-min"%>', '<%= "minC" + question.id.to_s %>')" type="number" value="<%= $json_master[label+"-"+question.id.to_s+"-min"] if not $json_master[label+"-"+question.id.to_s+"-min"].nil?%>"></td>
+                <td><input id="maxC<%=question.id%>" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-max"%>', '<%= "maxC" + question.id.to_s %>')" type="number" value="<%= $json_master[label+"-"+question.id.to_s+"-max"] if not $json_master[label+"-"+question.id.to_s+"-max"].nil?%>"></td>
               </tr>
               <% count += 1 %>
           <% end %>
@@ -94,8 +94,8 @@
                       <tr>
                         <td><%= option.body %></td>
                         <td><%= option.true_or_false %></td>
-                        <td><input id="c<%= option.id%>" type="number"></td>
-                        <td><input id="uc<%= option.id%>" type="number"></td>
+                        <td><input id="c<%= option.id%>" type="number" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-"+option.id.to_s+"-checked"%>', '<%= "c" + option.id.to_s %>')" value="<%= $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-checked"] if not $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-checked"].nil?%>"></td>
+                        <td><input id="uc<%= option.id%>" type="number" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-"+option.id.to_s+"-uncheck"%>', '<%= "uc" + option.id.to_s %>')" value="<%= $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-uncheck"] if not $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-uncheck"].nil?%>"></td>
                       </tr>
                   <% end %>
                   </tbody>
@@ -113,8 +113,9 @@
 </body>
 
 <script>
-    function change_key_master(id, value){
-        $.ajax({url: "<%= url_for(:action => 'update_json_master') %>"});
+    function change_key_master(key, id){
+        alert("asdsad");
+        $.ajax({url: "<%= url_for(:action => 'update_json_master') %>", data: {key: key, value: $(id).context.activeElement.valueAsNumber}});
         return false;
     }
 </script>
