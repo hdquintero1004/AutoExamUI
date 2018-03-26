@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     member do
       get 'select_questions'
       get 'update_master'
+      get 'update_json_master'
     end
   end
   resources :teachers
