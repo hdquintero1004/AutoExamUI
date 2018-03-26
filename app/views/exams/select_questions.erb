@@ -29,9 +29,9 @@
         <br/>
         <div class="form form-group">
           <label>How many questions:</label>
-          <input class="form form-control" placeholder="Minimum.">
+          <input type="number" class="form form-control" placeholder="Minimum.">
           <br/>
-          <input class="form form-control" placeholder="Maximum.">
+          <input type="number" class="form form-control" placeholder="Maximum.">
         </div>
 
         <% questions_filtered = []
@@ -63,8 +63,8 @@
                 <td><a data-toggle="tab" aria-controls="q<%= tab_count %><%= count %>" href="#q<%= tab_count %><%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>
                 <td><%= question.title %></td>
                 <td><%= question.body %></td>
-                <td><input id="minC<%=question.id%>" class="text-center"></td>
-                <td><input id="maxC<%=question.id%>" class="text-center"></td>
+                <td><input id="minC<%=question.id%>" onchange="$change_key_master" type="number"></td>
+                <td><input id="maxC<%=question.id%>" type="number"></td>
               </tr>
               <% count += 1 %>
           <% end %>
@@ -93,8 +93,8 @@
                       <tr>
                         <td><%= option.body %></td>
                         <td><%= option.true_or_false %></td>
-                        <td><input id="c<%= option.id%>" class="text-center"></td>
-                        <td><input id="uc<%= option.id%>" class="text-center"></td>
+                        <td><input id="c<%= option.id%>" type="number"></td>
+                        <td><input id="uc<%= option.id%>" type="number"></td>
                       </tr>
                   <% end %>
                   </tbody>
@@ -110,3 +110,7 @@
 
   <%= link_to 'Submit', {:controller => "exams", :action => "update_master"}, class: "btn btn-primary" %>
 </body>
+
+$function change_key_master(id, value){
+
+}

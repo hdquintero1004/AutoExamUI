@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180226023259) do
+ActiveRecord::Schema.define(version: 20180326141914) do
 
   create_table "exams", force: :cascade do |t|
     t.string   "title"
@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20180226023259) do
     t.string   "labels"
     t.integer  "amount"
     t.integer  "signature_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "json_master"
     t.index ["signature_id"], name: "index_exams_on_signature_id"
   end
 
