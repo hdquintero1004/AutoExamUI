@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :exams do
     member do
       get 'select_questions'
+      get 'update_master'
     end
   end
   resources :teachers

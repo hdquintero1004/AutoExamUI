@@ -27,6 +27,11 @@ class ExamsController < ApplicationController
     @exam = Exam.find(params[:id])
   end
 
+  # POST /exams/1/select_questions
+  def update_master
+    a
+  end
+
   # POST /exams
   # POST /exams.json
   def create
