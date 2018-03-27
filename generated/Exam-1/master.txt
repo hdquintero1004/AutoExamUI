@@ -1,0 +1,21 @@
+% ============================================================================
+% Examen Final 2017-2018 
+% ============================================================================
+% Lines starting with a % are ignored.
+% Blank lines are ignored as well.
+
+% the number of questions
+total: 10
+
+% the tags that will be used in the test
+% each tag comes with the minimun number of questions
+@bits: 1
+@easy: 2
+@hard: -1
+
+(1) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@bits
+How many bits are in one byte?
+_ 12
+_ 4
+_x 8

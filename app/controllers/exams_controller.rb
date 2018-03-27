@@ -32,7 +32,10 @@ class ExamsController < ApplicationController
     @exam = Exam.find(params[:id])
     @exam.json_master = JSON.dump($json_master)
     @exam.save
-    redirect_to home_index_path
+
+    set_master_txt
+
+    redirect_to signature_path @exam.signature_id
   end
 
   def update_json_master
@@ -85,6 +88,63 @@ class ExamsController < ApplicationController
   end
 
   private
+    def set_master_txt
+      directory = Rails.root.to_s + "/generated/Exam-" + @exam.id.to_s
+      Dir.mkdir(directory) unless File.exists?(directory)
+
+      exam_labels = @exam.labels.remove(' ').split(',')
+      json_master = JSON.load(@exam.json_master)
+
+      content = ["% ============================================================================"]
+      content << "% #{@exam.title} "
+      content << "% ============================================================================"
+      content << "% Lines starting with a % are ignored."
+      content << "% Blank lines are ignored as well."
+      content << ""
+      content << "% the number of questions"
+      content << "total: #{@exam.amount}"
+      content << ""
+      content << "% the tags that will be used in the test"
+      content << "% each tag comes with the minimun number of questions"
+
+      exam_labels.each do |label|
+        line = '@' + label + ': ' + json_master[label + "-min"].to_s
+        line += " % warning: this tag has zero question of that type" if json_master[label + "-min"].nil? or json_master[label + "-min"] == 0
+        content << line
+      end
+
+      content << ""
+
+      identifier = 0
+      Question.all.each do |q|
+        tags = []
+        q.labels.remove(' ').split(',').each do |l|
+          tags << l if not exam_labels.find_index(l).nil?
+        end
+
+        if not tags.empty?
+          identifier += 1
+          content << "(" + identifier.to_s + ") %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
+          content << tags.map {|e| "@" + e}.join(" ")
+          content << q.body
+          Option.where(:question_id => q.id).each do |o|
+            line = "_"
+            line += "x" if o.true_or_false == 1
+            line += " "
+            line += o.body
+            content << line
+          end
+          content << ""
+        end
+      end
+
+      content = content.join("\n")
+      directory += "/master.txt"
+      File.open(directory, "w") do |file|
+        file.write(content)
+      end
+    end
+
     def set_labels
       labels = ""
       signature_labels = Signature.find(@exam.signature_id).labels

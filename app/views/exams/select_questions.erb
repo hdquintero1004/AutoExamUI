@@ -114,7 +114,6 @@
 
 <script>
     function change_key_master(key, id){
-        alert("asdsad");
         $.ajax({url: "<%= url_for(:action => 'update_json_master') %>", data: {key: key, value: $(id).context.activeElement.valueAsNumber}});
         return false;
     }

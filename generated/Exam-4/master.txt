@@ -1,0 +1,13 @@
+% ============================================================================
+% Examen Extraordinario 
+% ============================================================================
+% Lines starting with a % are ignored.
+% Blank lines are ignored as well.
+
+% the number of questions
+total: 5
+
+% the tags that will be used in the test
+% each tag comes with the minimun number of questions
+@easy: 1
+@medium: 2
