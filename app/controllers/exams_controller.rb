@@ -35,7 +35,7 @@ class ExamsController < ApplicationController
 
     set_master_txt
 
-    redirect_to signature_path @exam.signature_id
+    redirect_to exam_path @exam.id
   end
 
   def update_json_master
@@ -168,23 +168,23 @@ class ExamsController < ApplicationController
 
       exams_labels = @exam.labels.remove(' ').split(',')
       exams_labels.each do |l|
-        json_master[l+"-min"] = nil
+        json_master[l+"-min"] = 0
         json_master[l+"-min"] = previous_json[l+"-min"] if not previous_json[l+"-min"].nil?
-        json_master[l+"-max"] = nil
+        json_master[l+"-max"] = 0
         json_master[l+"-max"] = previous_json[l+"-max"] if not previous_json[l+"-max"].nil?
       end
 
       Question.where(:signature_id => @exam.signature_id).each do |q|
         q.labels.remove(' ').split(',').each do |l|
           if not exams_labels.find_index(l).nil?
-            json_master[l+"-"+q.id.to_s+"-min"] = nil
+            json_master[l+"-"+q.id.to_s+"-min"] = 0
             json_master[l+"-"+q.id.to_s+"-min"] = previous_json[l+"-"+q.id.to_s+"-min"] if not previous_json[l+"-"+q.id.to_s+"-min"].nil?
-            json_master[l+"-"+q.id.to_s+"-max"] = nil
+            json_master[l+"-"+q.id.to_s+"-max"] = 0
             json_master[l+"-"+q.id.to_s+"-max"] = previous_json[l+"-"+q.id.to_s+"-max"] if not previous_json[l+"-"+q.id.to_s+"-max"].nil?
             Option.where(:question_id => q.id).each do |o|
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = nil
+              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = -1 * (o.true_or_false - 1)
               json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] if not previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"].nil?
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = nil
+              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = o.true_or_false
               json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] if not previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"].nil?
             end
           end
