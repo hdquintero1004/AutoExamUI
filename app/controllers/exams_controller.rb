@@ -43,6 +43,14 @@ class ExamsController < ApplicationController
     render :nothing => true
   end
 
+  def generate_latex
+    @exam = Exam.find(params[:id])
+    directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
+    Dir.chdir(directory)
+    system('autoexam gen -c ' + @exam.amount.to_s)
+    redirect_to signature_path @exam.signature_id
+  end
+
   # POST /exams
   # POST /exams.json
   def create
@@ -89,8 +97,9 @@ class ExamsController < ApplicationController
 
   private
     def set_master_txt
-      directory = Rails.root.to_s + "/generated/Exam-" + @exam.id.to_s
-      Dir.mkdir(directory) unless File.exists?(directory)
+      directory = Rails.root.to_s + '/generated'
+      directory += '/Exam-' + @exam.id.to_s
+      system('autoexam new -f ' + directory + ' Exam-' + @exam.id.to_s) unless File.exist?(directory)
 
       exam_labels = @exam.labels.remove(' ').split(',')
       json_master = JSON.load(@exam.json_master)
@@ -107,19 +116,22 @@ class ExamsController < ApplicationController
       content << "% the tags that will be used in the test"
       content << "% each tag comes with the minimun number of questions"
 
+      correct_labels = []
       exam_labels.each do |label|
-        line = '@' + label + ': ' + json_master[label + "-min"].to_s
-        line += " % warning: this tag has zero question of that type" if json_master[label + "-min"].nil? or json_master[label + "-min"] == 0
-        content << line
+        if json_master[label + "-min"].to_i > 0
+          content << '@' + label + ': ' + json_master[label + "-min"].to_s
+          correct_labels << label
+        end
       end
 
       content << ""
+      content << "----------------------------------------- "
 
       identifier = 0
       Question.all.each do |q|
         tags = []
         q.labels.remove(' ').split(',').each do |l|
-          tags << l if not exam_labels.find_index(l).nil?
+          tags << l if not correct_labels.find_index(l).nil?
         end
 
         if not tags.empty?

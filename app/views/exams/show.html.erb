@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Exam</h2><br/>
+<h2>Exam</h2>
 <h4><strong>Signature: </strong><%= @exam.signature.name %></h4>
+<br/>
 
 <div class="panel panel-info">
   <div class="panel-heading">
@@ -38,5 +39,14 @@
   <div class="panel-body"><%= @exam.amount %></div>
 </div>
 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Student List</strong>
+  </div>
+  <div class="panel-body"><%= @exam.students_list %></div>
+</div>
+
 <%= link_to 'Edit', edit_exam_path(@exam), class: "btn btn-primary" %>
 <%= link_to 'Back', signature_path(@exam.signature_id), class: "btn btn-primary" %>
+<%= link_to 'Statics', "#", class: "btn btn-success" %>
+<%= link_to 'Generate PDF', {:controller => "exams", :action => "generate_latex"}, class: "btn btn-danger" %>

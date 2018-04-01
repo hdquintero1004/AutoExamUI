@@ -1,0 +1,9 @@
+<% content_for :menu do %>
+  <%= link_to 'Detalles de Asignatura', @listado.asignatura, :class => 'btn btn-primary' %>
+<% end %>
+
+<h1>Editar listado</h1>
+<h4>Los nombres de los estudiantes deben estar separados por coma.</h4>
+
+<%= render 'form' %>
+

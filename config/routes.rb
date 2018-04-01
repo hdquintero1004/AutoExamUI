@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :exams do
     member do
+      get 'generate_latex'
       get 'select_questions'
       get 'update_master'
       get 'update_json_master'
