@@ -14,6 +14,7 @@
 
 <head></head>
 <body>
+  <br/>
   <h4>Number of questions:</h4>
   <input id="<%=@exam.id.to_s%>-numQuest" type="number" class="form form-control" placeholder="Number of Questions." onchange="change_key_master('<%=@exam.id.to_s%>-numQuest')" value="<%= $json_master[@exam.id.to_s + '-numQuest'] if not $json_master[@exam.id.to_s + '-numQuest'].nil?%>">
   <br/>

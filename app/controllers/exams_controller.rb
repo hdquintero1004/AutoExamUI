@@ -12,6 +12,7 @@ class ExamsController < ApplicationController
   def show
     @previous_version = []
     Dir.foreach(Rails.root().to_s + '/generated/Exam-' + @exam.id.to_s + '/generated'){|x| @previous_version << x if x[0] == 'v'}
+    @previous_version = @previous_version.sort()
   end
 
   # GET /exams/new
@@ -54,7 +55,7 @@ class ExamsController < ApplicationController
     master_file = File.join(directory, '/generated/last/pdf/Master.pdf')
     send_file(master_file, :filename => "document.pdf", :type => "application/pdf", :disposition => 'inline')
 
-    #redirect_to signature_path @exam.signature_id
+    redirect_to signature_path @exam.signature_id
   end
 
   # POST /exams
@@ -102,7 +103,10 @@ class ExamsController < ApplicationController
   end
 
   def exam_version
-    a
+    @exam = Exam.find(params[:id])
+    @file_list = []
+    Dir.foreach(Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s + '/generated/v' + params['version'] + '/pdf'){|f| @file_list << f if f[0] != '.'}
+    @file_list = @file_list.sort()
   end
 
   private
