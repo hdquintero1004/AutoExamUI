@@ -46,7 +46,17 @@
   <div class="panel-body"><%= @exam.students_list %></div>
 </div>
 
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <strong>Previous Versions</strong>
+  </div>
+  <div class="panel-body">
+    <% @previous_version.each do |v| %>
+      <li><a><%= v %></a></li>
+    <% end %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_exam_path(@exam), class: "btn btn-primary" %>
 <%= link_to 'Back', signature_path(@exam.signature_id), class: "btn btn-primary" %>
-<%= link_to 'Statics', "#", class: "btn btn-success" %>
-<%= link_to 'Generate PDF', {:controller => "exams", :action => "generate_latex"}, class: "btn btn-danger" %>
+<%= link_to 'Generate New Version', {:controller => "exams", :action => "generate_latex"}, class: "btn btn-danger" %>

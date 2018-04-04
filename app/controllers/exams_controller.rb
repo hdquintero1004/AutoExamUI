@@ -10,6 +10,8 @@ class ExamsController < ApplicationController
   # GET /exams/1
   # GET /exams/1.json
   def show
+    @previous_version = []
+    Dir.foreach(Rails.root().to_s + '/generated/Exam-' + @exam.id.to_s + '/generated'){|x| @previous_version << x if x[0] == 'v'}
   end
 
   # GET /exams/new
@@ -48,7 +50,11 @@ class ExamsController < ApplicationController
     directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
     Dir.chdir(directory)
     system('autoexam gen -c ' + @exam.amount.to_s)
-    redirect_to signature_path @exam.signature_id
+
+    master_file = File.join(directory, '/generated/last/pdf/Master.pdf')
+    send_file(master_file, :filename => "document.pdf", :type => "application/pdf", :disposition => 'inline')
+
+    #redirect_to signature_path @exam.signature_id
   end
 
   # POST /exams
