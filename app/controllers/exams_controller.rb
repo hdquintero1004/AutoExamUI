@@ -101,6 +101,10 @@ class ExamsController < ApplicationController
     end
   end
 
+  def exam_version
+    a
+  end
+
   private
     def set_master_txt
       directory = Rails.root.to_s + '/generated'
@@ -117,7 +121,7 @@ class ExamsController < ApplicationController
       content << "% Blank lines are ignored as well."
       content << ""
       content << "% the number of questions"
-      content << "total: #{@exam.amount}"
+      content << "total: #{json_master[@exam.id.to_s + '-numQuest'].to_s}"
       content << ""
       content << "% the tags that will be used in the test"
       content << "% each tag comes with the minimun number of questions"
@@ -183,6 +187,9 @@ class ExamsController < ApplicationController
       previous_json = {} if previous_json.nil?
 
       json_master = {}
+
+      json_master[@exam.id.to_s + '-numQuest'] = 0
+      json_master[@exam.id.to_s + '-numQuest'] = previous_json[@exam.id.to_s + '-numQuest'] if not previous_json[@exam.id.to_s + '-numQuest'].nil?
 
       exams_labels = @exam.labels.remove(' ').split(',')
       exams_labels.each do |l|

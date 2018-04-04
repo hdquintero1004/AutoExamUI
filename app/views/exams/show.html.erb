@@ -52,7 +52,7 @@
   </div>
   <div class="panel-body">
     <% @previous_version.each do |v| %>
-      <li><a><%= v %></a></li>
+      <li><%= link_to v, {:controller => "exams", :action => "exam_version", :version => v[1,]} %></li>
     <% end %>
   </div>
 </div>
