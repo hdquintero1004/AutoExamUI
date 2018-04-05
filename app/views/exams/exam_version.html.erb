@@ -8,6 +8,7 @@
 <ul class="nav nav-tabs">
   <li><a data-toggle="tab" aria-controls="Tests" href="#Tests">Tests</a></li>
   <li><a data-toggle="tab" aria-controls="Answers" href="#Answers">Answers</a></li>
+  <li><a data-toggle="tab" aria-controls="Statics" href="#Statics">Statics</a></li>
 </ul>
 
 <div class="tab-content">
@@ -15,7 +16,7 @@
     <br/>
     <% @file_list.each do |f| %>
       <% if f[0] == 'T' %>
-        <li><%= f %></li>
+            <li><a><%= f %></a></li>
       <% end %>
     <% end %>
     <br/>
@@ -26,11 +27,15 @@
     <br/>
     <% @file_list.each do |f| %>
         <% if f[0] == 'A' %>
-            <li><%= f %></li>
+            <li><a><%= f %></a></li>
         <% end %>
     <% end %>
     <br/>
     <h4><a href="#"><span class="glyphicon glyphicon-download"></span>Download All</a></h4>
+  </div>
+
+  <div class="tab-pane" id="Statics">
+
   </div>
 </div>
 
