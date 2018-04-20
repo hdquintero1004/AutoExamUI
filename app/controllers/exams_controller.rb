@@ -42,8 +42,23 @@ class ExamsController < ApplicationController
   end
 
   def update_json_master
-    $json_master[params[:key]] = params[:value]
-    render :nothing => true
+    valid_value = $json_master_validations[params[:key]]
+
+    in_range = false
+    if params[:key] == '-numQuest'
+      in_range = params[:value] <= valid_value[1] && params[:value] >= valid_value[0]
+    elsif params[:key] == '-min'
+      in_range = params[:value] >= valid_value
+    else
+      in_range = params[:value] <= valid_value
+    end
+
+    if in_range
+      $json_master[params[:key]] = params[:value]
+      render :nothing => true
+    else
+      render :nothing => true
+    end
   end
 
   def generate_latex
@@ -187,30 +202,49 @@ class ExamsController < ApplicationController
     end
 
     def set_json_master
+      # create json_master dic to store values for all questions and options in the exam...
+
+      # previous values of json_master
       previous_json = JSON.load(@exam.json_master)
       previous_json = {} if previous_json.nil?
 
       json_master = {}
+      json_master_validations = {}
 
+      # entry 'exam_id-numQuest' = number of question in each exam
       json_master[@exam.id.to_s + '-numQuest'] = 0
       json_master[@exam.id.to_s + '-numQuest'] = previous_json[@exam.id.to_s + '-numQuest'] if not previous_json[@exam.id.to_s + '-numQuest'].nil?
 
-      exams_labels = @exam.labels.remove(' ').split(',')
-      exams_labels.each do |l|
+      # entry 'exam_id-numQuest' = valid range for number of question in each exam
+      json_master_validations[@exam.id.to_s + '-numQuest'] = [0,0]
+
+      exams_labels = {}
+      @exam.labels.remove(' ').split(',').each do |l|
+        exams_labels[l] = 0
+
+        # entries 'label-min' and 'label-max' = minimum and maximum number of question foreach label
         json_master[l+"-min"] = 0
         json_master[l+"-min"] = previous_json[l+"-min"] if not previous_json[l+"-min"].nil?
         json_master[l+"-max"] = 0
         json_master[l+"-max"] = previous_json[l+"-max"] if not previous_json[l+"-max"].nil?
+
+        # entries 'label-min' and 'label-max' = minimum and maximum value for number of question foreach label
+        json_master_validations[l+"-min"] = 0
+        json_master_validations[l+"-max"] = 0
       end
 
       Question.where(:signature_id => @exam.signature_id).each do |q|
         q.labels.remove(' ').split(',').each do |l|
           if not exams_labels.find_index(l).nil?
+            exams_labels[l] += 1
+
+            # entries 'label-question_id-min' and 'label-question_id-max' = minimum and maximum cost foreach question
             json_master[l+"-"+q.id.to_s+"-min"] = 0
             json_master[l+"-"+q.id.to_s+"-min"] = previous_json[l+"-"+q.id.to_s+"-min"] if not previous_json[l+"-"+q.id.to_s+"-min"].nil?
             json_master[l+"-"+q.id.to_s+"-max"] = 0
             json_master[l+"-"+q.id.to_s+"-max"] = previous_json[l+"-"+q.id.to_s+"-max"] if not previous_json[l+"-"+q.id.to_s+"-max"].nil?
             Option.where(:question_id => q.id).each do |o|
+              # entries 'label-question_id-option_id-uncheck' and 'label-question_id-option_id-checked' = cost for uncheck and check each option
               json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = -1 * (o.true_or_false - 1)
               json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] if not previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"].nil?
               json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = o.true_or_false
@@ -219,7 +253,17 @@ class ExamsController < ApplicationController
           end
         end
       end
+
+      count = 0
+      exams_labels.keys.each do |l|
+        json_master_validations[l+"-max"] = exams_labels[l]
+        count += exams_labels[l]
+      end
+
+      json_master_validations[@exam.id.to_s + '-numQuest'][1] = count
+
       @exam.json_master = JSON.dump(json_master)
+      @exam.json_master_validations = JSON.dump(json_master_validations)
     end
 
     # Use callbacks to share common setup or constraints between actions.

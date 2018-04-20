@@ -1,5 +1,4 @@
 Pagination *
-Search labels optimice *
 
 create exam
 
@@ -16,14 +15,14 @@ json para clave ==> id_tag-min:#
 					id_tag-id_question-id_option-check:#
 
 grader.txt
-
-organizar exam vies for version
-
-how many questions for exams
-
-input numbers directly from keyboard
 validates numbers in select_question view
 
-show view exams
+download all answers/test
+
+show answer/test in exam_version view
+
+open camera to review
+
+*** input numbers directly from keyboard
 
 STATICS***
