@@ -63,14 +63,16 @@ class ExamsController < ApplicationController
   end
 
   def generate_version
+    # Generate a new version of the exam ...
     @exam = Exam.find(params[:id])
     directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
     Dir.chdir(directory)
     system('autoexam gen -c ' + @exam.amount.to_s)
 
-    set_grader_txt
+    directory = File.join(directory, '/generated/last/pdf/Master.pdf')
+    # Set grader.txt file ...
 
-    redirect_to exams_show_pdf_file_path :path => File.join(directory, '/generated/last/pdf/Master.pdf')
+    redirect_to exams_show_pdf_file_path :path => directory
   end
 
   # POST /exams
@@ -118,6 +120,7 @@ class ExamsController < ApplicationController
   end
 
   def exam_version
+    # Display a version view of the exam ...
     @exam = Exam.find(params[:id])
     @files_path = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s + '/generated/' + params['version'] + '/pdf'
     @file_list = []
@@ -127,6 +130,7 @@ class ExamsController < ApplicationController
 
   def show_pdf_file
   # This method is use to show in browser exams pdf files.
+
     # if to_do.nil? = true is because only need to show the pdf file.
     if params[:to_do].nil?
       send_file(params[:path], :disposition => 'inline')
@@ -157,6 +161,12 @@ class ExamsController < ApplicationController
 
   private
     def set_master_txt
+      # Set the master.txt file foreach exam.
+
+      # Store and update information for grader.txt file
+      grader_txt = { }
+
+      # Generate if not exits the directory of AutoExam project foreach exam ...
       directory = Rails.root.to_s + '/generated'
       directory += '/Exam-' + @exam.id.to_s
       system('autoexam new -f ' + directory + ' Exam-' + @exam.id.to_s) unless File.exist?(directory)
@@ -164,6 +174,7 @@ class ExamsController < ApplicationController
       exam_labels = @exam.labels.remove(' ').split(',')
       json_master = JSON.load(@exam.json_master)
 
+      # In content store the lines includes in master.txt file ...
       content = ["% ============================================================================"]
       content << "% #{@exam.title} "
       content << "% ============================================================================"
@@ -176,6 +187,7 @@ class ExamsController < ApplicationController
       content << "% the tags that will be used in the test"
       content << "% each tag comes with the minimun number of questions"
 
+      # Only store in master.txt file the labels that have more than 0 questions ...
       correct_labels = []
       exam_labels.each do |label|
         if json_master[label + "-min"].to_i > 0
@@ -184,9 +196,11 @@ class ExamsController < ApplicationController
         end
       end
 
+      # Finish head of master.txt file with 42 '-' characters
       content << ""
-      content << "----------------------------------------- "
+      content << "------------------------------------------"
 
+      # Include in master.txt file all questions ...
       identifier = 0
       Question.all.each do |q|
         tags = []
@@ -196,29 +210,41 @@ class ExamsController < ApplicationController
 
         if not tags.empty?
           identifier += 1
+
           content << "(" + identifier.to_s + ") %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
           content << tags.map {|e| "@" + e}.join(" ")
           content << q.body
+
+          # Entry in grader.txt file foreach question in master.txt file ...
+          grader_txt[identifier] = []
+
           Option.where(:question_id => q.id).each do |o|
             line = "_"
             line += "x" if o.true_or_false == 1
             line += " "
             line += o.body
             content << line
+
+            # Adding values for check and uncheck the options of each question ...
+            grader_txt[identifier] << [json_master[label+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"], json_master[label+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"]]
           end
           content << ""
         end
       end
+
+      # ...
+      @exam.json_grader = JSON.dump(grader_txt)
 
       content = content.join("\n")
       directory += "/master.txt"
       File.open(directory, "w") do |file|
         file.write(content)
       end
+
     end
 
     def set_grader_txt
-
+      directory = ''
     end
 
     def set_labels
