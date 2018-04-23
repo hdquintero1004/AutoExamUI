@@ -20,7 +20,7 @@
       <% end %>
     <% end %>
     <br/>
-    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Tests" } %></div>
+    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Test" } %></div>
   </div>
 
   <div class="tab-pane" id="Answers">
@@ -31,7 +31,7 @@
   <% end %>
     <% end %>
     <br/>
-    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answers" } %></div>
+    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answer" } %></div>
     <br>
     <%= link_to "Evaluate Answer", "", :class => "btn btn-primary" %>
   </div>

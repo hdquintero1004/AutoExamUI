@@ -126,16 +126,32 @@ class ExamsController < ApplicationController
   end
 
   def show_pdf_file
+  # This method is use to show in browser exams pdf files.
+    # if to_do.nil? = true is because only need to show the pdf file.
     if params[:to_do].nil?
       send_file(params[:path], :disposition => 'inline')
-    else
+    elsif params[:to_do] == 'Test' or params[:to_do] == 'Answer'
+      # else we need to pack all pdf requested and send. Request allows are 'Test', 'Answer'.
       Dir.chdir(params[:path])
-      if params[:to_do] == 'Tests'
-        system()
-      elsif params[:to_do] == 'Answers'
-        system()
+
+      # Create a temporal folder ...
+      file_name = params[:path].split('/')[-4] + '_' + params[:path].split('/')[-2] + '_' + params[:to_do]
+      system('mkdir ' + file_name)
+
+      # Copying the requested files to the new folder ...
+      file_list = []
+      Dir.foreach('.'){|f| file_list << f if f[0..params[:to_do].length-1] == params[:to_do]}
+
+      file_list.each() do |f|
+        system('cp ' + f + ' ./' + file_name)
       end
-      send_file(params_path + rar_path, :disposition => 'attachment')
+
+      # Packing the new folder in a .tar file and sending ...
+      system('tar -cf ' + file_name + '.tar ' + file_name)
+      send_file(params[:path] + '/' + file_name + '.tar', :disposition => 'attachment')
+
+      # Removing temporal files and directories ...
+      system('rm -r ' + file_name)
     end
   end
 

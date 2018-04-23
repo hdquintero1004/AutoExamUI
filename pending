@@ -17,7 +17,7 @@ json para clave ==> id_tag-min:#
 grader.txt
 validates numbers in select_question view
 
-download all answers/test
+download all answers/test (delete .tar after send) i dont like path in params
 
 open camera to review	
 

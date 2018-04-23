@@ -4,7 +4,8 @@
     <list default="true" id="e8226f3a-d091-468d-9510-d9f84c2d3e47" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/exams_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-4/master.txt" afterPath="$PROJECT_DIR$/generated/Exam-4/master.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" afterPath="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pending" afterPath="$PROJECT_DIR$/pending" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -19,7 +20,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutoExam@Development__AutoExam.coverage" NAME="Development: AutoExam Coverage Results" MODIFIED="1524244481406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="AutoExam" />
+    <SUITE FILE_PATH="coverage/AutoExam@Development__AutoExam.coverage" NAME="Development: AutoExam Coverage Results" MODIFIED="1524450829700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="AutoExam" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,11 +31,9 @@
       <file leaf-file-name="select_questions.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-199">
+            <state relative-caret-position="18">
               <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#!!top" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,8 +41,8 @@
       <file leaf-file-name="exams_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="57" column="38" lean-forward="true" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+            <state relative-caret-position="208">
+              <caret line="128" column="58" lean-forward="false" selection-start-line="128" selection-start-column="58" selection-end-line="128" selection-end-column="58" />
               <folding>
                 <element signature="e#151#188#0" expanded="false" />
                 <element signature="e#231#451#0" expanded="false" />
@@ -51,17 +50,16 @@
                 <element signature="e#581#595#0" expanded="false" />
                 <element signature="e#633#693#0" expanded="false" />
                 <element signature="e#732#909#0" expanded="false" />
+                <element signature="e#913#1545#0" expanded="false" />
                 <element signature="e#1549#1881#0" expanded="false" />
                 <element signature="e#1922#2390#0" expanded="false" />
                 <element signature="e#2445#2895#0" expanded="false" />
                 <element signature="e#2944#3188#0" expanded="false" />
-                <element signature="e#3489#3833#0" expanded="false" />
-                <element signature="e#3849#6011#0" expanded="false" />
-                <element signature="e#6017#6044#0" expanded="false" />
-                <element signature="e#6050#6420#0" expanded="false" />
-                <element signature="e#6426#9712#0" expanded="false" />
-                <element signature="e#9792#9849#0" expanded="false" />
-                <element signature="e#9944#10082#0" expanded="false" />
+                <element signature="e#6846#6873#0" expanded="false" />
+                <element signature="e#6879#7249#0" expanded="false" />
+                <element signature="e#7255#10541#0" expanded="false" />
+                <element signature="e#10621#10678#0" expanded="false" />
+                <element signature="e#10773#10911#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,7 +79,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="269">
-              <caret line="33" column="173" lean-forward="false" selection-start-line="33" selection-start-column="173" selection-end-line="33" selection-end-column="173" />
+              <caret line="33" column="172" lean-forward="false" selection-start-line="33" selection-start-column="172" selection-end-line="33" selection-end-column="172" />
               <folding />
             </state>
           </provider>
@@ -109,6 +107,7 @@
       <find>exam_ver</find>
       <find>generate_latex</find>
       <find>show_pdf_file</find>
+      <find>syste</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,9 +163,9 @@
         <option value="$PROJECT_DIR$/tmp/pids/server.pid" />
         <option value="$PROJECT_DIR$/tmp/restart.txt" />
         <option value="$PROJECT_DIR$/app/views/exams/select_questions.erb" />
-        <option value="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/exams/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
       </list>
     </option>
@@ -287,9 +286,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="RailsProjectView" />
       <pane id="Scratches" />
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -543,12 +542,13 @@
       <workItem from="1523410063547" duration="966000" />
       <workItem from="1523496367068" duration="30000" />
       <workItem from="1523551679471" duration="17000" />
-      <workItem from="1524237805340" duration="15191000" />
+      <workItem from="1524237805340" duration="15418000" />
+      <workItem from="1524450781376" duration="2177000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177821000" />
+    <option name="totallyTimeSpent" value="180225000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -561,7 +561,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31380337" sideWeight="0.49614644" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36047667" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35976213" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39424032" sideWeight="0.49811321" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -602,31 +602,18 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/exams_controller.rb</url>
-          <line>49</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="55" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="RailsRunConfigurationType">
         <watch expression="@exam" language="ruby" />
         <watch expression="params[:key]" language="ruby" />
-        <watch expression="params[:value].to_i()" language="ruby" />
+        <watch expression="params[:to_do]" language="ruby" />
+        <watch expression="params[:to_do].length-1" language="ruby" />
       </configuration>
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/roles/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/roles/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -918,15 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="162" column="10" lean-forward="true" selection-start-line="162" selection-start-column="10" selection-end-line="162" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="33" column="173" lean-forward="false" selection-start-line="33" selection-start-column="173" selection-end-line="33" selection-end-column="173" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,17 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="454">
           <caret line="61" column="89" lean-forward="false" selection-start-line="61" selection-start-column="89" selection-end-line="61" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-199">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -972,10 +939,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/dir.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="33" column="172" lean-forward="false" selection-start-line="33" selection-start-column="172" selection-end-line="33" selection-end-column="172" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="57" column="38" lean-forward="true" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
+        <state relative-caret-position="208">
+          <caret line="128" column="58" lean-forward="false" selection-start-line="128" selection-start-column="58" selection-end-line="128" selection-end-column="58" />
           <folding>
             <element signature="e#151#188#0" expanded="false" />
             <element signature="e#231#451#0" expanded="false" />
@@ -983,17 +974,16 @@
             <element signature="e#581#595#0" expanded="false" />
             <element signature="e#633#693#0" expanded="false" />
             <element signature="e#732#909#0" expanded="false" />
+            <element signature="e#913#1545#0" expanded="false" />
             <element signature="e#1549#1881#0" expanded="false" />
             <element signature="e#1922#2390#0" expanded="false" />
             <element signature="e#2445#2895#0" expanded="false" />
             <element signature="e#2944#3188#0" expanded="false" />
-            <element signature="e#3489#3833#0" expanded="false" />
-            <element signature="e#3849#6011#0" expanded="false" />
-            <element signature="e#6017#6044#0" expanded="false" />
-            <element signature="e#6050#6420#0" expanded="false" />
-            <element signature="e#6426#9712#0" expanded="false" />
-            <element signature="e#9792#9849#0" expanded="false" />
-            <element signature="e#9944#10082#0" expanded="false" />
+            <element signature="e#6846#6873#0" expanded="false" />
+            <element signature="e#6879#7249#0" expanded="false" />
+            <element signature="e#7255#10541#0" expanded="false" />
+            <element signature="e#10621#10678#0" expanded="false" />
+            <element signature="e#10773#10911#0" expanded="false" />
           </folding>
         </state>
       </provider>
