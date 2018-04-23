@@ -1,5 +1,7 @@
 <% @exam = Exam.find(params[:id])
    $json_master = JSON.load(@exam.json_master)
+   $json_master_validation = JSON.load(@exam.json_master_validation)
+
    labels = @exam.labels
    if labels.nil?
      labels = []

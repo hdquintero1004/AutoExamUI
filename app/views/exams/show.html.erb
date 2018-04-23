@@ -52,11 +52,11 @@
   </div>
   <div class="panel-body">
     <% @previous_version.each do |v| %>
-      <li><%= link_to v, {:controller => "exams", :action => "exam_version", :version => v[1,]} %></li>
+      <li><%= link_to v, {:controller => "exams", :action => "exam_version", :version => v} %></li>
     <% end %>
   </div>
 </div>
 
 <%= link_to 'Edit', edit_exam_path(@exam), class: "btn btn-primary" %>
 <%= link_to 'Back', signature_path(@exam.signature_id), class: "btn btn-primary" %>
-<%= link_to 'Generate New Version', {:controller => "exams", :action => "generate_latex"}, class: "btn btn-danger" %>
+<%= link_to 'Generate New Version', {:controller => "exams", :action => "generate_version"}, class: "btn btn-danger" %>

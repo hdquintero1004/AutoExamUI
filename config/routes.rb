@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   resources :exams do
     member do
       get 'exam_version'
-      get 'generate_latex'
+      get 'generate_version'
       get 'select_questions'
+      get 'show_pdf_file'
       get 'update_master'
       get 'update_json_master'
     end

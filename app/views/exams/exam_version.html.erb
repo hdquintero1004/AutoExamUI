@@ -16,22 +16,24 @@
     <br/>
     <% @file_list.each do |f| %>
       <% if f[0] == 'T' %>
-            <li><a><%= f %></a></li>
+            <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
       <% end %>
     <% end %>
     <br/>
-    <h4><a href="#"><span class="glyphicon glyphicon-download"></span>Download All</a></h4>
+    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Tests" } %></div>
   </div>
 
   <div class="tab-pane" id="Answers">
     <br/>
     <% @file_list.each do |f| %>
         <% if f[0] == 'A' %>
-            <li><a><%= f %></a></li>
-        <% end %>
+            <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
+  <% end %>
     <% end %>
     <br/>
-    <h4><a href="#"><span class="glyphicon glyphicon-download"></span>Download All</a></h4>
+    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answers" } %></div>
+    <br>
+    <%= link_to "Evaluate Answer", "", :class => "btn btn-primary" %>
   </div>
 
   <div class="tab-pane" id="Statics">
@@ -39,4 +41,5 @@
   </div>
 </div>
 
+<br>
 <%= link_to 'Back', @exam, :class => "btn btn-primary" %>

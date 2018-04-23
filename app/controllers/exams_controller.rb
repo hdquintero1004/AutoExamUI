@@ -42,14 +42,15 @@ class ExamsController < ApplicationController
   end
 
   def update_json_master
-    valid_value = $json_master_validations[params[:key]]
+    valid_value = $json_master_validation[params[:key]]
+    valid_value = "" if valid_value.nil?
 
     in_range = false
     if params[:key] == '-numQuest'
       in_range = params[:value] <= valid_value[1] && params[:value] >= valid_value[0]
     elsif params[:key] == '-min'
       in_range = params[:value] >= valid_value
-    else
+    elsif params[:key] == '-max'
       in_range = params[:value] <= valid_value
     end
 
@@ -61,16 +62,15 @@ class ExamsController < ApplicationController
     end
   end
 
-  def generate_latex
+  def generate_version
     @exam = Exam.find(params[:id])
     directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
     Dir.chdir(directory)
     system('autoexam gen -c ' + @exam.amount.to_s)
 
-    master_file = File.join(directory, '/generated/last/pdf/Master.pdf')
-    send_file(master_file, :filename => "document.pdf", :type => "application/pdf", :disposition => 'inline')
+    set_grader_txt
 
-    redirect_to signature_path @exam.signature_id
+    redirect_to exams_show_pdf_file_path :path => File.join(directory, '/generated/last/pdf/Master.pdf')
   end
 
   # POST /exams
@@ -119,9 +119,24 @@ class ExamsController < ApplicationController
 
   def exam_version
     @exam = Exam.find(params[:id])
+    @files_path = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s + '/generated/' + params['version'] + '/pdf'
     @file_list = []
-    Dir.foreach(Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s + '/generated/v' + params['version'] + '/pdf'){|f| @file_list << f if f[0] != '.'}
+    Dir.foreach(@files_path){|f| @file_list << f if f[0] != '.'}
     @file_list = @file_list.sort()
+  end
+
+  def show_pdf_file
+    if params[:to_do].nil?
+      send_file(params[:path], :disposition => 'inline')
+    else
+      Dir.chdir(params[:path])
+      if params[:to_do] == 'Tests'
+        system()
+      elsif params[:to_do] == 'Answers'
+        system()
+      end
+      send_file(params_path + rar_path, :disposition => 'attachment')
+    end
   end
 
   private
@@ -186,6 +201,10 @@ class ExamsController < ApplicationController
       end
     end
 
+    def set_grader_txt
+
+    end
+
     def set_labels
       labels = ""
       signature_labels = Signature.find(@exam.signature_id).labels
@@ -209,14 +228,14 @@ class ExamsController < ApplicationController
       previous_json = {} if previous_json.nil?
 
       json_master = {}
-      json_master_validations = {}
+      json_master_validation = {}
 
       # entry 'exam_id-numQuest' = number of question in each exam
       json_master[@exam.id.to_s + '-numQuest'] = 0
       json_master[@exam.id.to_s + '-numQuest'] = previous_json[@exam.id.to_s + '-numQuest'] if not previous_json[@exam.id.to_s + '-numQuest'].nil?
 
       # entry 'exam_id-numQuest' = valid range for number of question in each exam
-      json_master_validations[@exam.id.to_s + '-numQuest'] = [0,0]
+      json_master_validation[@exam.id.to_s + '-numQuest'] = [0,0]
 
       exams_labels = {}
       @exam.labels.remove(' ').split(',').each do |l|
@@ -229,13 +248,13 @@ class ExamsController < ApplicationController
         json_master[l+"-max"] = previous_json[l+"-max"] if not previous_json[l+"-max"].nil?
 
         # entries 'label-min' and 'label-max' = minimum and maximum value for number of question foreach label
-        json_master_validations[l+"-min"] = 0
-        json_master_validations[l+"-max"] = 0
+        json_master_validation[l+"-min"] = 0
+        json_master_validation[l+"-max"] = 0
       end
 
       Question.where(:signature_id => @exam.signature_id).each do |q|
         q.labels.remove(' ').split(',').each do |l|
-          if not exams_labels.find_index(l).nil?
+          if not exams_labels.keys.find_index(l).nil?
             exams_labels[l] += 1
 
             # entries 'label-question_id-min' and 'label-question_id-max' = minimum and maximum cost foreach question
@@ -256,14 +275,14 @@ class ExamsController < ApplicationController
 
       count = 0
       exams_labels.keys.each do |l|
-        json_master_validations[l+"-max"] = exams_labels[l]
+        json_master_validation[l+"-max"] = exams_labels[l]
         count += exams_labels[l]
       end
 
-      json_master_validations[@exam.id.to_s + '-numQuest'][1] = count
+      json_master_validation[@exam.id.to_s + '-numQuest'][1] = count
 
       @exam.json_master = JSON.dump(json_master)
-      @exam.json_master_validations = JSON.dump(json_master_validations)
+      @exam.json_master_validation = JSON.dump(json_master_validation)
     end
 
     # Use callbacks to share common setup or constraints between actions.
