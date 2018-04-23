@@ -69,8 +69,8 @@
                 <td><a data-toggle="tab" aria-controls="q<%= tab_count %><%= count %>" href="#q<%= tab_count %><%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>
                 <td><%= question.title %></td>
                 <td><%= question.body %></td>
-                <td><input id="<%=label+"-"+question.id.to_s+"-min"%>" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-min"%>')" type="number" value="<%= $json_master[label+"-"+question.id.to_s+"-min"] if not $json_master[label+"-"+question.id.to_s+"-min"].nil?%>"></td>
-                <td><input id="<%=label+"-"+question.id.to_s+"-max"%>" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-max"%>')" type="number" value="<%= $json_master[label+"-"+question.id.to_s+"-max"] if not $json_master[label+"-"+question.id.to_s+"-max"].nil?%>"></td>
+                <td><input id="<%=question.id.to_s+"-min"%>" onchange="change_key_master('<%=question.id.to_s+"-min"%>')" type="number" value="<%= $json_master[question.id.to_s+"-min"] if not $json_master[question.id.to_s+"-min"].nil?%>"></td>
+                <td><input id="<%=question.id.to_s+"-max"%>" onchange="change_key_master('<%=question.id.to_s+"-max"%>')" type="number" value="<%= $json_master[question.id.to_s+"-max"] if not $json_master[question.id.to_s+"-max"].nil?%>"></td>
               </tr>
               <% count += 1 %>
           <% end %>
@@ -99,8 +99,8 @@
                       <tr>
                         <td><%= option.body %></td>
                         <td><%= option.true_or_false %></td>
-                        <td><input id="<%=label+"-"+question.id.to_s+"-"+option.id.to_s+"-checked"%>" type="number" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-"+option.id.to_s+"-checked"%>')" value="<%= $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-checked"] if not $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-checked"].nil?%>"></td>
-                        <td><input id="<%=label+"-"+question.id.to_s+"-"+option.id.to_s+"-uncheck"%>" type="number" onchange="change_key_master('<%=label+"-"+question.id.to_s+"-"+option.id.to_s+"-uncheck"%>')" value="<%= $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-uncheck"] if not $json_master[label+"-"+question.id.to_s+"-"+option.id.to_s+"-uncheck"].nil?%>"></td>
+                        <td><input id="<%=question.id.to_s+"-"+option.id.to_s+"-checked"%>" type="number" onchange="change_key_master('<%=question.id.to_s+"-"+option.id.to_s+"-checked"%>')" value="<%= $json_master[question.id.to_s+"-"+option.id.to_s+"-checked"] if not $json_master[question.id.to_s+"-"+option.id.to_s+"-checked"].nil?%>"></td>
+                        <td><input id="<%=question.id.to_s+"-"+option.id.to_s+"-uncheck"%>" type="number" onchange="change_key_master('<%=question.id.to_s+"-"+option.id.to_s+"-uncheck"%>')" value="<%= $json_master[question.id.to_s+"-"+option.id.to_s+"-uncheck"] if not $json_master[question.id.to_s+"-"+option.id.to_s+"-uncheck"].nil?%>"></td>
                       </tr>
                   <% end %>
                   </tbody>

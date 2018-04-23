@@ -5,13 +5,13 @@
 % Blank lines are ignored as well.
 
 % the number of questions
-total: 2
+total: 1
 
 % the tags that will be used in the test
 % each tag comes with the minimun number of questions
 @bits: 1
 
------------------------------------------ 
+------------------------------------------
 (1) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 @bits
 How many bits are in one byte?

@@ -45,7 +45,7 @@ class ExamsController < ApplicationController
     valid_value = $json_master_validation[params[:key]]
     valid_value = "" if valid_value.nil?
 
-    in_range = false
+    in_range = true
     if params[:key][-9..-1] == '-numQuest'
       in_range = valid_value[0] <= params[:value].to_i() && params[:value].to_i() <= valid_value[1]
     elsif params[:key][-4..-1] == '-min'
@@ -69,10 +69,37 @@ class ExamsController < ApplicationController
     Dir.chdir(directory)
     system('autoexam gen -c ' + @exam.amount.to_s)
 
-    directory = File.join(directory, '/generated/last/pdf/Master.pdf')
+    directory = File.join(directory, '/generated/last/')
     # Set grader.txt file ...
+    content = []
 
-    redirect_to exams_show_pdf_file_path :path => directory
+    # Read the first line of existing grader.txt file to know the version ...
+    file = File.open(directory + 'grader.txt', "r")
+    content << file.readline()
+    file.close()
+
+    # Create content for new grader.txt file ...
+    json_grader = JSON.load(@exam.json_grader)
+    json_grader.keys.sort.each do |identifier|
+      content << identifier
+      content << "total: " + json_grader[identifier].size.to_s
+
+      line = ""
+      json_grader[identifier].each() do |option|
+        line += ' ' if line != ""
+        line += option[0].to_s + ':' + option[1].to_s
+      end
+
+      content << line
+      content << ""
+    end
+
+    content = content.join("\n")
+    File.open(directory + 'grader.txt', "w") do |file|
+      file.write(content)
+    end
+
+    redirect_to show_pdf_file_exam_path :path => File.join(directory, 'pdf/Master.pdf')
   end
 
   # POST /exams
@@ -226,14 +253,15 @@ class ExamsController < ApplicationController
             content << line
 
             # Adding values for check and uncheck the options of each question ...
-            grader_txt[identifier] << [json_master[label+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"], json_master[label+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"]]
+            grader_txt[identifier].append([json_master[q.id.to_s+"-"+o.id.to_s+"-checked"], json_master[q.id.to_s+"-"+o.id.to_s+"-uncheck"]])
           end
           content << ""
         end
       end
 
-      # ...
+      # Save in json_grader field of exam the information needed ...
       @exam.json_grader = JSON.dump(grader_txt)
+      @exam.save()
 
       content = content.join("\n")
       directory += "/master.txt"
@@ -241,10 +269,6 @@ class ExamsController < ApplicationController
         file.write(content)
       end
 
-    end
-
-    def set_grader_txt
-      directory = ''
     end
 
     def set_labels
@@ -299,17 +323,17 @@ class ExamsController < ApplicationController
           if not exams_labels.keys.find_index(l).nil?
             exams_labels[l] += 1
 
-            # entries 'label-question_id-min' and 'label-question_id-max' = minimum and maximum cost foreach question
-            json_master[l+"-"+q.id.to_s+"-min"] = 0
-            json_master[l+"-"+q.id.to_s+"-min"] = previous_json[l+"-"+q.id.to_s+"-min"] if not previous_json[l+"-"+q.id.to_s+"-min"].nil?
-            json_master[l+"-"+q.id.to_s+"-max"] = 0
-            json_master[l+"-"+q.id.to_s+"-max"] = previous_json[l+"-"+q.id.to_s+"-max"] if not previous_json[l+"-"+q.id.to_s+"-max"].nil?
+            # entries 'question_id-min' and 'question_id-max' = minimum and maximum cost foreach question
+            json_master[q.id.to_s+"-min"] = 0
+            json_master[q.id.to_s+"-min"] = previous_json[q.id.to_s+"-min"] if not previous_json[q.id.to_s+"-min"].nil?
+            json_master[q.id.to_s+"-max"] = 0
+            json_master[q.id.to_s+"-max"] = previous_json[q.id.to_s+"-max"] if not previous_json[q.id.to_s+"-max"].nil?
             Option.where(:question_id => q.id).each do |o|
-              # entries 'label-question_id-option_id-uncheck' and 'label-question_id-option_id-checked' = cost for uncheck and check each option
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = -1 * (o.true_or_false - 1)
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] = previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"] if not previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-uncheck"].nil?
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = o.true_or_false
-              json_master[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] = previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"] if not previous_json[l+"-"+q.id.to_s+"-"+o.id.to_s+"-checked"].nil?
+              # entries 'question_id-option_id-uncheck' and 'question_id-option_id-checked' = cost for uncheck and check each option
+              json_master[q.id.to_s+"-"+o.id.to_s+"-uncheck"] = -1 * (o.true_or_false - 1)
+              json_master[q.id.to_s+"-"+o.id.to_s+"-uncheck"] = previous_json[q.id.to_s+"-"+o.id.to_s+"-uncheck"] if not previous_json[q.id.to_s+"-"+o.id.to_s+"-uncheck"].nil?
+              json_master[q.id.to_s+"-"+o.id.to_s+"-checked"] = o.true_or_false
+              json_master[q.id.to_s+"-"+o.id.to_s+"-checked"] = previous_json[q.id.to_s+"-"+o.id.to_s+"-checked"] if not previous_json[q.id.to_s+"-"+o.id.to_s+"-checked"].nil?
             end
           end
         end
