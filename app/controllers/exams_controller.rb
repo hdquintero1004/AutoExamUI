@@ -46,12 +46,12 @@ class ExamsController < ApplicationController
     valid_value = "" if valid_value.nil?
 
     in_range = false
-    if params[:key] == '-numQuest'
-      in_range = params[:value] <= valid_value[1] && params[:value] >= valid_value[0]
-    elsif params[:key] == '-min'
-      in_range = params[:value] >= valid_value
-    elsif params[:key] == '-max'
-      in_range = params[:value] <= valid_value
+    if params[:key][-9..-1] == '-numQuest'
+      in_range = valid_value[0] <= params[:value].to_i() && params[:value].to_i() <= valid_value[1]
+    elsif params[:key][-4..-1] == '-min'
+      in_range = params[:value].to_i() >= valid_value
+    elsif params[:key][-4..-1] == '-max'
+      in_range = params[:value].to_i() <= valid_value
     end
 
     if in_range
