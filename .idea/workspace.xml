@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8226f3a-d091-468d-9510-d9f84c2d3e47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-1/generated/last" afterPath="$PROJECT_DIR$/generated/Exam-1/generated/last" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/exams_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exams/select_questions.erb" afterPath="$PROJECT_DIR$/app/views/exams/select_questions.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-1/.autoexam/next_version" afterPath="$PROJECT_DIR$/generated/Exam-1/.autoexam/next_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-1/generated/v16/grader.txt" afterPath="$PROJECT_DIR$/generated/Exam-1/generated/v16/grader.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-1/master.txt" afterPath="$PROJECT_DIR$/generated/Exam-1/master.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-4/.autoexam/next_version" afterPath="$PROJECT_DIR$/generated/Exam-4/.autoexam/next_version" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/grader.txt" afterPath="$PROJECT_DIR$/generated/Exam-4/generated/v7/grader.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-4/master.txt" afterPath="$PROJECT_DIR$/generated/Exam-4/master.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pending" afterPath="$PROJECT_DIR$/pending" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -37,8 +31,8 @@
       <file leaf-file-name="select_questions.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="101" column="282" lean-forward="false" selection-start-line="101" selection-start-column="282" selection-end-line="101" selection-end-column="282" />
+            <state relative-caret-position="517">
+              <caret line="124" column="9" lean-forward="true" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -47,8 +41,8 @@
       <file leaf-file-name="exams_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+            <state relative-caret-position="308">
+              <caret line="330" column="81" lean-forward="false" selection-start-line="330" selection-start-column="81" selection-end-line="330" selection-end-column="81" />
               <folding>
                 <element signature="e#151#188#0" expanded="false" />
                 <element signature="e#231#451#0" expanded="false" />
@@ -56,17 +50,15 @@
                 <element signature="e#581#595#0" expanded="false" />
                 <element signature="e#633#693#0" expanded="false" />
                 <element signature="e#732#909#0" expanded="false" />
-                <element signature="e#913#1544#0" expanded="false" />
-                <element signature="e#1548#2745#0" expanded="false" />
-                <element signature="e#2786#3254#0" expanded="false" />
-                <element signature="e#3309#3759#0" expanded="false" />
-                <element signature="e#3808#4052#0" expanded="false" />
-                <element signature="e#4056#4394#0" expanded="false" />
-                <element signature="e#5588#8708#0" expanded="false" />
-                <element signature="e#8714#9084#0" expanded="false" />
-                <element signature="e#9090#12256#0" expanded="false" />
-                <element signature="e#12336#12393#0" expanded="false" />
-                <element signature="e#12488#12626#0" expanded="false" />
+                <element signature="e#1839#3036#0" expanded="false" />
+                <element signature="e#3077#3545#0" expanded="false" />
+                <element signature="e#3600#4050#0" expanded="false" />
+                <element signature="e#4099#4343#0" expanded="false" />
+                <element signature="e#4347#4685#0" expanded="false" />
+                <element signature="e#5879#8999#0" expanded="false" />
+                <element signature="e#9005#9375#0" expanded="false" />
+                <element signature="e#12659#12716#0" expanded="false" />
+                <element signature="e#12811#12949#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -121,6 +113,7 @@
       <find>json_master</find>
       <find>JSON.du</find>
       <find>sort</find>
+      <find>max</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -556,12 +549,12 @@
       <workItem from="1523496367068" duration="30000" />
       <workItem from="1523551679471" duration="17000" />
       <workItem from="1524237805340" duration="15418000" />
-      <workItem from="1524450781376" duration="10294000" />
+      <workItem from="1524450781376" duration="11295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188342000" />
+    <option name="totallyTimeSpent" value="189343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -615,13 +608,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/app/controllers/exams_controller.rb</url>
-          <line>47</line>
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager>
@@ -946,30 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="61" column="89" lean-forward="false" selection-start-line="61" selection-start-column="89" selection-end-line="61" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="101" column="282" lean-forward="false" selection-start-line="101" selection-start-column="282" selection-end-line="101" selection-end-column="282" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -986,10 +948,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="61" column="89" lean-forward="false" selection-start-line="61" selection-start-column="89" selection-end-line="61" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="124" column="9" lean-forward="true" selection-start-line="124" selection-start-column="9" selection-end-line="124" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="64" column="22" lean-forward="false" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
+        <state relative-caret-position="308">
+          <caret line="330" column="81" lean-forward="false" selection-start-line="330" selection-start-column="81" selection-end-line="330" selection-end-column="81" />
           <folding>
             <element signature="e#151#188#0" expanded="false" />
             <element signature="e#231#451#0" expanded="false" />
@@ -997,17 +983,15 @@
             <element signature="e#581#595#0" expanded="false" />
             <element signature="e#633#693#0" expanded="false" />
             <element signature="e#732#909#0" expanded="false" />
-            <element signature="e#913#1544#0" expanded="false" />
-            <element signature="e#1548#2745#0" expanded="false" />
-            <element signature="e#2786#3254#0" expanded="false" />
-            <element signature="e#3309#3759#0" expanded="false" />
-            <element signature="e#3808#4052#0" expanded="false" />
-            <element signature="e#4056#4394#0" expanded="false" />
-            <element signature="e#5588#8708#0" expanded="false" />
-            <element signature="e#8714#9084#0" expanded="false" />
-            <element signature="e#9090#12256#0" expanded="false" />
-            <element signature="e#12336#12393#0" expanded="false" />
-            <element signature="e#12488#12626#0" expanded="false" />
+            <element signature="e#1839#3036#0" expanded="false" />
+            <element signature="e#3077#3545#0" expanded="false" />
+            <element signature="e#3600#4050#0" expanded="false" />
+            <element signature="e#4099#4343#0" expanded="false" />
+            <element signature="e#4347#4685#0" expanded="false" />
+            <element signature="e#5879#8999#0" expanded="false" />
+            <element signature="e#9005#9375#0" expanded="false" />
+            <element signature="e#12659#12716#0" expanded="false" />
+            <element signature="e#12811#12949#0" expanded="false" />
           </folding>
         </state>
       </provider>

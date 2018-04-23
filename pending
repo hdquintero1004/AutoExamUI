@@ -10,14 +10,13 @@ create exam
 json para clave ==> id_label-min:#
 					id_label-max:#
 					id_question-min:#
-					question-max:#
-					question-id_option-uncheck:#
-					question-id_option-checked:#
+					id_question-max:#
+					id_question-id_option-uncheck:#
+					id_question-id_option-checked:#
 
 save json_master after update_json_master
 reload if no its posible update json_master entry
 
-grader.txt
 validates numbers in select_question view
 
 download all answers/test (delete .tar after send) i dont like path in params

@@ -42,12 +42,15 @@ class ExamsController < ApplicationController
   end
 
   def update_json_master
+    # Take the valid values for params[:key] entry in the exam ...
     valid_value = $json_master_validation[params[:key]]
     valid_value = "" if valid_value.nil?
 
     in_range = true
+    # If entry finish in '-numQuest' is the value for total number of question in the exam ...
     if params[:key][-9..-1] == '-numQuest'
       in_range = valid_value[0] <= params[:value].to_i() && params[:value].to_i() <= valid_value[1]
+    # If entry finish in '-min' or '-max' is the value for minimum or maximum number or questions for each label in the exam ...
     elsif params[:key][-4..-1] == '-min'
       in_range = params[:value].to_i() >= valid_value
     elsif params[:key][-4..-1] == '-max'
@@ -324,10 +327,10 @@ class ExamsController < ApplicationController
             exams_labels[l] += 1
 
             # entries 'question_id-min' and 'question_id-max' = minimum and maximum cost foreach question
-            json_master[q.id.to_s+"-min"] = 0
-            json_master[q.id.to_s+"-min"] = previous_json[q.id.to_s+"-min"] if not previous_json[q.id.to_s+"-min"].nil?
-            json_master[q.id.to_s+"-max"] = 0
-            json_master[q.id.to_s+"-max"] = previous_json[q.id.to_s+"-max"] if not previous_json[q.id.to_s+"-max"].nil?
+            json_master[q.id.to_s+"-minCost"] = 0
+            json_master[q.id.to_s+"-minCost"] = previous_json[q.id.to_s+"-minCost"] if not previous_json[q.id.to_s+"-minCost"].nil?
+            json_master[q.id.to_s+"-maxCost"] = 0
+            json_master[q.id.to_s+"-maxCost"] = previous_json[q.id.to_s+"-maxCost"] if not previous_json[q.id.to_s+"-maxCost"].nil?
             Option.where(:question_id => q.id).each do |o|
               # entries 'question_id-option_id-uncheck' and 'question_id-option_id-checked' = cost for uncheck and check each option
               json_master[q.id.to_s+"-"+o.id.to_s+"-uncheck"] = -1 * (o.true_or_false - 1)
