@@ -5,7 +5,7 @@
 % Blank lines are ignored as well.
 
 % the number of questions
-total: 1
+total: 3
 
 % the tags that will be used in the test
 % each tag comes with the minimun number of questions

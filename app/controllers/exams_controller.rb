@@ -61,7 +61,12 @@ class ExamsController < ApplicationController
       $json_master[params[:key]] = params[:value]
       render :nothing => true
     else
-      render :nothing => true
+      exam = Exam.find(params[:id])
+      exam.json_master = JSON.dump($json_master)
+      exam.save()
+      respond_to do |format|
+        format.js{ render inline: "location.reload();", }
+      end
     end
   end
 
@@ -149,6 +154,7 @@ class ExamsController < ApplicationController
     end
   end
 
+  # GET /exams/1/exam_version?version=...
   def exam_version
     # Display a version view of the exam ...
     @exam = Exam.find(params[:id])

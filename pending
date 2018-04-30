@@ -9,8 +9,8 @@ create exam
 
 json para clave ==> id_label-min:#
 					id_label-max:#
-					id_question-min:#
-					id_question-max:#
+					id_question-minCost:#
+					id_question-maxCost:#
 					id_question-id_option-uncheck:#
 					id_question-id_option-checked:#
 
@@ -19,7 +19,7 @@ reload if no its posible update json_master entry
 
 validates numbers in select_question view
 
-download all answers/test (delete .tar after send) i dont like path in params
+delete .tar after download test/anwser ... i dont like path in params
 
 open camera to review	
 
