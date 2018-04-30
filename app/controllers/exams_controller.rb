@@ -43,29 +43,24 @@ class ExamsController < ApplicationController
 
   def update_json_master
     # Take the valid values for params[:key] entry in the exam ...
-    valid_value = $json_master_validation[params[:key]]
-    valid_value = "" if valid_value.nil?
 
     in_range = true
     # If entry finish in '-numQuest' is the value for total number of question in the exam ...
     if params[:key][-9..-1] == '-numQuest'
-      in_range = valid_value[0] <= params[:value].to_i() && params[:value].to_i() <= valid_value[1]
+      in_range = $json_master_validation[params[:key]][0] <= params[:value].to_i() && params[:value].to_i() <= $json_master_validation[params[:key]][1]
     # If entry finish in '-min' or '-max' is the value for minimum or maximum number or questions for each label in the exam ...
-    elsif params[:key][-4..-1] == '-min'
-      in_range = params[:value].to_i() >= valid_value
-    elsif params[:key][-4..-1] == '-max'
-      in_range = params[:value].to_i() <= valid_value
+    elsif params[:key][-4..-1] == '-min' or params[:key][-4..-1] == '-max'
+      in_range = (params[:value].to_i() >= $json_master_validation[params[:key][0..-5]+'-min'] and params[:value].to_i() <= $json_master_validation[params[:key][0..-5]+'-max'])
     end
 
     if in_range
       $json_master[params[:key]] = params[:value]
-      render :nothing => true
     else
       exam = Exam.find(params[:id])
       exam.json_master = JSON.dump($json_master)
       exam.save()
       respond_to do |format|
-        format.js{ render inline: "location.reload();", }
+        format.js{ render inline: "location.reload();" }
       end
     end
   end
