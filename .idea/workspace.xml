@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e8226f3a-d091-468d-9510-d9f84c2d3e47" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/exams_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-4/master.txt" afterPath="$PROJECT_DIR$/generated/Exam-4/master.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" afterPath="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pending" afterPath="$PROJECT_DIR$/pending" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -19,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutoExam@Development__AutoExam.coverage" NAME="Development: AutoExam Coverage Results" MODIFIED="1525054255513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="AutoExam" />
+    <SUITE FILE_PATH="coverage/AutoExam@Development__AutoExam.coverage" NAME="Development: AutoExam Coverage Results" MODIFIED="1525134362571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="AutoExam" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -30,35 +30,19 @@
       <file leaf-file-name="select_questions.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="2178">
               <caret line="121" column="142" lean-forward="false" selection-start-line="121" selection-start-column="142" selection-end-line="121" selection-end-column="142" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exams_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="exams_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="18">
               <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="e#151#188#0" expanded="false" />
-                <element signature="e#231#451#0" expanded="false" />
-                <element signature="e#474#555#0" expanded="false" />
-                <element signature="e#581#595#0" expanded="false" />
-                <element signature="e#633#693#0" expanded="false" />
-                <element signature="e#732#909#0" expanded="false" />
-                <element signature="e#1995#3192#0" expanded="false" />
-                <element signature="e#3233#3701#0" expanded="false" />
-                <element signature="e#4255#4499#0" expanded="false" />
-                <element signature="e#4545#4883#0" expanded="false" />
-                <element signature="e#4887#6061#0" expanded="false" />
-                <element signature="e#6077#9197#0" expanded="false" />
-                <element signature="e#9203#9573#0" expanded="false" />
-                <element signature="e#12857#12914#0" expanded="false" />
-                <element signature="e#13009#13147#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,8 +50,8 @@
       <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="84" column="40" lean-forward="false" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exam_version.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="exam_version.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            <state relative-caret-position="90">
+              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -179,11 +163,11 @@
         <option value="$PROJECT_DIR$/tmp/restart.txt" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/exams/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
         <option value="$PROJECT_DIR$/app/views/exams/select_questions.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/signatures/show.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
       </list>
     </option>
   </component>
@@ -221,8 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -249,8 +231,26 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="AutoExam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutoExam" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -268,33 +268,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="signatures" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoExam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutoExam" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -309,11 +287,17 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -570,12 +554,13 @@
       <workItem from="1524237805340" duration="15418000" />
       <workItem from="1524450781376" duration="12532000" />
       <workItem from="1524754356832" duration="1095000" />
-      <workItem from="1525046154269" duration="5465000" />
+      <workItem from="1525046154269" duration="6417000" />
+      <workItem from="1525133796153" duration="1882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197140000" />
+    <option name="totallyTimeSpent" value="199974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -916,19 +901,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/rescue.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -936,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -944,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -952,6 +926,35 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/instrumentation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2178">
+          <caret line="121" column="142" lean-forward="false" selection-start-line="121" selection-start-column="142" selection-end-line="121" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/activesupport-5.0.0/lib/active_support/callbacks.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -966,57 +969,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="84" column="40" lean-forward="false" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/instrumentation.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="121" column="142" lean-forward="false" selection-start-line="121" selection-start-column="142" selection-end-line="121" selection-end-column="142" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/activesupport-5.0.0/lib/active_support/callbacks.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="126" column="0" lean-forward="false" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#151#188#0" expanded="false" />
-            <element signature="e#231#451#0" expanded="false" />
-            <element signature="e#474#555#0" expanded="false" />
-            <element signature="e#581#595#0" expanded="false" />
-            <element signature="e#633#693#0" expanded="false" />
-            <element signature="e#732#909#0" expanded="false" />
-            <element signature="e#1995#3192#0" expanded="false" />
-            <element signature="e#3233#3701#0" expanded="false" />
-            <element signature="e#4255#4499#0" expanded="false" />
-            <element signature="e#4545#4883#0" expanded="false" />
-            <element signature="e#4887#6061#0" expanded="false" />
-            <element signature="e#6077#9197#0" expanded="false" />
-            <element signature="e#9203#9573#0" expanded="false" />
-            <element signature="e#12857#12914#0" expanded="false" />
-            <element signature="e#13009#13147#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>

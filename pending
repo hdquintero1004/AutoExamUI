@@ -14,7 +14,6 @@ json para clave ==> id_label-min:#
 					id_question-id_option-uncheck:#
 					id_question-id_option-checked:#
 
-save json_master after update_json_master
 reload if no its posible update json_master entry
 
 validates numbers in select_question view
@@ -28,3 +27,9 @@ student list ****
 *** input numbers directly from keyboard
 
 STATICS***
+
+ESCRIBIR ESCRIBIR ESCRIBIR ..........
+
+
+
+paso 2 -> code dentro de un <script>

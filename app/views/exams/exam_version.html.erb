@@ -1,45 +1,66 @@
-<h1><%= @exam.title %></h1>
-<h2><%= @exam.header %></h2>
+<head>
+  <link href="c3.css" rel="stylesheet">
+</head>
 
-<h3>Signature: <%= @exam.signature.name %></h3>
+<body>
+  <script src= "d3-4.13.0.min.js" charset="utf-8"></script>
+  <script src="c3.min.js"></script>
 
-<h4>Version: <%= params['version'][1..-1] %></h4>
+  <h1><%= @exam.title %></h1>
+  <h2><%= @exam.header %></h2>
 
-<ul class="nav nav-tabs">
-  <li><a data-toggle="tab" aria-controls="Tests" href="#Tests">Tests</a></li>
-  <li><a data-toggle="tab" aria-controls="Answers" href="#Answers">Answers</a></li>
-  <li><a data-toggle="tab" aria-controls="Statics" href="#Statics">Statics</a></li>
-</ul>
+  <h3>Signature: <%= @exam.signature.name %></h3>
 
-<div class="tab-content">
-  <div class="tab-pane" id="Tests">
-    <br/>
-    <% @file_list.each do |f| %>
-      <% if f[0] == 'T' %>
-            <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
+  <h4>Version: <%= params['version'][1..-1] %></h4>
+
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" aria-controls="Tests" href="#Tests">Tests</a></li>
+    <li><a data-toggle="tab" aria-controls="Answers" href="#Answers">Answers</a></li>
+    <li><a data-toggle="tab" aria-controls="Statics" href="#Statics">Statics</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane" id="Tests">
+      <br/>
+      <% @file_list.each do |f| %>
+        <% if f[0] == 'T' %>
+              <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
+        <% end %>
       <% end %>
+      <br/>
+      <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Test" } %></div>
+    </div>
+
+    <div class="tab-pane" id="Answers">
+      <br/>
+      <% @file_list.each do |f| %>
+          <% if f[0] == 'A' %>
+              <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
     <% end %>
-    <br/>
-    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Test" } %></div>
+      <% end %>
+      <br/>
+      <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answer" } %></div>
+      <br>
+      <%= link_to "Evaluate Answer", "", :class => "btn btn-primary" %>
+    </div>
+
+    <div class="tab-pane" id="Statics">
+      <div id="chart"></div>
+      <script>
+        var chart = c3.generate({
+                    bindto: '#chart',
+                    data: {
+                    columns: [
+                    ['data1', 30, 200, 100, 400, 150, 250],
+                    ['data2', 50, 20, 10, 40, 15, 25]
+                    ]
+                    }
+                    });
+      </script>
+
+    </div>
   </div>
 
-  <div class="tab-pane" id="Answers">
-    <br/>
-    <% @file_list.each do |f| %>
-        <% if f[0] == 'A' %>
-            <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
-  <% end %>
-    <% end %>
-    <br/>
-    <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answer" } %></div>
-    <br>
-    <%= link_to "Evaluate Answer", "", :class => "btn btn-primary" %>
-  </div>
-
-  <div class="tab-pane" id="Statics">
-
-  </div>
-</div>
-
-<br>
-<%= link_to 'Back', @exam, :class => "btn btn-primary" %>
+  <br>
+  <%= link_to 'Back', @exam, :class => "btn btn-primary" %>
+</body>
