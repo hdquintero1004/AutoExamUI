@@ -13,12 +13,12 @@
 
   <div class="form form-group">
     <%= f.label :user_id %>
-    <%= f.text_field :user_id, class: "form form-control" %>
+    <%= f.select :user_id, User.all.collect{|u| [u.email, u.id]}, :class => "form form-control" %>
   </div>
 
   <div class="form form-group">
     <%= f.label :signature_id %>
-    <%= f.text_field :signature_id, class: "form form-control" %>
+    <%= f.select :signature_id, Signature.all.collect{|s| [s.name, s.id]}, :class => "form form-control" %>
   </div>
 
   <input class="btn btn-primary" name="commit" value="Submit" data-disable-with="Submit" type="submit">
