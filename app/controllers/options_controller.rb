@@ -1,4 +1,5 @@
 class OptionsController < ApplicationController
+  before_action :check_user_log_in
   before_action :set_option, only: [:show, :edit, :update, :destroy]
 
   # GET /options
@@ -73,4 +74,10 @@ class OptionsController < ApplicationController
     def option_params
       params.require(:option).permit(:body, :true_or_false, :question_id)
     end
+
+    def check_user_log_in
+    if not user_signed_in?
+      redirect_to(user_session_path)
+    end
+  end
 end

@@ -1,4 +1,5 @@
 class ExamsController < ApplicationController
+  before_action :check_user_log_in
   before_action :set_exam, only: [:show, :edit, :update, :destroy]
 
   # GET /exams
@@ -228,7 +229,7 @@ class ExamsController < ApplicationController
       end
 
       # Finish head of master.txt file with 42 '-' characters
-      content << ""
+       content << ""
       content << "------------------------------------------"
 
       # Include in master.txt file all questions ...
@@ -363,5 +364,11 @@ class ExamsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def exam_params
       params.require(:exam).permit(:title, :header, :description, :labels, :amount, :students_list, :signature_id)
+    end
+
+    def check_user_log_in
+      if not user_signed_in?
+        redirect_to(user_session_path)
+      end
     end
 end

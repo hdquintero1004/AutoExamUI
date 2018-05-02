@@ -1,4 +1,5 @@
 class RolesController < ApplicationController
+  before_action :check_user_log_in
   before_action :set_role, only: [:show, :edit, :update, :destroy]
 
   # GET /roles
@@ -71,4 +72,10 @@ class RolesController < ApplicationController
     def role_params
       params.require(:role).permit(:name)
     end
+
+    def check_user_log_in
+    if not user_signed_in?
+      redirect_to(user_session_path)
+    end
+  end
 end

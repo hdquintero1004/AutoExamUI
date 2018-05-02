@@ -1,4 +1,5 @@
 class QuestionsController < ApplicationController
+  before_action :check_user_log_in
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
   # GET /questions
@@ -91,4 +92,10 @@ class QuestionsController < ApplicationController
     def question_params
       params.require(:question).permit(:title, :body, :labels, :signature_id)
     end
+
+    def check_user_log_in
+    if not user_signed_in?
+      redirect_to(user_session_path)
+    end
+  end
 end

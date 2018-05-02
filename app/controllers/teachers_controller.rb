@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+  before_action :check_user_log_in
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
   # GET /teachers
@@ -71,4 +72,10 @@ class TeachersController < ApplicationController
     def teacher_params
       params.require(:teacher).permit(:user_id, :signature_id)
     end
+
+    def check_user_log_in
+    if not user_signed_in?
+      redirect_to(user_session_path)
+    end
+  end
 end

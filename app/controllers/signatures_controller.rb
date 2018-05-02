@@ -1,4 +1,5 @@
 class SignaturesController < ApplicationController
+  before_action :check_user_log_in
   before_action :set_signature, only: [:show, :edit, :update, :destroy]
 
   # GET /signatures
@@ -76,4 +77,10 @@ class SignaturesController < ApplicationController
       end
       signature_params
     end
+
+    def check_user_log_in
+    if not user_signed_in?
+      redirect_to(user_session_path)
+    end
+  end
 end
