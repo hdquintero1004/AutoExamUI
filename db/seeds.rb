@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Signature.create([{:name => "Arquitectura de Computadoras"}, {:name => "Programacion de Maquinas"}])
-Role.create([ {name: "Admin"}, {name: "Profesor"}])
+Role.create([ {name: "Admin"}, {name: "Professor"}])
 User.create([{:email => "admin@matcom.uh.cu", :password => "admin123", :password_confirmation => "admin123", :role_id => 1}, {:email => "hd@matcom.uh.cu", :password => "123456", :password_confirmation => "123456", :role_id => 2 }])
 Teacher.create([{:user_id => 2, :signature_id => 1}, {:user_id => 2, :signature_id => 2}])
