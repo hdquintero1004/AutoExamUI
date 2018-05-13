@@ -23,7 +23,7 @@
   <% end %>
 
 <h3>Exams</h3>
-  <% exams = Exam.where("signature_id = ? AND (title LIKE ? OR header LIKE ? OR labels LIKE ? OR description LIKE ?)", @signature.id, '*' + text + '*', '*' + text + '*', '*' + text + '*', '*' + text + '*').paginate(:page => params[:exam_page], :per_page => 10) %>
+  <% exams = Exam.where("signature_id = ? AND (title LIKE ? OR header LIKE ? OR labels LIKE ? OR description LIKE ?)", @signature.id, "%#{text}%", "%#{text}%", "%#{text}%", "%#{text}%").paginate(:page => params[:exam_page], :per_page => 10) %>
   <br/><%= will_paginate exams, :param_name => 'exam_page' %>
   <table class="table table-striped">
     <thead>
@@ -53,7 +53,7 @@
   </table>
 
 <h3>Questions</h3>
-  <% questions = Question.where(:signature_id => @signature.id).paginate(:page => params[:question_page], :per_page => 10) %>
+  <% questions = Question.where("signature_id = ? AND (title LIKE ? OR body LIKE ? OR labels LIKE ?)", @signature.id, "%#{text}%", "%#{text}%", "%#{text}%").paginate(:page => params[:question_page], :per_page => 10) %>
   <br/><%= will_paginate questions, :param_name => 'question_page' %>
   <table class="table table-striped">
     <thead>
