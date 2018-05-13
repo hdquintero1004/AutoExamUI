@@ -213,7 +213,7 @@ class ExamsController < ApplicationController
       content << "% Lines starting with a % are ignored."
       content << "% Blank lines are ignored as well."
       content << ""
-      content << "% the number of questions"
+      content << "% the number of questions in each document"
       content << "total: #{json_master[@exam.id.to_s + '-numQuest'].to_s}"
       content << ""
       content << "% the tags that will be used in the test"

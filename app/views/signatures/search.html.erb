@@ -1,0 +1,121 @@
+<h1> <%= @signature.name %></h1>
+
+<form class="navbar-form navbar-left" action="<%= url_for(:controller => 'signatures', :action => 'search') %>" accept-charset="UTF-8" method="get">
+  <div class="form form-group">
+    <input class="form-control" type="text" name="searched_text" id="searched_text" placeholder="Search">
+  </div>
+
+  <input class="btn btn-default" name="commit" value="Search" data-disable-with="Submit" type="submit">
+</form>
+
+<br/>
+<br/>
+<br/>
+
+<% text = params[:searched_text] %>
+<h4>Search Results for "<%= text %>" ...</h4>
+
+<h3>Labels</h3>
+  <% if @results['labels'].nil?%>
+    <p>Not results found.</p>
+  <% else %>
+    <p><%= @results['labels'][0] %></p>
+  <% end %>
+
+<h3>Exams</h3>
+  <% exams = Exam.where("signature_id = ? AND (title LIKE ? OR header LIKE ? OR labels LIKE ? OR description LIKE ?)", @signature.id, '*' + text + '*', '*' + text + '*', '*' + text + '*', '*' + text + '*').paginate(:page => params[:exam_page], :per_page => 10) %>
+  <br/><%= will_paginate exams, :param_name => 'exam_page' %>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Header</th>
+      <th>Description</th>
+      <th>Labels</th>
+      <th>Amount</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+    <tbody>
+      <% exams.each do |exam| %>
+        <tr>
+          <td><%= exam.title %></td>
+          <td><%= exam.header %></td>
+          <td><%= exam.description %></td>
+          <td><%= exam.labels %></td>
+          <td><%= exam.amount %></td>
+          <td><%= link_to 'Show', exam %></td>
+          <td><%= link_to 'Edit', edit_exam_path(exam) %></td>
+          <td><%= link_to 'Destroy', exam, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<h3>Questions</h3>
+  <% questions = Question.where(:signature_id => @signature.id).paginate(:page => params[:question_page], :per_page => 10) %>
+  <br/><%= will_paginate questions, :param_name => 'question_page' %>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Labels</th>
+      <th>Signature</th>
+      <th colspan="3"></th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% count = 0 %>
+    <% questions.each do |question| %>
+        <tr>
+          <td><a data-toggle="tab" aria-controls="q<%= count %>" href="#q<%= count %>"><span class="glyphicon glyphicon-list"></span>Options</a></td>
+          <td><%= question.title %></td>
+          <td><%= question.body %></td>
+          <td><%= question.labels %></td>
+          <td><%= question.signature.name %></td>
+          <td><%= link_to 'Show', question %></td>
+          <td><%= link_to 'Edit', edit_question_path(question) %></td>
+          <td><%= link_to 'Destroy', question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% count += 1 %>
+    <% end %>
+    </tbody>
+  </table>
+
+  <div class="tab-content">
+    <% count = 0 %>
+    <% questions.each do |question| %>
+        <div class="tab-pane" id="q<%= count %>">
+          <table class="col-md-6">
+            <p>Options for: "<%= question.body %>"</p>
+
+            <table class="table table-responsive">
+              <thead>
+              <tr>
+                <th>Body</th>
+                <th>True or false</th>
+                <th colspan="3"></th>
+              </tr>
+              </thead>
+
+              <tbody>
+              <% options = Option.where(:question_id => question.id) %>
+              <% options.each do |option| %>
+                  <tr>
+                    <td><%= option.body %></td>
+                    <td><%= option.true_or_false %></td>
+                    <td><%= link_to 'Show', option %></td>
+                    <td><%= link_to 'Edit', edit_option_path(option) %></td>
+                    <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+          </table>
+        </div>
+        <% count += 1 %>
+    <% end %>
+  </div>

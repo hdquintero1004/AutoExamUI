@@ -1,6 +1,6 @@
 class SignaturesController < ApplicationController
   before_action :check_user_log_in
-  before_action :set_signature, only: [:show, :edit, :update, :destroy]
+  before_action :set_signature, only: [:show, :edit, :update, :destroy, :search]
 
   # GET /signatures
   # GET /signatures.json
@@ -11,6 +11,17 @@ class SignaturesController < ApplicationController
   # GET /signatures/1
   # GET /signatures/1.json
   def show
+  end
+
+  def search
+    text = params[:searched_text]
+    @results = {}
+
+    # Searching Labels
+      @results['labels'] = nil
+      @results['labels'] = [text] if not @signature.labels.remove(' ').split(',').find_index(text).nil?
+    # Searching Exams
+    # Searching Questions
   end
 
   # GET /signatures/new

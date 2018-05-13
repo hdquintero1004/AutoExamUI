@@ -3,9 +3,6 @@ class Question < ApplicationRecord
   has_many :options, :dependent => :destroy
 
   validates :body, :presence => true
-  validates :labels_in_signature?
+  validates :signature_id, :presence => true
 
-  def labels_in_signature?
-    signature_labels = Signature.find(signature_id).labels
-  end
 end

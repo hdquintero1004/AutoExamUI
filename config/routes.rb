@@ -9,10 +9,16 @@ Rails.application.routes.draw do
       get 'update_json_master'
     end
   end
+  resources :signatures do
+    member do
+      get 'search'
+    end
+  end
+
+
   resources :teachers
   resources :options
   resources :questions
-  resources :signatures
   resources :roles
 
   devise_for :users

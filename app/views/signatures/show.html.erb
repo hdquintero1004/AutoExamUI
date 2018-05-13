@@ -1,5 +1,16 @@
 <h1> <%= @signature.name %></h1>
 
+<form class="navbar-form navbar-left" action="<%= url_for(:controller => 'signatures', :action => 'search') %>" accept-charset="UTF-8" method="get">
+  <div class="form form-group">
+    <input class="form-control" type="text" name="searched_text" id="searched_text" placeholder="Search">
+  </div>
+
+  <input class="btn btn-default" name="commit" value="Search" data-disable-with="Submit" type="submit">
+</form>
+
+<br/>
+<br/>
+
 <h3> Labels <a href="<%= edit_signature_path(@signature.id) %>"><span class="glyphicon glyphicon-pencil"></span>edit</a></h3>
 <p> <%= @signature.labels %> </p>
 
