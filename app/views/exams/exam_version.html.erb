@@ -41,7 +41,7 @@
       <br/>
       <div><span class="glyphicon glyphicon-download"><%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answer" } %></div>
       <br>
-      <%= link_to "Evaluate Answer", "", :class => "btn btn-primary" %>
+      <%= link_to "Evaluate Answer", {:controller => "exams", :action => "evaluate_answer"}, :class => "btn btn-primary" %>
     </div>
 
     <div class="tab-pane" id="Statics">

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :exams do
     member do
       get 'exam_version'
+      get 'evaluate_answer'
       get 'generate_version'
       get 'select_questions'
       get 'show_pdf_file'

@@ -160,6 +160,10 @@ class ExamsController < ApplicationController
     @file_list = @file_list.sort()
   end
 
+  def evaluate_answer
+
+  end
+
   def show_pdf_file
   # This method is use to show in browser exams pdf files.
 
