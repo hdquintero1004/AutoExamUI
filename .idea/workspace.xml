@@ -2,14 +2,521 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8226f3a-d091-468d-9510-d9f84c2d3e47" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/exams/evaluate_answer.erb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/last" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v1/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v1/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v10/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v10/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v11/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v12/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v12/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v13/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v13/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v13/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v13/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v13/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v14/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v14/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v15/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v16/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v16/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v17/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v17/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v18/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v19/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v19/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v2/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v20/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v20/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v20/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v20/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v20/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v21/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v21/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v22/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v23/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v23/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v23/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v23/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v23/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v24/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v25/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/5-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/6-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/7-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/8-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/images/9-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0005.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0006.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0007.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0008.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Answer-0009.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0005.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0006.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0007.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0008.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/Test-0009.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0005.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0006.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0007.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0008.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Answer-0009.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0005.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0006.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0007.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0008.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/pdf/Test-0009.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0005.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0006.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0007.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0008.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Answer-0009.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0005.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0006.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0007.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0008.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/Test-0009.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v26/src/qrcode-9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v3/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v4/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v5/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v6/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/images/0-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/images/1-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/images/2-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/images/3-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/images/4-scan-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Answer-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Answer-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Answer-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Answer-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Answer-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Master.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Test-0000.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Test-0001.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Test-0002.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Test-0003.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/Test-0004.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/log/compile_latex.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/order.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Answer-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Answer-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Answer-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Answer-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Answer-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Master.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Test-0000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Test-0001.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Test-0002.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Test-0003.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/pdf/Test-0004.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/seed" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Answer-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Answer-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Answer-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Answer-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Answer-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Test-0000.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Test-0001.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Test-0002.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Test-0003.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/Test-0004.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/qrcode-0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/qrcode-1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/qrcode-2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/qrcode-3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v7/src/qrcode-4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v8/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v8/grader.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v9/Master.tex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/generated/Exam-4/generated/v9/grader.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/exams_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" afterPath="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/assets.rb" afterPath="$PROJECT_DIR$/config/initializers/assets.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/exams/evaluate_answer.erb" afterPath="$PROJECT_DIR$/app/views/exams/evaluate_answer.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-4/.autoexam/next_version" afterPath="$PROJECT_DIR$/generated/Exam-4/.autoexam/next_version" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/Exam-4/master.txt" afterPath="$PROJECT_DIR$/generated/Exam-4/master.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pending" afterPath="$PROJECT_DIR$/pending" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -25,7 +532,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/AutoExam@Development__AutoExam.coverage" NAME="Development: AutoExam Coverage Results" MODIFIED="1526842586243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="AutoExam" />
+    <SUITE FILE_PATH="coverage/AutoExam@Development__AutoExam.coverage" NAME="Development: AutoExam Coverage Results" MODIFIED="1526859815594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="AutoExam" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -33,61 +540,64 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="exams_controller.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="exams_controller.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
+            <state relative-caret-position="349">
+              <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding>
-                <element signature="e#186#223#0" expanded="false" />
-                <element signature="e#266#486#0" expanded="false" />
-                <element signature="e#509#590#0" expanded="false" />
-                <element signature="e#616#630#0" expanded="false" />
-                <element signature="e#668#728#0" expanded="false" />
-                <element signature="e#767#944#0" expanded="false" />
-                <element signature="e#948#2026#0" expanded="false" />
-                <element signature="e#2030#3227#0" expanded="false" />
-                <element signature="e#3268#3736#0" expanded="false" />
-                <element signature="e#3791#4241#0" expanded="false" />
-                <element signature="e#4290#4534#0" expanded="false" />
-                <element signature="e#4580#4918#0" expanded="false" />
-                <element signature="e#4952#6126#0" expanded="false" />
-                <element signature="e#6142#9280#0" expanded="false" />
-                <element signature="e#9286#9656#0" expanded="false" />
-                <element signature="e#9662#12860#0" expanded="false" />
-                <element signature="e#12940#12997#0" expanded="false" />
-                <element signature="e#13092#13230#0" expanded="false" />
-                <element signature="e#13236#13343#0" expanded="false" />
+                <element signature="e#3642#4110#0" expanded="false" />
+                <element signature="e#4165#4615#0" expanded="false" />
+                <element signature="e#4664#4908#0" expanded="false" />
+                <element signature="e#4954#5292#0" expanded="false" />
+                <element signature="e#5296#5322#0" expanded="false" />
+                <element signature="e#5326#6500#0" expanded="false" />
+                <element signature="e#6516#9654#0" expanded="false" />
+                <element signature="e#9660#10030#0" expanded="false" />
+                <element signature="e#10036#13234#0" expanded="false" />
+                <element signature="e#13314#13371#0" expanded="false" />
+                <element signature="e#13466#13604#0" expanded="false" />
+                <element signature="e#13610#13717#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="evaluate_answer.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rescue.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/rescue.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dir.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/dir.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="316" column="13" lean-forward="false" selection-start-line="316" selection-start-column="13" selection-end-line="316" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="evaluate_answer.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/exams/evaluate_answer.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/application.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assets.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/assets.rb">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="4" column="63" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="select_questions.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2178">
+              <caret line="121" column="142" lean-forward="false" selection-start-line="121" selection-start-column="142" selection-end-line="121" selection-end-column="142" />
               <folding />
             </state>
           </provider>
@@ -96,7 +606,7 @@
       <file leaf-file-name="exam_version.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="774">
               <caret line="43" column="91" lean-forward="false" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
               <folding />
             </state>
@@ -190,11 +700,11 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/views/exams/exam_version.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/config/initializers/assets.rb" />
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/app/views/exams/evaluate_answer.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/exams_controller.rb" />
       </list>
     </option>
   </component>
@@ -232,8 +742,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="RailsProjectView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -256,7 +766,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -270,11 +784,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="exams" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -600,12 +1118,13 @@
       <workItem from="1525914433334" duration="746000" />
       <workItem from="1525969602497" duration="639000" />
       <workItem from="1526174415757" duration="8712000" />
-      <workItem from="1526840467883" duration="2175000" />
+      <workItem from="1526840467883" duration="4031000" />
+      <workItem from="1526857587343" duration="3931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230139000" />
+    <option name="totallyTimeSpent" value="235926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
@@ -614,17 +1133,17 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24851751" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39424032" sideWeight="0.5040431" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="367" y="284" width="805" height="742" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32274082" sideWeight="0.49614644" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32274082" sideWeight="0.49614644" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34756702" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39424032" sideWeight="0.49595687" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39424032" sideWeight="0.49595687" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="367" y="200" width="805" height="742" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -639,9 +1158,20 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="89" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/exams_controller.rb</url>
+          <line>74</line>
+          <option name="timeStamp" value="97" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="98" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="RailsRunConfigurationType">
+        <watch expression="x[1..-1]" language="ruby" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.erb" />
@@ -681,13 +1211,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/dir.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="51" column="13" lean-forward="false" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20180420165707_add_json_master_validation_to_exams.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -702,38 +1225,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/rescue.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/activesupport-5.0.0/lib/active_support/notifications/instrumenter.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/mime_responds.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
           <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/instrumentation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2178">
-          <caret line="121" column="142" lean-forward="false" selection-start-line="121" selection-start-column="142" selection-end-line="121" selection-end-column="142" />
         </state>
       </provider>
     </entry>
@@ -853,7 +1348,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="44" lean-forward="false" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -896,7 +1390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="10" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="22" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,7 +1404,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1638">
           <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -919,7 +1411,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="12" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="26" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -935,7 +1426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="55" column="131" lean-forward="false" selection-start-line="55" selection-start-column="131" selection-end-line="55" selection-end-column="131" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -943,7 +1433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -955,49 +1444,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="43" column="91" lean-forward="false" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
-          <folding>
-            <element signature="e#186#223#0" expanded="false" />
-            <element signature="e#266#486#0" expanded="false" />
-            <element signature="e#509#590#0" expanded="false" />
-            <element signature="e#616#630#0" expanded="false" />
-            <element signature="e#668#728#0" expanded="false" />
-            <element signature="e#767#944#0" expanded="false" />
-            <element signature="e#948#2026#0" expanded="false" />
-            <element signature="e#2030#3227#0" expanded="false" />
-            <element signature="e#3268#3736#0" expanded="false" />
-            <element signature="e#3791#4241#0" expanded="false" />
-            <element signature="e#4290#4534#0" expanded="false" />
-            <element signature="e#4580#4918#0" expanded="false" />
-            <element signature="e#4952#6126#0" expanded="false" />
-            <element signature="e#6142#9280#0" expanded="false" />
-            <element signature="e#9286#9656#0" expanded="false" />
-            <element signature="e#9662#12860#0" expanded="false" />
-            <element signature="e#12940#12997#0" expanded="false" />
-            <element signature="e#13092#13230#0" expanded="false" />
-            <element signature="e#13236#13343#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1005,7 +1455,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,11 +1466,80 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/exam_version.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="43" column="91" lean-forward="false" selection-start-line="43" selection-start-column="91" selection-end-line="43" selection-end-column="91" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/exams/select_questions.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2178">
+          <caret line="121" column="142" lean-forward="false" selection-start-line="121" selection-start-column="142" selection-end-line="121" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/exams/evaluate_answer.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="72">
+          <caret line="4" column="63" lean-forward="false" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/instrumentation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/activesupport-5.0.0/lib/active_support/notifications/instrumenter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs22/dir.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="316" column="13" lean-forward="false" selection-start-line="316" selection-start-column="13" selection-end-line="316" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-2.2.3/gems/actionpack-5.0.0/lib/action_controller/metal/rescue.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/exams_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="e#3642#4110#0" expanded="false" />
+            <element signature="e#4165#4615#0" expanded="false" />
+            <element signature="e#4664#4908#0" expanded="false" />
+            <element signature="e#4954#5292#0" expanded="false" />
+            <element signature="e#5296#5322#0" expanded="false" />
+            <element signature="e#5326#6500#0" expanded="false" />
+            <element signature="e#6516#9654#0" expanded="false" />
+            <element signature="e#9660#10030#0" expanded="false" />
+            <element signature="e#10036#13234#0" expanded="false" />
+            <element signature="e#13314#13371#0" expanded="false" />
+            <element signature="e#13466#13604#0" expanded="false" />
+            <element signature="e#13610#13717#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

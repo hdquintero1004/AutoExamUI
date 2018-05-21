@@ -1,25 +1,34 @@
-<h2>Evaluate Answer</h2>
+<head>
+</head>
 
-<%= javascript_include_tag "webcam", "data-turbolinks-track" => true %>
-<script src="app/assets/javascripts/webcam.js">
-  Webcam.set({
-      width: 320,
-      height: 240,
-      image_format: 'jpeg',
-      jpeg_quality: 90
-  });
-  Webcam.attach('#web_cam');
+<body>
+  <script type="text/javascript" src="../../assets/javascripts/webcam.min.js"></script>
 
-  function take_image(){
-      var data_uri = WebCam.snap();
-      document.getElementById('results').innerHTML =
-          '<h2> Here is your image </h2>' +
-              '<img src="'+data_uri+'"/>';
-  }
+  <script language="JavaScript">
+      Webcam.set({
+          width: 320,
+          height: 240,
+          image_format: 'jpeg',
+          jpeg_quality: 90
+      });
+      Webcam.attach('#web_cam');
+  </script>
+
+  <h2>Evaluate Answer</h2>
+
+  <div id="results"></div>
+  <div id="web_cam"></div>
+  <form>
+    <input type="button" value="Take Photo" onclick="take_image">
+  </form>
+</body>
+
+
+<script>
+    function take_image(){
+        var data_uri = WebCam.snap();
+        document.getElementById('results').innerHTML =
+            '<h2> Here is your image </h2>' +
+            '<img src="'+data_uri+'"/>';
+    }
 </script>
-
-<div id="results"></div>
-<div id="web_cam"></div>
-<form>
-  <input type="button" value="Take Photo" onclick="take_image">
-</form>

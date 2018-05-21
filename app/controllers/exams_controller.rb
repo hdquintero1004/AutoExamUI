@@ -71,7 +71,15 @@ class ExamsController < ApplicationController
     @exam = Exam.find(params[:id])
     directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
     Dir.chdir(directory)
-    system('autoexam gen -c ' + @exam.amount.to_s)
+    if not system('autoexam gen -c ' + @exam.amount.to_s)
+      directory += '/generated'
+      Dir.chdir(directory)
+      last_version = 0
+      Dir.foreach(directory){|x| last_version = x[1..-1].to_i if x[0] == 'v' and x[1..-1].to_i > last_version}
+      system('rm -r ' + directory + '/v' + last_version.to_s)
+      redirect_to @exam, :notice => "A Error ocurred when trying to create a new version."
+      return
+    end
 
     directory = File.join(directory, '/generated/last/')
     # Set grader.txt file ...

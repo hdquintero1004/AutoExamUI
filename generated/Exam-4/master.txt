@@ -1,11 +1,11 @@
 % ============================================================================
-% Examen Extraordinario
+% Examen Extraordinario 
 % ============================================================================
 % Lines starting with a % are ignored.
 % Blank lines are ignored as well.
 
 % the number of questions in each document
-total: 2
+total: 3
 
 % the tags that will be used in the test
 % each tag comes with the minimun number of questions
@@ -31,3 +31,14 @@ _x 0
 1 OR 0
 _x 1
 _ 0
+
+(4) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@bits
+1 XOR 0
+_x 1
+_ 0
+
+(5) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@easy
+blala csalfa
+_x slkadas
