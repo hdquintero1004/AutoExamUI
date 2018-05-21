@@ -14,7 +14,7 @@
   <div class="panel-heading">
     <strong>True or False</strong>
   </div>
-  <div class="panel-body"><%= @option.true_or_false %></div>
+  <div class="panel-body"><%= if @option.true_or_false == 1; "True" else "False" end%></div>
 </div>
 
 <%= link_to 'Edit', edit_option_path(@option), class: "btn btn-primary" %>
