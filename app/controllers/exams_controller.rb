@@ -176,14 +176,37 @@ class ExamsController < ApplicationController
   def scan_answer
     directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
     Dir.chdir(directory)
-    system('mkdir temp')
+    #system('mkdir temp')
+    #
+    # # Saving image in server.
+    # File.open(directory + '/temp/answer.jpeg', 'wb') do |f|
+    #   f.write(params[:image].read)
+    # end
 
-    # Saving image in server.
-    File.open(directory + '/temp/answer.jpeg', 'wb') do |f|
-      f.write(params[:image].read)
+    # scanning image to determine if contains a exam answer
+    system('autoexam scan -f temp > log.txt')
+
+    # checking the results of scan
+    result = []
+    File.open(directory + '/results.json', 'r') do |f|
+      result = f.readlines
     end
 
-    system('rm -r temp')
+    result = JSON.load(result.join(""))
+
+    if result.blank?
+      # error with image
+    elsif result['0']['exam_id'] != params[:version].to_i
+      # the answer is not for this version
+    else
+      # valid answer. add to statics
+
+    end
+
+    # remove temporaly files
+    # system('rm -r temp')
+    # system('rm log')
+    # system('rm result.json')
 
   end
 

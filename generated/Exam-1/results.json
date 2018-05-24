@@ -1,1 +1,74 @@
-{}
+{
+    "0": {
+        "exam_id": 23, 
+        "id": 0, 
+        "questions": [
+            {
+                "multiple": false, 
+                "visual_answers": [
+                    1
+                ], 
+                "answers": [
+                    2
+                ], 
+                "order": [
+                    2, 
+                    0, 
+                    1
+                ], 
+                "total_answers": 3, 
+                "id": 1
+            }, 
+            {
+                "multiple": false, 
+                "visual_answers": [
+                    2
+                ], 
+                "answers": [
+                    0
+                ], 
+                "order": [
+                    1, 
+                    0
+                ], 
+                "total_answers": 2, 
+                "id": 2
+            }, 
+            {
+                "multiple": false, 
+                "visual_answers": [
+                    2
+                ], 
+                "answers": [
+                    0
+                ], 
+                "order": [
+                    1, 
+                    0
+                ], 
+                "total_answers": 2, 
+                "id": 4
+            }, 
+            {
+                "multiple": false, 
+                "visual_answers": [], 
+                "answers": [], 
+                "order": [
+                    1, 
+                    0
+                ], 
+                "total_answers": 2, 
+                "id": 3
+            }
+        ], 
+        "warnings": [
+            {
+                "question": 4, 
+                "message": "The question 4 is single selection and the scan reported no selection at all.", 
+                "selection": [], 
+                "type": "Empty Selection", 
+                "selected": false
+            }
+        ]
+    }
+}

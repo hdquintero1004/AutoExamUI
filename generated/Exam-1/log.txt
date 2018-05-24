@@ -1,0 +1,15 @@
+Initializing scanner...
+Test ID: 0
+1. [1] (1s. [2])
+2. [2] (2s. [0])
+3. [2] (4s. [0])
+4. [] (3s. [])
+Warnings:
+	The question 4 is single selection and the scan reported no selection at all.
+The test '0' was already scanned.
+The test '0' was already scanned.
+The test '0' was already scanned.
+Folder finished!
+Restoring previous tests...
+Saving test: 0
+1 exams stored...

@@ -39,6 +39,7 @@
               var fd = new FormData();
               // Append our Canvas image file to the form data
               fd.append("image", blob);
+              fd.append("version", <%= params['version'] %>)
               // And send it
               $.ajax({
                   url: "<%= url_for(:action => 'scan_answer') %>",
