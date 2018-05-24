@@ -2,7 +2,10 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( webcam.js )
+Rails.application.config.assets.precompile += %w( webcam.swf )
+Rails.application.config.assets.precompile += %w( bootstrap )
+Rails.application.config.assets.precompile += %w( c3.min )
+Rails.application.config.assets.precompile += %w( d3-4.13.0.min )
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path

@@ -98,7 +98,7 @@
                   <% options.each do |option| %>
                       <tr>
                         <td><%= option.body %></td>
-                        <td><%= option.true_or_false %></td>
+                        <td><%= if option.true_or_false == 1; "True" else "False" end %></td>
                         <td><input id="<%=question.id.to_s+"-"+option.id.to_s+"-checked"%>" type="number" onchange="change_key_master('<%=question.id.to_s+"-"+option.id.to_s+"-checked"%>')" value="<%= $json_master[question.id.to_s+"-"+option.id.to_s+"-checked"] if not $json_master[question.id.to_s+"-"+option.id.to_s+"-checked"].nil?%>"></td>
                         <td><input id="<%=question.id.to_s+"-"+option.id.to_s+"-uncheck"%>" type="number" onchange="change_key_master('<%=question.id.to_s+"-"+option.id.to_s+"-uncheck"%>')" value="<%= $json_master[question.id.to_s+"-"+option.id.to_s+"-uncheck"] if not $json_master[question.id.to_s+"-"+option.id.to_s+"-uncheck"].nil?%>"></td>
                       </tr>

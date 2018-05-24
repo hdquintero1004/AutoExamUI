@@ -1,34 +1,55 @@
 <head>
+  <script src="webcam.js"></script>
 </head>
 
 <body>
-  <script type="text/javascript" src="../../assets/javascripts/webcam.min.js"></script>
+  <h2>Evaluate Answer</h2>
+  <br/>
+  <h3>Exam: <%= @exam.title %></h3>
+  <h4>Signature: <%= @exam.signature.name %></h4>
+  <h4>Version: </h4>
+  <br/>
+  <p>Put the answer in front of the camera</p>
+
+  <div id="my_camera" style="width:640px; height:480px;"></div>
 
   <script language="JavaScript">
+      Webcam.attach( '#my_camera' );
+
       Webcam.set({
-          width: 320,
-          height: 240,
+          width: 640,
+          height: 480,
+          dest_width: 1280,
+          dest_height: 760,
           image_format: 'jpeg',
-          jpeg_quality: 90
+          jpeg_quality: 90,
+          force_flash: false
       });
-      Webcam.attach('#web_cam');
+
+      function take_snapshot() {
+          Webcam.snap( function(data_uri) {
+              var binary = atob(data_uri.split(',')[1]);
+              // Create 8-bit unsigned array
+              var array = [];
+              for(var i = 0; i < binary.length; i++) {
+                  array.push(binary.charCodeAt(i));
+              }
+              // Return our Blob object
+              var blob = new Blob([new Uint8Array(array)], {type: 'image/png'});
+              var fd = new FormData();
+              // Append our Canvas image file to the form data
+              fd.append("image", blob);
+              // And send it
+              $.ajax({
+                  url: "<%= url_for(:action => 'scan_answer') %>",
+                  type: "POST",
+                  data: fd,
+                  processData: false,
+                  contentType: false,
+              });
+          } );
+      }
   </script>
-
-  <h2>Evaluate Answer</h2>
-
-  <div id="results"></div>
-  <div id="web_cam"></div>
-  <form>
-    <input type="button" value="Take Photo" onclick="take_image">
-  </form>
+  <br/>
+  <a href="javascript:void(take_snapshot())" class="btn btn-primary">Take Snapshot</a>
 </body>
-
-
-<script>
-    function take_image(){
-        var data_uri = WebCam.snap();
-        document.getElementById('results').innerHTML =
-            '<h2> Here is your image </h2>' +
-            '<img src="'+data_uri+'"/>';
-    }
-</script>

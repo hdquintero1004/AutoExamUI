@@ -14,29 +14,15 @@ json para clave ==> id_label-min:#
 					id_question-id_option-uncheck:#
 					id_question-id_option-checked:#
 
-reload if no its posible update json_master entry
-
-validates numbers in select_question view
-
-delete .tar after download test/anwser ... i dont like path in params
-
-open camera to review	
-
-student list ****
-
-cambiar verdadero o falso
+delete .tar after download test/anwser ... i dont like path in params	
 
 *** input numbers directly from keyboard
 
 STATICS***
 
-ESCRIBIR ESCRIBIR ESCRIBIR ..........
+Puts notes field in exams_versions
 
-buscar devise properties and specifications
-buscar antecedentes y estado del arte....	
+Change pdf to open in new tab
 
-
-asignacions de roles 
-etiquetas
-
-PROBLEMAS DURANTE IMPLEMENTACION
+Preguntar Coto
+Referencias

@@ -14,6 +14,9 @@
 //= require bootstrap
 //= require jquery_ujs
 //= require turbolinks
-//= require webcam.js
+//= require webcam.min
+//= require c3.min
+//= require d3-4.13.0.min
+//= require bootstrap
 //= require_tree .
 

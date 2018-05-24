@@ -18,7 +18,7 @@
     <% @options.each do |option| %>
         <tr>
           <td><%= option.body %></td>
-          <td><%= option.true_or_false %></td>
+          <td><%= if option.true_or_false == 1; "True" else "False" end %></td>
           <td><%= link_to 'Show', option %></td>
           <td><%= link_to 'Edit', edit_option_path(option) %></td>
           <td><%= link_to 'Destroy', option, method: :delete, data: { confirm: 'Are you sure?' } %></td>

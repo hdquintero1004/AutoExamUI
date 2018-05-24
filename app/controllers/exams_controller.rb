@@ -1,6 +1,6 @@
 class ExamsController < ApplicationController
   before_action :check_user_log_in
-  before_action :set_exam, only: [:show, :edit, :update, :destroy]
+  before_action :set_exam, only: [:show, :edit, :update, :destroy, :exam_version, :evaluate_answer, :scan_answer]
 
   # GET /exams
   # GET /exams.json
@@ -161,14 +161,29 @@ class ExamsController < ApplicationController
   # GET /exams/1/exam_version?version=...
   def exam_version
     # Display a version view of the exam ...
-    @exam = Exam.find(params[:id])
     @files_path = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s + '/generated/' + params['version'] + '/pdf'
     @file_list = []
     Dir.foreach(@files_path){|f| @file_list << f if f[0] != '.'}
     @file_list = @file_list.sort()
+
+    @statics = [['Right Answer', 6, 8, 9, 5], ['Wrong Answer', 4, 2, 1, 5]]
   end
 
   def evaluate_answer
+
+  end
+
+  def scan_answer
+    directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
+    Dir.chdir(directory)
+    system('mkdir temp')
+
+    # Saving image in server.
+    File.open(directory + '/temp/answer.jpeg', 'wb') do |f|
+      f.write(params[:image].read)
+    end
+
+    system('rm -r temp')
 
   end
 

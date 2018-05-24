@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get 'exam_version'
       get 'evaluate_answer'
       get 'generate_version'
+      post 'scan_answer'
       get 'select_questions'
       get 'show_pdf_file'
       get 'update_master'

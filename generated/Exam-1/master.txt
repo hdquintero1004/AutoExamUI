@@ -4,7 +4,7 @@
 % Lines starting with a % are ignored.
 % Blank lines are ignored as well.
 
-% the number of questions
+% the number of questions in each document
 total: 4
 
 % the tags that will be used in the test
