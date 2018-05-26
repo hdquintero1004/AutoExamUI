@@ -86,10 +86,9 @@ class ExamsController < ApplicationController
 
     # Read the first line of existing grader.txt file to know the version ...
     file = File.open(directory + 'grader.txt', "r")
-    version = file.readline().to_i
-    file.close()
+    version = file.readline.to_i
+    file.close
 
-    version = 23
     json_version_grader = JSON.load(@exam.json_versions_grader)
 
     if json_version_grader.nil?
@@ -107,7 +106,7 @@ class ExamsController < ApplicationController
       json_version_grader[version][identifier]=[]
 
       line = ""
-      json_grader[identifier].each() do |option|
+      json_grader[identifier].each do |option|
         line += ' ' if line != ""
         line += option[0].to_s + ':' + option[1].to_s
         json_version_grader[version][identifier] << [option[0].to_s, option[1].to_s, option[2].to_s]
@@ -176,7 +175,7 @@ class ExamsController < ApplicationController
   # GET /exams/1/exam_version?version=...
   def exam_version
     # Display a version view of the exam ...
-    @files_path = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s + '/generated/' + params[:version] + '/pdf'
+    @files_path = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s + '/generated/v' + params[:version] + '/pdf'
     @file_list = []
     Dir.foreach(@files_path){|f| @file_list << f if f[0] != '.'}
     @file_list = @file_list.sort()
@@ -187,39 +186,46 @@ class ExamsController < ApplicationController
     @statics['table'] = []
     @statics['table'][1] = []
 
-    # Construct graph
+    # Construct graphs
     @statics['graph'] = [['Right Answer'], ['Wrong Answer']]
+    @statics['marked_options'] = {}
 
 
-    @statics['table'][0] = JSON.load(@exam.json_versions_grader)[params[:version][1..-1]].keys
+    @statics['table'][0] = JSON.load(@exam.json_versions_grader)[params[:version]].keys
 
-    t = [0]*@statics['table'][0].size
-    f = [0]*@statics['table'][0].size
+    @statics['graph'][0] += [0]*@statics['table'][0].size
+    @statics['graph'][1] += [0]*@statics['table'][0].size
 
-    document_ids = Static.where({exam_id: @exam.id, exam_version: params[:version][1..-1].to_i}).group(:document_id).count(:document_id)
+    document_ids = Static.where({exam_id: @exam.id, exam_version: params[:version].to_i}).group(:document_id).count(:document_id)
     document_ids.each do |document|
       sum = 0
       row = []
       row << document[0]
 
       @statics['table'][0].each do |question|
-        answer = Static.where({exam_id: @exam.id, exam_version: params[:version][1..-1].to_i, document_id: document[0], question_id: question.to_i}).first
+        answer = Static.where({exam_id: @exam.id, exam_version: params[:version].to_i, document_id: document[0], question_id: question.to_i}).first
         row << answer.note
         sum += answer.note
         if answer.right == 0
-          f[question.to_i - 1]+=1
+          @statics['graph'][1][question.to_i]+=1
         else
-          t[question.to_i - 1]+=1
+          @statics['graph'][0][question.to_i]+=1
+        end
+
+        if @statics['marked_options'][question].nil?
+          @statics['marked_options'][question] = JSON.load(answer.answer)['marked_options']
+        else
+          index = 0
+          JSON.load(answer.answer)['marked_options'].each do |option|
+            @statics['marked_options'][question][index] += option
+            index += 1
+          end
         end
       end
 
       row << sum
       @statics['table'][1] << row
     end
-
-    @statics['graph'][0] += t
-    @statics['graph'][1] += f
-
   end
 
   def evaluate_answer
@@ -256,21 +262,24 @@ class ExamsController < ApplicationController
       document_id = result['0']['id']
       result['0']['questions'].each do |q|
         question_id = q['id'].to_s
-        answer = q['answers']
+        answer = {}
 
         # Calculate the note ...
         note = 0
         index = 0
         right = 1
+        answer['marked_options'] = ['Options']
         JSON.load(@exam.json_versions_grader)[params[:version]][question_id].each do |o|
-          if answer.find_index(index).nil?
+          if q['answers'].find_index(index).nil?
+            answer['marked_options'] << 0
             note += o[1].to_i
-            if o[2] == "0"
+            if o[2] == "1"
               right = 0
             end
           else
+            answer['marked_options'] << 1
             note += o[0].to_i
-            if o[2] == "1"
+            if o[2] == "0"
               right = 0
             end
           end
@@ -278,6 +287,7 @@ class ExamsController < ApplicationController
           index+=1
         end
 
+        answer = JSON.dump(answer)
         stats = Static.all.where({exam_id: @exam.id, exam_version: params[:version].to_i, document_id: document_id, question_id: question_id}).first
         if stats.nil?
           # Insert stats in DB
@@ -296,6 +306,8 @@ class ExamsController < ApplicationController
     # system('rm log')
     # system('rm result.json')
 
+    redirect_to exam_version_exam_path :version => params[:version]
+
   end
 
   def show_pdf_file
@@ -303,7 +315,7 @@ class ExamsController < ApplicationController
 
     # if to_do.nil? = true is because only need to show the pdf file.
     if params[:to_do].nil?
-      send_file(params[:path], :disposition => 'inline')
+      send_file(params[:path], :disposition => 'inline') #Change to new tab
     elsif params[:to_do] == 'Test' or params[:to_do] == 'Answer'
       # else we need to pack all pdf requested and send. Request allows are 'Test', 'Answer'.
       Dir.chdir(params[:path])

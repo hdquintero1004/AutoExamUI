@@ -11,12 +11,12 @@
 
   <h3>Signature: <%= @exam.signature.name %></h3>
 
-  <h4>Version: <%= params['version'][1..-1] %></h4>
+  <h4>Version: <%= params['version'] %></h4>
 
   <ul class="nav nav-tabs">
     <li><a data-toggle="tab" aria-controls="Tests" href="#Tests">Tests</a></li>
     <li><a data-toggle="tab" aria-controls="Answers" href="#Answers">Answers</a></li>
-    <li><a data-toggle="tab" aria-controls="Statics" href="#Statics">Statics</a></li>
+    <li class="active"><a data-toggle="tab" aria-controls="Statics" href="#Statics">Statics</a></li>
   </ul>
 
   <div class="tab-content">
@@ -24,7 +24,7 @@
       <br/>
       <% @file_list.each do |f| %>
         <% if f[0] == 'T' %>
-              <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
+              <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f }, :target => "_blank" %></li>
         <% end %>
       <% end %>
       <br/>
@@ -35,26 +35,27 @@
       <br/>
       <% @file_list.each do |f| %>
           <% if f[0] == 'A' %>
-              <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f } %></li>
+              <li><%= link_to f, {:controller => "exams", :action => "show_pdf_file", :path => @files_path + '/' + f }, :target => "_blank" %></li>
     <% end %>
       <% end %>
       <br/>
       <%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answer" }, :class => "btn btn-success" %>
-      <%= link_to "Evaluate Answer", {:controller => "exams", :action => "evaluate_answer", :version => params['version'][1..-1]}, :class => "btn btn-primary" %>
+      <%= link_to "Evaluate Answer", {:controller => "exams", :action => "evaluate_answer", :version => params['version']}, :class => "btn btn-primary" %>
     </div>
 
-    <div class="tab-pane" id="Statics">
+    <div class="tab-pane active" id="Statics">
 
       <br/>
-      <h2>Exam Qualifications</h2>
+      <h2>Exam Qualifications</h2>See <%= link_to 'Master.pdf', {:controller => "exams", :action => "show_pdf_file", :path => @files_path+'/Master.pdf'}, :target => "_blank" %> to know the questions.
+      <br/>
       <br/>
       <table class="table table-striped">
         <thead>
         <tr>
           <th>id</th>
           <% @statics['table'][0].each do |header|%>
-              <th>Question <%= header %></th>
-        <%end%>
+              <th>Question<%= header %></th>
+          <%end%>
           <th>Note</th>
           <th colspan="3"></th>
         </tr>
@@ -65,32 +66,51 @@
           <% @statics['table'][1].each do |row| %>
               <% row.each do |field|%>
                   <td><%= field %></td>
-        <% end %>
-        <% end %>
+              <% end %>
+          <% end %>
         </tr>
         </tbody>
       </table>
 
-      <br/>
-      <div id="chart"  date-source="<%= @statics['graph'] %>"></div>
-      <script>
-          var dateSource = $("#chart").attr("date-source");
-          var date = JSON.parse(dateSource);
-          var chart = c3.generate({
-              bindto: '#chart',
-              data: {
-                  columns: date,
-                  labels: true
-              },
-              types:{
+      <br>
+      <% @statics['table'][0].each do |question| %>
+        <hr>
+          <h3 id="<%='jumptoquestion' + question %>">Question <%= question %></h3>
 
-              },
-              axis: {
-                  x: { label: {text: 'Questions', position: 'outer-middle'} } ,
-                  y: { label: {text:'Total', position: 'outer-middle'}}
-              }
-          });
-      </script>
+          <div id="<%='question' + question %>" date-source="<%= [['Right Answers'] + [@statics['graph'][0][question.to_i]], ['Wrong Answers'] + [@statics['graph'][1][question.to_i]]]%>"></div>
+          <script>
+            var dateSource = $("<%='#question' + question %>").attr("date-source");
+            var date = JSON.parse(dateSource);
+            var chart = c3.generate({
+                bindto: '<%='#question' + question %>',
+                data: {
+                    columns: date,
+                    type : 'donut'
+                },
+                donut: {
+                    title: '<%= 'Question ' + question %>'
+                }
+            });
+        </script>
+
+          <div id="<%='graph' + question %>"  date-source="<%= [@statics['marked_options'][question]] %>"></div>
+          <script id="<%='graph' + question %>">
+              var dateSource = $("<%='#graph' + question %>").attr("date-source");
+              var date = JSON.parse(dateSource);
+              var chart = c3.generate({
+                  bindto: '<%='#graph' + question %>',
+                  data: {
+                      columns: date,
+                      labels: true,
+                      type: 'bar'
+                  },
+                  axis: {
+                      x: { label: {text: 'Options', position: 'outer-middle'} } ,
+                      y: { label: 'Times Select' }
+                  }
+              });
+          </script>
+      <% end %>
 
     </div>
   </div>

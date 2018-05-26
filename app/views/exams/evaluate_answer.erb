@@ -48,10 +48,15 @@
                   processData: false,
                   contentType: false,
               });
-              Webcam.reset()
+              close_camera();
           } );
+      }
+
+      function close_camera(){
+          Webcam.reset()
       }
   </script>
   <br/>
-  <a href="javascript:void(take_snapshot())" class="btn btn-primary">Take Snapshot</a>
+  <a class="btn btn-primary" href="<%= url_for({:controller => "exams", :action => "exam_version", :version => params[:version]})%>" onclick="close_camera()">Back</a>
+  <a href="javascript:void(take_snapshot())" class="btn btn-danger">Take Snapshot</a>
 </body>
