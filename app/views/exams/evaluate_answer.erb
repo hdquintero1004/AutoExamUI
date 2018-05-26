@@ -7,7 +7,7 @@
   <br/>
   <h3>Exam: <%= @exam.title %></h3>
   <h4>Signature: <%= @exam.signature.name %></h4>
-  <h4>Version: </h4>
+  <h4>Version: <%= params[:version].to_s %></h4>
   <br/>
   <p>Put the answer in front of the camera</p>
 
@@ -48,6 +48,7 @@
                   processData: false,
                   contentType: false,
               });
+              Webcam.reset()
           } );
       }
   </script>

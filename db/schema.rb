@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180423154209) do
+ActiveRecord::Schema.define(version: 20180526135909) do
 
   create_table "exams", force: :cascade do |t|
     t.string   "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180423154209) do
     t.string   "json_master"
     t.string   "json_master_validation"
     t.string   "json_grader"
+    t.string   "json_versions_grader"
     t.index ["signature_id"], name: "index_exams_on_signature_id"
   end
 
@@ -58,6 +59,19 @@ ActiveRecord::Schema.define(version: 20180423154209) do
     t.text     "labels"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "statics", force: :cascade do |t|
+    t.integer  "exam_id"
+    t.integer  "exam_version"
+    t.integer  "document_id"
+    t.integer  "question_id"
+    t.string   "answer"
+    t.integer  "note"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "right"
+    t.index ["exam_id"], name: "index_statics_on_exam_id"
   end
 
   create_table "teachers", force: :cascade do |t|
