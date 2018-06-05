@@ -28,7 +28,7 @@
         <% end %>
       <% end %>
       <br/>
-      <%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Test" } , :class => "btn btn-success"%>
+      <%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Test" } , :class => "btn btn-success", :target => "_blank" %>
     </div>
 
     <div class="tab-pane" id="Answers">
@@ -39,12 +39,12 @@
     <% end %>
       <% end %>
       <br/>
-      <%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answer" }, :class => "btn btn-success" %>
+      <%= link_to 'Download All', {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => "Answer" }, :class => "btn btn-success", :target => "_blank" %>
       <%= link_to "Evaluate Answer", {:controller => "exams", :action => "evaluate_answer", :version => params['version']}, :class => "btn btn-primary" %>
     </div>
 
     <div class="tab-pane active" id="Statics">
-
+      <% content = "" %>
       <br/>
       <h2>Exam Qualifications</h2>See <%= link_to 'Master.pdf', {:controller => "exams", :action => "show_pdf_file", :path => @files_path+'/Master.pdf'}, :target => "_blank" %> to know the questions.
       <br/>
@@ -52,25 +52,40 @@
       <table class="table table-striped">
         <thead>
         <tr>
-          <th>id</th>
+          <th>id</th><% content += "id" %>
           <% @statics['table'][0].each do |header|%>
-              <th>Question<%= header %></th>
+              <th>Question<%= header %></th> <% content += ("\t\tQuestion" + header.to_s) %>
           <%end%>
-          <th>Note</th>
+          <th>Note</th> <% content += "\t\tNote\n" %>
           <th colspan="3"></th>
         </tr>
         </thead>
 
         <tbody>
-        <tr>
           <% @statics['table'][1].each do |row| %>
+              <tr>
               <% row.each do |field|%>
-                  <td><%= field %></td>
+                    <% if field[1] == 2 %>
+                        <td><%= field[0] %></td>
+                    <% elsif field[1] == 1 %>
+                        <td><li class="list-group-item list-group-item-success"><%= field[0] %></li></td>
+                    <% else %>
+                        <td><li class="list-group-item list-group-item-danger"><%= field[0] %></li></td>
+                    <% end %>
+
+                    <% if field[0] == ""
+                         content += " \t\t\t"
+                       else
+                         content += (field[0].to_s + "\t\t\t")
+                       end %>
+
               <% end %>
+              </tr>
+              <% content += "\n" %>
           <% end %>
-        </tr>
         </tbody>
       </table>
+      <div class="nav navbar-nav navbar-right"><%= link_to "Export to .txt", {:controller => "exams", :action => "show_pdf_file", :path => @files_path, :to_do => 'Table', :content => content }, :target => "_blank" %></div>
 
       <br>
       <% @statics['table'][0].each do |question| %>
@@ -113,8 +128,8 @@
       <% end %>
 
     </div>
-  </div>
-
-  <br>
+  <br/>
+  <hr>
   <%= link_to 'Back', @exam, :class => "btn btn-primary" %>
+  </div>
 </body>

@@ -58,5 +58,4 @@
 </div>
 
 <%= link_to 'Edit', edit_exam_path(@exam), class: "btn btn-primary" %>
-<%= link_to 'Back', signature_path(@exam.signature_id), class: "btn btn-primary" %>
 <%= link_to 'Generate New Version', {:controller => "exams", :action => "generate_version"}, class: "btn btn-danger" %>

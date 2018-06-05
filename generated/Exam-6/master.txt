@@ -1,0 +1,58 @@
+% ============================================================================
+% Examen Ingreso Prueba 
+% ============================================================================
+% Lines starting with a % are ignored.
+% Blank lines are ignored as well.
+
+% the number of questions in each document
+total: 4
+
+% the tags that will be used in the test
+% each tag comes with the minimun number of questions
+@1868-1895: 2
+@1952-1959: 1
+@Neocolonia: 2
+@Revolucion: 1
+
+------------------------------------------
+(1) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@1868-1895
+Caída en combate de José Martí:
+_ 12 de abril de 1897
+_x 19 de mayo de 1895
+_ 1 de abril de 1895
+
+(2) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@1868-1895
+Inicio de la Guerra de los Diez Años
+_x 10 de octubre de 1868
+_ 24 de febrero de 1895
+_ 12 de octubre de 1868
+
+(3) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@Neocolonia
+Primer presidente de la Republica Neocolonial
+_x Tomas Estrada Palma
+_ Jose Miguel Gomez
+_ Gerardo Machado
+_ Fulgencio Batista
+
+(4) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@1952-1959
+Asalto al Cuartel Moncada
+_ 2 de diciembre de 1956
+_x 26 de julio de 1953
+
+(5) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@Neocolonia
+Expedicionarios del Yate Granma
+_x Camilo Cienfuegos
+_ Frank País
+_x Ernesto Che Guevara
+
+(6) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@Revolucion
+Invasión de Playa Girón
+_ 15 de octubre de 1962
+_ 22 de abril de 1961
+_ 10 de octubre de 1960

@@ -197,33 +197,39 @@ class ExamsController < ApplicationController
     @statics['graph'][1] += [0]*@statics['table'][0].size
 
     document_ids = Static.where({exam_id: @exam.id, exam_version: params[:version].to_i}).group(:document_id).count(:document_id)
-    document_ids.each do |document|
+    document_ids.keys.each do |document|
       sum = 0
       row = []
-      row << document[0]
+      row << [document, 2]
 
       @statics['table'][0].each do |question|
-        answer = Static.where({exam_id: @exam.id, exam_version: params[:version].to_i, document_id: document[0], question_id: question.to_i}).first
-        row << answer.note
-        sum += answer.note
-        if answer.right == 0
-          @statics['graph'][1][question.to_i]+=1
+        answer = Static.where({exam_id: @exam.id, exam_version: params[:version].to_i, document_id: document, question_id: question.to_i}).first
+        if answer.nil?
+          row << ["", 2]
         else
-          @statics['graph'][0][question.to_i]+=1
-        end
-
-        if @statics['marked_options'][question].nil?
-          @statics['marked_options'][question] = JSON.load(answer.answer)['marked_options']
-        else
-          index = 0
-          JSON.load(answer.answer)['marked_options'].each do |option|
-            @statics['marked_options'][question][index] += option
-            index += 1
+          row << [answer.note, 0]
+          sum += answer.note
+          if answer.right == 0
+            @statics['graph'][1][question.to_i]+=1
+          else
+            @statics['graph'][0][question.to_i]+=1
+            row[-1][1] = 1
           end
+
+          if @statics['marked_options'][question].nil?
+            @statics['marked_options'][question] = JSON.load(answer.answer)['marked_options']
+          else
+            index = 0
+            JSON.load(answer.answer)['marked_options'].each do |option|
+              @statics['marked_options'][question][index] += option
+              index += 1
+            end
+          end
+          @statics['marked_options'][question][0] = "Times"
         end
       end
 
-      row << sum
+      row << [sum, 2]
       @statics['table'][1] << row
     end
   end
@@ -235,12 +241,13 @@ class ExamsController < ApplicationController
   def scan_answer
     directory = Rails.root.to_s + '/generated/Exam-' + @exam.id.to_s
     Dir.chdir(directory)
-    #system('mkdir temp')
-    #
-    # # Saving image in server.
-    # File.open(directory + '/temp/answer.jpeg', 'wb') do |f|
-    #   f.write(params[:image].read)
-    # end
+    system('mkdir temp')
+
+    # Saving image in server.
+    File.open(directory + '/temp/answer.jpeg', 'wb') do |f|
+      f.write(params[:image].read)
+      f.close
+    end
 
     # scanning image to determine if contains a exam answer
     system('autoexam scan -f temp > log.txt')
@@ -249,18 +256,21 @@ class ExamsController < ApplicationController
     result = []
     File.open(directory + '/results.json', 'r') do |f|
       result = f.readlines
+      f.close
     end
 
     result = JSON.load(result.join(""))
 
     if result.blank?
       # error with image
-    elsif result['0']['exam_id'] != params[:version].to_i
+      redirect_to evaluate_answer_exam_path(:version=> params[:version]), :notice => "Error while scan the document."
+    elsif result[result.keys[0]]['exam_id'] != params[:version].to_i
       # the answer is not for this version
+      redirect_to evaluate_answer_exam_path(:version=> params[:version]), :notice => "Error while scan the document."
     else
       # valid answer. add to statics
-      document_id = result['0']['id']
-      result['0']['questions'].each do |q|
+      document_id = result[result.keys[0]]['id']
+      result[result.keys[0]]['questions'].each do |q|
         question_id = q['id'].to_s
         answer = {}
 
@@ -299,29 +309,30 @@ class ExamsController < ApplicationController
 
         stats.save
       end
+      redirect_to exam_version_exam_path :version => params[:version]
     end
 
     # remove temporaly files
-    # system('rm -r temp')
-    # system('rm log')
-    # system('rm result.json')
-
-    redirect_to exam_version_exam_path :version => params[:version]
+    system('rm -r temp')
+    #system('rm log.txt')
+    system('rm results.json')
 
   end
 
   def show_pdf_file
   # This method is use to show in browser exams pdf files.
 
+    directory = params[:path]
+
     # if to_do.nil? = true is because only need to show the pdf file.
     if params[:to_do].nil?
-      send_file(params[:path], :disposition => 'inline') #Change to new tab
+      send_file(params[:path], :disposition => 'inline')
+    # else we need to pack all pdf requested and send. Request allows are 'Test', 'Answer', 'Table'.
     elsif params[:to_do] == 'Test' or params[:to_do] == 'Answer'
-      # else we need to pack all pdf requested and send. Request allows are 'Test', 'Answer'.
-      Dir.chdir(params[:path])
+      Dir.chdir(directory)
 
       # Create a temporal folder ...
-      file_name = params[:path].split('/')[-4] + '_' + params[:path].split('/')[-2] + '_' + params[:to_do]
+      file_name = directory.split('/')[-4] + '_' + directory.split('/')[-2] + '_' + params[:to_do]
       system('mkdir ' + file_name)
 
       # Copying the requested files to the new folder ...
@@ -334,10 +345,16 @@ class ExamsController < ApplicationController
 
       # Packing the new folder in a .tar file and sending ...
       system('tar -cf ' + file_name + '.tar ' + file_name)
-      send_file(params[:path] + '/' + file_name + '.tar', :disposition => 'attachment')
+      send_file(directory + '/' + file_name + '.tar', :disposition => 'attachment')
 
       # Removing temporal files and directories ...
       system('rm -r ' + file_name)
+    elsif params[:to_do] == 'Table'
+      Dir.chdir(directory)
+      File.open(directory + '/notes.txt', 'wb') do |f|
+        f.write(params[:content])
+      end
+      send_file(directory + '/notes.txt', :disposition => 'attachment')
     end
   end
 

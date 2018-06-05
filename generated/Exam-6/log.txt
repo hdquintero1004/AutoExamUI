@@ -1,0 +1,18 @@
+Initializing scanner...
+Test ID: 4
+1. [] (1s. [])
+2. [] (2s. [])
+3. [] (6s. [])
+4. [] (4s. [])
+Warnings:
+	The question 1 is single selection and the scan reported no selection at all.
+	The question 2 is single selection and the scan reported no selection at all.
+	The question 3 is single selection and the scan reported no selection at all.
+	The question 4 is single selection and the scan reported no selection at all.
+The test '4' was already scanned.
+The test '4' was already scanned.
+The test '4' was already scanned.
+The test '4' was already scanned.
+Folder finished!
+Saving test: 4
+1 exams stored...

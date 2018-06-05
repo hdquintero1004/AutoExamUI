@@ -24,7 +24,7 @@
 
     <div class="form form-group">
       <%= f.label :true_or_false %>
-      <%= f.text_field :true_or_false, class: "form form-control" %>
+      <%= f.select :true_or_false, options_for_select([["True", 1], ["False", 0]], selected: if @option.true_or_false == 1; 1 else 0 end), :class => "form form-control" %>
     </div>
 
     <div class="field">

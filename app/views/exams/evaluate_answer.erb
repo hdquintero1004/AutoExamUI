@@ -4,27 +4,30 @@
 
 <body>
   <h2>Evaluate Answer</h2>
-  <br/>
   <h3>Exam: <%= @exam.title %></h3>
   <h4>Signature: <%= @exam.signature.name %></h4>
   <h4>Version: <%= params[:version].to_s %></h4>
   <br/>
-  <p>Put the answer in front of the camera</p>
+  <strong><p>Put the answer in front of the camera and take a snapshot.</p></strong>
+  <a class="btn btn-primary" href="<%= url_for({:controller => "exams", :action => "exam_version", :version => params[:version]})%>" onclick="close_camera()">Back</a>
+  <a href="javascript:void(take_snapshot())" class="btn btn-danger">Take Snapshot</a>
+  <br/>
+  <br/>
 
   <div id="my_camera" style="width:640px; height:480px;"></div>
 
   <script language="JavaScript">
-      Webcam.attach( '#my_camera' );
-
       Webcam.set({
           width: 640,
           height: 480,
           dest_width: 1280,
-          dest_height: 760,
+          dest_height: 720,
           image_format: 'jpeg',
-          jpeg_quality: 90,
+          jpeg_quality: 1000,
           force_flash: false
       });
+
+      Webcam.attach( '#my_camera' );
 
       function take_snapshot() {
           Webcam.snap( function(data_uri) {
@@ -56,7 +59,4 @@
           Webcam.reset()
       }
   </script>
-  <br/>
-  <a class="btn btn-primary" href="<%= url_for({:controller => "exams", :action => "exam_version", :version => params[:version]})%>" onclick="close_camera()">Back</a>
-  <a href="javascript:void(take_snapshot())" class="btn btn-danger">Take Snapshot</a>
 </body>

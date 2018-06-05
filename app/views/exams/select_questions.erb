@@ -17,7 +17,7 @@
 <head></head>
 <body>
   <br/>
-  <h4>Number of questions:</h4>
+  <h4>Number of questions:     <a>?</a></h4>
   <input id="<%=@exam.id.to_s%>-numQuest" type="number" class="form form-control" placeholder="Number of Questions." onchange="change_key_master('<%=@exam.id.to_s%>-numQuest')" value="<%= $json_master[@exam.id.to_s + '-numQuest'] if not $json_master[@exam.id.to_s + '-numQuest'].nil?%>">
   <br/>
   <h4>Labels:</h4>
@@ -34,10 +34,11 @@
       <div class="tab-pane" id="<%= label %>">
         <br/>
         <div class="form form-group">
-          <label>How many questions:</label>
+          <label>How many questions of this label:</label>
+          <br/>
           <input id="<%=label%>-min" type="number" class="form form-control" placeholder="Minimum." onchange="change_key_master('<%=label+"-min"%>')" value="<%= $json_master[label+"-min"] if not $json_master[label+"-min"].nil?%>">
           <br/>
-          <input id="<%=label%>-max" type="number" class="form form-control" placeholder="Maximum." onchange="change_key_master('<%=label+"-max"%>')" value="<%= $json_master[label+"-max"] if not $json_master[label+"-max"].nil?%>">
+          <!--<input id="<%=label%>-max" type="number" class="form form-control" placeholder="Maximum." onchange="change_key_master('<%=label+"-max"%>')" value="<%= $json_master[label+"-max"] if not $json_master[label+"-max"].nil?%>">-->
         </div>
 
         <% questions_filtered = []
@@ -114,6 +115,8 @@
     <% end %>
   </div>
 
+  <hr>
+  <%= link_to 'Back', {:controller => "exams", :action => "edit", :id => @exam}, class: "btn btn-primary" %>
   <%= link_to 'Submit', {:controller => "exams", :action => "update_master"}, class: "btn btn-primary" %>
 </body>
 

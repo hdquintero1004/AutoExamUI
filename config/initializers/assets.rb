@@ -3,7 +3,7 @@
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( webcam.swf )
-Rails.application.config.assets.precompile += %w( bootstrap )
+Rails.application.config.assets.precompile += %w( bootstrap.min )
 Rails.application.config.assets.precompile += %w( c3.min )
 Rails.application.config.assets.precompile += %w( d3-4.13.0.min )
 
