@@ -55,7 +55,7 @@
           <th>id</th><% content += "id" %>
           <% @statics['table'][0].each do |header|%>
               <th>Question<%= header %></th> <% content += ("\t\tQuestion" + header.to_s) %>
-          <%end%>
+          <% end %>
           <th>Note</th> <% content += "\t\tNote\n" %>
           <th colspan="3"></th>
         </tr>
@@ -63,14 +63,33 @@
 
         <tbody>
           <% @statics['table'][1].each do |row| %>
-              <tr>
               <% row.each do |field|%>
                     <% if field[1] == 2 %>
                         <td><%= field[0] %></td>
                     <% elsif field[1] == 1 %>
-                        <td><li class="list-group-item list-group-item-success"><%= field[0] %></li></td>
+                        <td>
+                          <div class="btn-group dropup">
+                            <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><%= field[0] %></button>
+                            <ul class="dropdown-menu">
+                              <% index = 1 %>
+                              <% field[2].each do |option| %>
+                                <li><%= index.to_s + ". " %> <%= if option == 0 then "_"; else "x" end %></li><% index += 1 %>
+                              <% end %>
+                            </ul>
+                          </div>
+                        </td>
                     <% else %>
-                        <td><li class="list-group-item list-group-item-danger"><%= field[0] %></li></td>
+                        <td>
+                          <div class="btn-group dropup">
+                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><%= field[0] %></button>
+                            <ul class="dropdown-menu">
+                              <% index = 1 %>
+                              <% field[2].each do |option| %>
+                                  <li><%= index.to_s + ". " %> <%= if option == 0 then "_"; else "x" end %></li><% index += 1 %>
+                              <% end %>
+                            </ul>
+                          </div>
+                        </td>
                     <% end %>
 
                     <% if field[0] == ""

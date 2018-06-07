@@ -17,7 +17,7 @@
 <head></head>
 <body>
   <br/>
-  <h4>Number of questions:     <a>?</a></h4>
+  <h4>Number of questions: <a title="The number of questions must be less than the total questions in this form.">?</a></h4>
   <input id="<%=@exam.id.to_s%>-numQuest" type="number" class="form form-control" placeholder="Number of Questions." onchange="change_key_master('<%=@exam.id.to_s%>-numQuest')" value="<%= $json_master[@exam.id.to_s + '-numQuest'] if not $json_master[@exam.id.to_s + '-numQuest'].nil?%>">
   <br/>
   <h4>Labels:</h4>
@@ -34,7 +34,7 @@
       <div class="tab-pane" id="<%= label %>">
         <br/>
         <div class="form form-group">
-          <label>How many questions of this label:</label>
+          <label>How many questions of this label: <a title="The number of questions pertaining to this label must be less than the total of questions in this tab.">?</a></label>
           <br/>
           <input id="<%=label%>-min" type="number" class="form form-control" placeholder="Minimum." onchange="change_key_master('<%=label+"-min"%>')" value="<%= $json_master[label+"-min"] if not $json_master[label+"-min"].nil?%>">
           <br/>

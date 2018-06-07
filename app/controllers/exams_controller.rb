@@ -61,7 +61,7 @@ class ExamsController < ApplicationController
       exam.json_master = JSON.dump($json_master)
       exam.save()
       respond_to do |format|
-        format.js{ render inline: "location.reload();" }
+        format.js { render inline: "location.reload();" }
       end
     end
   end
@@ -205,28 +205,35 @@ class ExamsController < ApplicationController
       @statics['table'][0].each do |question|
         answer = Static.where({exam_id: @exam.id, exam_version: params[:version].to_i, document_id: document, question_id: question.to_i}).first
         if answer.nil?
-          row << ["", 2]
+          column = ["", 2, []]
         else
-          row << [answer.note, 0]
+          column = [answer.note, 0, []]
           sum += answer.note
           if answer.right == 0
             @statics['graph'][1][question.to_i]+=1
           else
             @statics['graph'][0][question.to_i]+=1
-            row[-1][1] = 1
+            column[1] = 1
           end
 
           if @statics['marked_options'][question].nil?
             @statics['marked_options'][question] = JSON.load(answer.answer)['marked_options']
+            index = 0
+            @statics['marked_options'][question].each do |option|
+              column[2] << option if index > 0
+              index += 1
+            end
           else
             index = 0
             JSON.load(answer.answer)['marked_options'].each do |option|
               @statics['marked_options'][question][index] += option
+              column[2] << option if index > 0
               index += 1
             end
           end
           @statics['marked_options'][question][0] = "Times"
         end
+        row << column
       end
 
       row << [sum, 2]
