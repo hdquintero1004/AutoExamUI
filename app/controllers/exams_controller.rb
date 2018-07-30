@@ -270,10 +270,10 @@ class ExamsController < ApplicationController
 
     if result.blank?
       # error with image
-      redirect_to evaluate_answer_exam_path(:version=> params[:version]), :notice => "Error while scan the document."
+      redirect_to evaluate_answer_exam_path(:version=> params[:version]), :notice => "Error while scan the document. Try move the document in front camera."
     elsif result[result.keys[0]]['exam_id'] != params[:version].to_i
       # the answer is not for this version
-      redirect_to evaluate_answer_exam_path(:version=> params[:version]), :notice => "Error while scan the document."
+      redirect_to evaluate_answer_exam_path(:version=> params[:version]), :notice => "The document not correspond to this version."
     else
       # valid answer. add to statics
       document_id = result[result.keys[0]]['id']

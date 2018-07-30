@@ -1,0 +1,48 @@
+% ============================================================================
+% Examen Predefensa 
+% ============================================================================
+% Lines starting with a % are ignored.
+% Blank lines are ignored as well.
+
+% the number of questions in each document
+total: 2
+
+% the tags that will be used in the test
+% each tag comes with the minimun number of questions
+@1868-1895: 2
+@1952-1959: 2
+@Revolucion: 1
+
+------------------------------------------
+(1) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@1868-1895
+Caída en combate de José Martí:
+_ 12 de abril de 1897
+_x 19 de mayo de 1895
+_ 1 de abril de 1895
+
+(2) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@1868-1895
+Inicio de la Guerra de los Diez Años
+_x 10 de octubre de 1868
+_ 24 de febrero de 1895
+_ 12 de octubre de 1868
+
+(3) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@1952-1959
+Asalto al Cuartel Moncada
+_ 2 de diciembre de 1956
+_x 26 de julio de 1953
+
+(4) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@Revolucion
+Invasión de Playa Girón
+_ 15 de octubre de 1962
+_ 22 de abril de 1961
+_ 10 de octubre de 1960
+
+(5) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@1952-1959
+Desembarco del Granma
+_x 2 de dicembre de 1956
+_ 30 de noviembre de 1957

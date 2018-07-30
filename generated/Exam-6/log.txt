@@ -1,13 +1,15 @@
 Initializing scanner...
-Test ID: 4
-1. [2] (1s. [1])
-2. [2] (2s. [0])
-3. [3] (6s. [0])
-4. [1] (4s. [1])
-The test '4' was already scanned.
-The test '4' was already scanned.
-The test '4' was already scanned.
-The test '4' was already scanned.
+Test ID: 6
+1. [2] (5m. [1])
+2. [2, 3] (2s. [1, 2])
+3. [] (6s. [])
+4. [1] (4s. [0])
+Warnings:
+	The question 2 is single selection and it has additional answers marked. The selection is [2, 3]
+	The question 3 is single selection and the scan reported no selection at all.
+The test '6' was already scanned.
+The test '6' was already scanned.
+The test '6' was already scanned.
 Folder finished!
-Saving test: 4
+Saving test: 6
 1 exams stored...
